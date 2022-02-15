@@ -2,7 +2,7 @@
 
 ## What is "Your HQ"?
 
-The easiest way to interact with the Q network is to use the dApp *Your HQ*. It consists of a GUI that is integrated with the Q smart contracts through a JS SDK. It is open source and can be found on the Q project [gitlab](https://gitlab.com/q-dev). One publicly available UI instance is hosted at [https://hq.qtestnet.org/](https://hq.qtestnet.org/). You will need to have a running MetaMask wallet plug-in before being able to interact with the relevant delegation smart contract through *Your HQ*. Please check the [MetaMask tutorial](how_to_install_metamask.md) first.
+The easiest way to interact with the Q network is to use the dApp *Your HQ*. It consists of a GUI that is integrated with the Q smart contracts through a JS SDK. It is open source and can be found on the Q project [gitlab](https://gitlab.com/q-dev). One publicly available UI instance is hosted at [https://hq.q.org/](https://hq.q.org/). You will need to have a running MetaMask wallet plug-in before being able to interact with the relevant delegation smart contract through *Your HQ*. Please check the [MetaMask tutorial](how_to_install_metamask.md) first.
 
 The following chapters explain the main purpose for each dApp section and give background information on how to interact with Q system.
 

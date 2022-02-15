@@ -27,15 +27,13 @@ Borrowing comes with a fee that is applied based on compound rate approach. You 
 
 ## Obtaining QBTC
 
-For borrowing synthetic assets like QUSD, you need to deposit a collateral such as QBTC. QBTC is wrapped BTC that was bridged from Ethereum to Q using a token bridge (or Omnibridge). A token bridgefor Q testnet is deployed and reachable at [https://bridge.qtestnet.org/](https://bridge.qtestnet.org/). This bridge bridges Q testnet with Rinkeby Testnet.
+For borrowing synthetic assets like QUSD, you need to deposit a collateral such as QBTC. QBTC is wrapped BTC that was bridged from Ethereum to Q using a token bridge (or Omnibridge). A token bridgefor Q mainnet is deployed and reachable at [https://bridge.q.org/](https://bridge.q.org/). This bridge bridges Q mainnet with Ethereum mainnet.
 
 These are the steps you need to do in order to have QBTC in your MetaMask wallet:
 
-1. Search for a faucet on Rinkeby network to retrieve WBTC
-2. Go to `https://bridge.qtestnet.org` with MetaMask connected to Rinkeby Testnet
-3. Enter the desired and available amount to be bridged in WBTC from Rinkeby to QBTC on Q
-4. Wait for confirmation, change MetaMask back to Q testnet and verify your new Balance
+1. Buy and transfer WBTC to your Ethereum mainnet wallet account
+2. Go to `https://bridge.q.org` with MetaMask connected to Ethereum mainnet
+3. Enter the desired and available amount to be bridged in WBTC from Ethereum to QBTC on Q
+4. Wait for confirmation, change MetaMask back to Q mainnet and verify your new Balance
 
 If you can't see QBTC asset within MetaMask, you can either open Saving & Borrowing page in a fresh browser session (MetaMask will ask once to add both QUSD and QBTC to MetaMask if not added already) or you do it manually by entering a "Custom Token". You need to provide the QBTC contract address for this which can be found in the [dashboard's parameter list](dapp_dashboard.md#dashboard) under parameter `governed.EPDR.QBTC_address`.
-
-Alternatively, Q testnet faucet allows to retrieve a small amount of QBTC for testing purposes. Please see [here](how_to_install_metamask.md#faucet) how this can be achieved.

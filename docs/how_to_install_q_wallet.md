@@ -2,7 +2,7 @@
 
 ## Installation
 
-The first step is to install the app on your device. Get the latest Q wallet app within [Apple App Store](#) or [Google Play store](https://play.google.com/store/apps/details?id=li.qdev.qwallet.testnet&gl=DE) and follow the installation instructions.
+The first step is to install the app on your device. Get the latest Q wallet app within Apple App Store or Google Play store and follow the installation instructions.
 
 ## Wallet first time use
 
@@ -23,7 +23,7 @@ You will need to memorize (i.e. write it down and keep it safe) a 12-word seed p
 
 ## Getting started
 
-To be able to send Q tokens and finally use Q, you need to buy a certain amount of Q on your wallet. Select the Q token through the assets list on the wallet page. Then tap on "Buy". If you are using the Q wallet app connected to testnet, your wallet will be funded by our Q faucet. The same functionality works for other supported assets. On Q mainnet, the procedure will of course be different: you will get redirected to a location that allows you to buy Q tokens.
+To be able to send Q tokens and finally use Q, you need to buy a certain amount of Q on your wallet. We are currently working on integrating a buy option into Q wallet app. Alternatively, you can send Q to the wallet address.
 
 ## Sending tokens
 

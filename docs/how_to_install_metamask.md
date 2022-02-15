@@ -15,23 +15,10 @@ You need to configure your newly created wallet to support and accept Q tokens. 
 
 | **Parameter** | **Value** |
 |:--|:--|
-| Network name | Q Testnet|
-| RPC-URL | https://rpc.qtestnet.org |
-| Chain-ID | 35443 |
+| Network name | Q Mainnet |
+| RPC-URL | https://rpc.q.org |
+| Chain-ID | 35441 |
 | Symbol | Q |
-| Block-Explorer-URL| https://explorer.qtestnet.org |
+| Block-Explorer-URL| https://explorer.q.org |
 
-> **Note: ** *These parameters are valid for Q testnet only!*
-
-## Faucet
-
-To continue working on testnet, you need to receive some Q tokens to your address using the faucet. Add your wallet address (something like `0x0AbC123...abc`) into the below URL of the faucet and open the URL within your browser.  
-
-`https://faucet.qtestnet.org/0x0AbC123...abc`  
-
-If the faucet is working as expected, your balance will increase within a couple of seconds.
-
-Other assets on Q testnet are be supported by the faucet as well. The asset type simply needs to be added to the URL like a sub-folder before the wallet address (again, replace `0x0AbC123...abc` with your Q testnet address.):
-
-`https://faucet.qtestnet.org/QBTC/0x0AbC123...abc`  
-`https://faucet.qtestnet.org/QUSD/0x0AbC123...abc`
+> **Note: ** *These parameters are valid for Q mainnet only!*

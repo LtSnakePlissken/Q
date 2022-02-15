@@ -6,18 +6,7 @@ You must prepare your server / machine to begin. One possibility is to use a loc
 
 ## Basic configuration
 
-Clone the repository `https://gitlab.com/q-dev/testnet-public-tools` and go to the validator directory. This directory contains docker-compose file for quick launching of full node with enabled rpc along with blockchain explorer, .env file for ports configuration and genesis.json - config of genesis block of Q TestNet.
-
-## Testnet redeployment
-
-In case Q testnet was redeployed, you will be required to update the validator files and configs. To do so, within directory \validator, use the following commands:
-
-1. `docker-compose down -v` to stop current validator node and delete volume
-2. `git pull` to pull latest configs
-3. `docker-compose pull` to pull (and overwrite) the latest docker images
-4. `docker-compose up -d` to restart with new configs & images
-
-Now your validator node should restart and synchronise with the testnet again. Please ensure you have enough Q staked on your validator. Check [this section](#Put-stake-in-validators-contract) for more information.
+Clone the repository `https://gitlab.com/q-dev/mainnet-public-tools` and go to the validator directory. This directory contains docker-compose file for quick launching of full node with enabled rpc along with blockchain explorer, .env file for ports configuration and genesis.json - config of genesis block of Q mainnet.
 
 ## Generate a keypair for validator
 
@@ -25,7 +14,7 @@ In order to sign blocks and receive reward, a validator needs a keypair.
 Create a keystore directory, then a password which will be used for private key encryption and save it into a text file pwd.txt in keystore directory.
 Assuming you are in validator directory, issue this command in order to generate a keypair:  
 
-    docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:testnet geth account new --datadir=/data --password=/data/keystore/pwd.txt
+    docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:mainnet geth account new --datadir=/data --password=/data/keystore/pwd.txt
 
 The output of this command should look like this:
 
@@ -57,7 +46,7 @@ Whether you chose to provide your own vanity keys or use the above command to cr
 
 ## Get Q tokens
 
-In order to become a validator, you will need to put some stake in validators contract, so you need Q tokens for this. For Q TestNet, you can get some Q using the faucet located at `https://faucet.qtestnet.org/{address}` (Where {address} should be replaced by the address you created in the previous step 3. In our example the link should be https://faucet.qtestnet.org/0xb3FF24F818b0ff6Cc50de951bcB8f86b52287DAc). Verify that tokens were sent by looking up your address within [Block Explorer](https://explorer.qtestnet.org/).
+In order to become a validator, you will need to put some stake in validators contract, so you need Q tokens for this. We are working on a public listing of the Q token at the moment.
 
 ## Configure setup
 
@@ -73,16 +62,16 @@ Next, you need to edit config.json as this file is required for staking. Put you
       "address": "b3FF24F818b0ff6Cc50de951bcB8f86b52287DAc",`  
       "password": "supersecurepassword",`  
       "keystoreDirectory": "/data",`  
-      "rpc": "https://rpc.qtestnet.org"`  
+      "rpc": "https://rpc.q.org"`  
     }
 
 ## Put stake in validators contract
 
 As was mentioned previously, you need to put stake to validators contract in order to become a validator. There’s a script that does it for you:
 
-    docker run --rm -v $PWD:/data -v $PWD/config.json:/build/config.json qblockchain/js-interface:testnet validators.js
+    docker run --rm -v $PWD:/data -v $PWD/config.json:/build/config.json qblockchain/js-interface:mainnet validators.js
 
-Alternatively, you can use the dApp "Your HQ" that can be found at [https://hq.qtestnet.org](https://hq.qtestnet.org).
+Alternatively, you can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org).
 
 ## Launch validator node
 

@@ -2,7 +2,7 @@
 
 If you managed to run a validator or full node (e.g. for becoming a root node), you might want to import your private key into a wallet application like MetaMask in order to actively participate in Q governance processes, change your stake or interact with other system contracts through the dApp "Your HQ".
 
-The script located [here](https://gitlab.com/q-dev/testnet-public-tools/-/tree/master/js-tools) helps you doint the export. It is best used within node.js environment.
+The script located [here](https://gitlab.com/q-dev/mainnet-public-tools/-/tree/master/js-tools) helps you doint the export. It is best used within node.js environment.
 
 ## Prepare
 

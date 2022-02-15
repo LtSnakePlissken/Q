@@ -14,11 +14,15 @@ All responsibilities of a root node are described within the constitution. The m
 
 To become a root node, you must run your own full node, meet the requirements according to constitution, create a proposal to enter the root node panel and receive a voting majority on this proposal. The following tutorial will guide you through the process.
 
+## Onboarding on Mainnet
+
+For Q mainnet, the onboarding of root nodes is bound to root node eligibility and selection of appropriate candidates. Amongst others, this includes the requirement to fully identify (due dilligence) the root node operator and ensure he is incorporated within a country that has accepted the Convention on the Recognition and Enforcement of Foreign Arbitral Awards of 1958 ("NY Convention").
+
+Since this implies discretionary decisions to be made, a dedicated expert panel for root node onboarding decisions takes over this task. Please check Q Constitution, Article 5.
+
 ## Run a full node
 
 Since the fundamental responsibility of a root node lies in the monitoring of on-chain operations conducted by validators, a root node shall operate its own full node to be able to screen blocks and transactions. Check our [full node tutorial](how_to_setup_fullnode.md) to learn how to set up a full node.
-
-> **Note: ** *Q testnet's main purpose is to allow participants to play around, learn and prepare for mainnet. Since there is no real values at stake within Q testnet, ultimately it's not required for a root node to run its own full node, although we strongly encourage everyone to do so.*
 
 ## Root Node Stake
 
@@ -26,7 +30,7 @@ To be able to sign transactions with your root node address, you need to import 
 
 Next step is to add Q tokens as stake to show your commitment to the project and put some "skin into the game". Please note that adding stake is optional for root nodes but the more stake you add, the higher the chance you get voted into the panel.
 
-Go to the dApp "Your HQ" at [https://hq.qtestnet.org](https://hq.qtestnet.org), connect it with your root node wallet account and go to "Consensus Services -> Root Node Staking". Enter the desired amount of Q you want to stake, then click on "Stake to Panel" and confirm the transaction within MetaMask.
+Go to the dApp "Your HQ" at [https://hq.q.org](https://hq.q.org), connect it with your root node wallet account and go to "Consensus Services -> Root Node Staking". Enter the desired amount of Q you want to stake, then click on "Stake to Panel" and confirm the transaction within MetaMask.
 
 > **Note: ** *If you want to remove stake, you have to enter the desired amount of Q to be withdrawn from panel, then click "Announce Withdrawal". After the announcement period has ended, you can withdraw up to the announced amount within a separate transaction by clicking on "Withdraw from Panel". The announcement period allows others to get notified about your planned stake reduction and potentially initiate (on-chain) legal measures that would have an impact on your stake (e.g. slashing proposal due to constitutional breach or incompliant actions).*
 
@@ -55,11 +59,3 @@ If you want to use a different content platform, please ensure you include at le
 Finally, select "Yes" if you want to remove and replace an existing root node within a single proposal or "No" if you simply want your address to be added to the existing root node panel.
 
 After you committed the proposal by confirming the transaction through MetaMask, the process is started and voting is possible for all eligible Q token holders until the voting period has ended. Once ended, if quorum is reached and the required majority voted "yes", you will be added to root node panel by executing the proposal through a final transaction.
-
-> **Note: ** *For Q testnet, it is useful to inform other testnet participants and Q token holders about important votings happening on Q testnet. You are highly encouraged to use the subreddit to announce votings and advertise your proposals [here](https://www.reddit.com/r/QBlockchain/).*
-
-## Onboarding on Mainnet (wip)
-
-For Q mainnet, the onboarding of root nodes will be slightly different with regards to root node eligibility and selection of appropriate candidates. Amongst others, this includes the requirement to fully identify (due dilligence) the root node operator and ensure he is incorporated within a country that has accepted the Convention on the Recognition and Enforcement of Foreign Arbitral Awards of 1958 ("NY Convention").
-
-Since this implies discretionary decisions to be made, a dedicated expert panel for root node onboarding decisions will take over this task.

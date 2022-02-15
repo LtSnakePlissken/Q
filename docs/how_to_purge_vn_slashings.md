@@ -8,9 +8,9 @@ Since the `purgePendingSlashings` function is not implemented in Your HQ dApp, r
 
 ## Abi file and contract address
 
-The according contract abi file can be imported from [`testnet-public-tools`](https://gitlab.com/q-dev/testnet-public-tools/-/tree/master/abi).
+The according contract abi file can be imported from [`mainnet-public-tools`](https://gitlab.com/q-dev/mainnet-public-tools/-/tree/master/abi).
 
-The contract address for `governance.validators` can be retrieved from your [HQ dApp parameter list](https://hq.qtestnet.org/q-parameters)
+The contract address for `governance.validators` can be retrieved from your [HQ dApp parameter list](https://hq.q.org/q-parameters)
 
 ## Purge function
 

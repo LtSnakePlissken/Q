@@ -2,7 +2,7 @@
 
 ## Your HQ and MetaMask
 
-The easiest way to make use of the Q governance features is to use our dApp *Your HQ*. One instance is hosted at [https://hq.qtestnet.org/](https://hq.qtestnet.org/). You will need to have a running MetaMask wallet plug-in before being able to interact with the relevant delegation smart contract through *Your HQ*. Please check the MetaMask tutorial first.
+The easiest way to make use of the Q governance features is to use our dApp *Your HQ*. One instance is hosted at [https://hq.q.org/](https://hq.q.org/). You will need to have a running MetaMask wallet plug-in before being able to interact with the relevant delegation smart contract through *Your HQ*. Please check the MetaMask tutorial first.
 
 ## Account funding
 
@@ -18,7 +18,7 @@ Now with Q on the platform, you need to lock the number of tokens that you plan 
 
 It is also possible to let a representative vote in your place by delegating your locked funds to their address. Your representative's voting weight will then be increased by the amount of Q you locked for voting.  Similar to voting by yourself, your funds will also be locked until the proposal voting phase is over if your representative casts his vote. The representative will have no access to your funds.
 
-To delegate your voting power, go to the *Q Vault* area and enter the wallet address of your representative in the *Delegate Voting Power* section and click on *Announce* and confirm the MetaMask transaction. The address of your representative will appear under *Current agent*. You have to click on the *confirm* button and confirm another MetaMask transaction before the delegation takes effect. 
+To delegate your voting power, go to the *Q Vault* area and enter the wallet address of your representative in the *Delegate Voting Power* section and click on *Announce* and confirm the MetaMask transaction. The address of your representative will appear under *Current agent*. You have to click on the *confirm* button and confirm another MetaMask transaction before the delegation takes effect.
 
 ## Governance
 

@@ -6,7 +6,7 @@ You must prepare your server / machine to begin. One possibility is to use a loc
 
 ## Get basic configuration
 
-Clone this [repository](https://gitlab.com/q-dev/testnet-public-tools/) and go to the fullnode directory. This directory contains the docker-compose file for quick launching of the full node with preconfigurations on rpc, blockchain explorer, .env file for ports configuration and genesis.json.
+Clone this [repository](https://gitlab.com/q-dev/mainnet-public-tools/) and go to the fullnode directory. This directory contains the docker-compose file for quick launching of the full node with preconfigurations on rpc, blockchain explorer, .env file for ports configuration and genesis.json.
 
 ## Configure ports
 

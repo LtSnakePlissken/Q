@@ -4,8 +4,8 @@ Q is a novel blockchain that combines the benefits of a public, open and decentr
 
 Welcome to Q.
 
-## Testnet
-Q is live on testnet. The following tutorials reflect interactions with Q testnet only. On Q testnet, there is no flow of valuable funds. The Q mainnet launch is planned to happen soon. For more information, please visit [https://q.org](https://q.org) or visit [https://www.reddit.com/r/QBlockchain/](https://www.reddit.com/r/QBlockchain/)to not miss any update on Q.
+## Testnet vs. Mainnet
+Q offers a [testnet](https://docs.qtestnet.org). Use Q testnet if you want to get to know the system and play around in a sandbox environment. The following tutorials reflect interactions with Q *mainnet* and some features might behave differently on both networks.
 
 ## Terminology
 Within these tutorials you will encounter artefacts, entities and namings that might not sound familiar to you. This initial chapter shall give you some background information on the most commonly used terms.
