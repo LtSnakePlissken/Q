@@ -27,8 +27,12 @@ nav:
     - Technical How To's:
       - Setup a Q fullnode : how_to_setup_fullnode.md
       - Setup a validator node : how_to_setup_validator.md
+      - Setup a Root Node: how_to_setup_rootnode.md
       - Setup the token OmniBridge : how_to_setup_omnibridge.md
+      - Setup Sentry Node: how-to-setup-sentry-node.md
+      - Use clef to unlock account with prompt: clef-tutorial.md
       - Interact with smart contracts : how_to_interact_with_smart_contracts_with_remix.md
-      - Purge validator slashings : how_to_purge_vn_slashings.md 
+      - Purge validator slashings : how_to_purge_vn_slashings.md
       - Export private key: how_to_export_key.md
+      - Unlock Account: how-to-unlock-account.md
 theme: readthedocs
