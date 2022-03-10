@@ -1,0 +1,6 @@
+{
+  "address": "0000000000000000000000000000000000000000",
+  "password": "supersecurepassword",
+  "keystoreDirectory": "/data",
+  "rpc": "https://rpc.q.org"
+}

@@ -1,0 +1,37 @@
+version: "3"
+
+services:
+  node-init:
+    image: qblockchain/q-client:mainnet
+    environment:
+      - DATADIR=/data
+      - GENESIS_PATH=genesis.json
+    entrypoint: ["/bin/sh","./entrypoint.sh"]
+    volumes:
+      - ./init.sh:/entrypoint.sh
+      - ./genesis.json:/genesis.json
+      - node-data:/data
+
+  node:
+    image: qblockchain/q-client:mainnet
+    depends_on: 
+      - node-init
+    entrypoint: ["geth", "--datadir=/data", "--http", "--http.corsdomain=*", "--http.addr=0.0.0.0", "--syncmode=full", "--rpc.allow-unprotected-txs", "--networkid=35441", "--verbosity=3", "--bootnodes=$BOOTNODE_ADDR", "--miner.gasprice=50000000000", "--txpool.pricelimit=47619047619", "--http", "--http.addr=0.0.0.0", "--http.corsdomain=*", "--http.api=net,web3,eth,debug"]
+    volumes:
+      - node-data:/data
+    ports:
+    - $EXT_PORT:8545
+    restart: unless-stopped
+
+  local-explorer:
+    image: alethio/ethereum-lite-explorer
+    depends_on:
+      - node
+    environment:
+      - APP_NODE_URL=http://localhost:$EXT_PORT
+    ports:
+      - $EXPLORER_PORT:80
+    restart: unless-stopped
+
+volumes:
+  node-data:
