@@ -92,4 +92,4 @@ Please note that upon start you are likely to see a lot of warnings in q-client 
 
 This is actually ok, as the node needs some time to synchronize with the peers of Q network. Until a full sync is reached, it may happen that your node already starts block creation using the most recent snapshot in which you are the only validator. After successful peer discovery, there warnings will disappear.
 
-  > **Note: ** *All validators are required to run an omnibridge-oracle as per Constitution. Please see [here](how_to_setup_omnibridge.md#Configure-OmniBridge-oracle) for a tutorial how to do this.*
+  > **Note: ** *All validators are required to run an omnibridge-oracle as per Constitution. Please see [here](how-to-setup-omnibridge.md#Configure-OmniBridge-oracle) for a tutorial how to do this.*
