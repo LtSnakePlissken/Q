@@ -58,7 +58,6 @@ markdown_extensions:
 nav:
     - Introduction:
       - What is Q? : index.md
-      - Test Intro Page: example-page-for-q.md
       - Q onboarding in 5 minutes : five_minutes.md
     - Tutorials:
       - Basic Setup:
