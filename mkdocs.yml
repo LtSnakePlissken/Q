@@ -63,7 +63,7 @@ nav:
       - Basic Setup:
         - Install and setup MetaMask : how-to-install-metamask.md
         - Use the Q mobile wallet : how-to-install-q-wallet.md
-        - Delegate Q to a validator : how_to_delegate_to_validator.md
+        - Delegate Q to a validator : how-to-delegate-to-validator.md
         - Exercise your governance rights : how-to-exercise-governance-rights.md
         - Become a root node : how-to-become-a-root-node.md
         - Layer 0 governance of root nodes: layer0-governance.md
