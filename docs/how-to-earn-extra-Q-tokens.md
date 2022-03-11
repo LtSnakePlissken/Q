@@ -6,7 +6,7 @@ On Q network, you are able to earn extra Q tokens for participating in the Q gov
 
 ## Setup MetaMask and Your HQ website
 
-At first, go to page [*Your HQ*](https://hq.q.org/). Complete the MetaMask installation by following the instructions on the website or follow this [tutorial](how_to_install_metamask.md) to setup your MetaMask account.
+At first, go to page [*Your HQ*](https://hq.q.org/). Complete the MetaMask installation by following the instructions on the website or follow this [tutorial](how-to-install-metamask.md) to setup your MetaMask account.
 
 ## Option I: Q vault
 

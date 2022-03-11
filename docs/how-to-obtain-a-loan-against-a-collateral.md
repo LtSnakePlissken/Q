@@ -4,7 +4,7 @@
 
 On the Q network, you are able to take a loan in the QUSD against collateral in QBTC and use these assets in your aims. To do this you  must have a MetaMask account and QBTC in the wallet.
 
-First, go to the dApp [*Your HQ*](https://hq.q.org/). Complete the installation by following the instructions on the website or follow this [tutorial](how_to_install_metamask.md) to setup your MetaMask account.
+First, go to the dApp [*Your HQ*](https://hq.q.org/). Complete the installation by following the instructions on the website or follow this [tutorial](how-to-install-metamask.md) to setup your MetaMask account.
 
 ## Account funding
 

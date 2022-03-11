@@ -17,7 +17,7 @@ Before depositing a supported collateral asset, you need to create a vault that 
 
 > **Note: ** *Before you initially deposit your first collateral, you have to approve contract interaction by entering the desired amount for deposit and clicking on "Approve". After successful transaction confirmation, you can again click on "Deposit" for triggering the deposit.*
 
-The idea behind borrowing is simple: you can borrow synthetic assets up to the borrowing limit for deposited collaterals. For system stability reasons, the borrowing limit is not equal but less than 100% of the collateral's value. This security buffer is used for price fluctuation. If the threshold (liquidation limit) is reached, the vault can be liquidated and its collateral will be auctioned to the highest bidder on Q system [see here](dapp_decentralizedauctions.md).
+The idea behind borrowing is simple: you can borrow synthetic assets up to the borrowing limit for deposited collaterals. For system stability reasons, the borrowing limit is not equal but less than 100% of the collateral's value. This security buffer is used for price fluctuation. If the threshold (liquidation limit) is reached, the vault can be liquidated and its collateral will be auctioned to the highest bidder on Q system [see here](dapp-decentralizedauctions.md).
 
 If a vault has been liquidated, it will be marked as such and can't be used for borrowing anymore. Also, the liquidated and auctioned collateral will be transferred to the highest bidder after the auction has ended.
 
@@ -36,4 +36,4 @@ These are the steps you need to do in order to have QBTC in your MetaMask wallet
 3. Enter the desired and available amount to be bridged in WBTC from Ethereum to QBTC on Q
 4. Wait for confirmation, change MetaMask back to Q mainnet and verify your new Balance
 
-If you can't see QBTC asset within MetaMask, you can either open Saving & Borrowing page in a fresh browser session (MetaMask will ask once to add both QUSD and QBTC to MetaMask if not added already) or you do it manually by entering a "Custom Token". You need to provide the QBTC contract address for this which can be found in the [dashboard's parameter list](dapp_dashboard.md#dashboard) under parameter `governed.EPDR.QBTC_address`.
+If you can't see QBTC asset within MetaMask, you can either open Saving & Borrowing page in a fresh browser session (MetaMask will ask once to add both QUSD and QBTC to MetaMask if not added already) or you do it manually by entering a "Custom Token". You need to provide the QBTC contract address for this which can be found in the [dashboard's parameter list](dapp-dashboard.md#dashboard) under parameter `governed.EPDR.QBTC_address`.

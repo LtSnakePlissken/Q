@@ -57,7 +57,7 @@ Whether you chose to provide your own vanity keys or use the above command to cr
 
 ## Get Q tokens
 
-In order to become a root node, you will need to make an onchain proposal to [add yourself to the root node panel](how_to_become_a_root_node.md). You need Q tokens for this. For Q testnet, you can get some Q using the faucet located at `https://faucet.qtestnet.org/{address}` (Where {address} should be replaced by the address you created in the previous step 3. In our example the link should be https://faucet.qtestnet.org/0xb3FF24F818b0ff6Cc50de951bcB8f86b52287DAc). Verify that tokens were sent by looking up your address within [Block Explorer](https://explorer.qtestnet.org/).
+In order to become a root node, you will need to make an onchain proposal to [add yourself to the root node panel](how-to-become-a-root-node.md). You need Q tokens for this. For Q testnet, you can get some Q using the faucet located at `https://faucet.qtestnet.org/{address}` (Where {address} should be replaced by the address you created in the previous step 3. In our example the link should be https://faucet.qtestnet.org/0xb3FF24F818b0ff6Cc50de951bcB8f86b52287DAc). Verify that tokens were sent by looking up your address within [Block Explorer](https://explorer.qtestnet.org/).
 
 ## Configure setup
 

@@ -4,7 +4,7 @@ As a security and anti-spam protection feature, a root node is only allowed to p
 
 ## Basic concept using Remix
 
-Since the `purgePendingSlashings` function is not implemented in Your HQ dApp, root nodes need to directly interact with the smart contract. One easy way is using [Remix](how_to_interact_with_smart_contracts_with_remix.md).
+Since the `purgePendingSlashings` function is not implemented in Your HQ dApp, root nodes need to directly interact with the smart contract. One easy way is using [Remix](how-to-interact-with-smart-contracts-with-remix.md).
 
 ## Abi file and contract address
 

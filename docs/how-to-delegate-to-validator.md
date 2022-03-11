@@ -6,7 +6,7 @@ When you have Q tokens, you can delegate them to another validator node that you
 
 ## Your HQ and MetaMask
 
-The easiest way to delegate your stake is to use our dApp *Your HQ*. One instance is hosted at [https://hq.q.org](https://hq.q.org). You will need to have a running MetaMask wallet plug-in before being able to interact with the relevant delegation smart contract through *Your HQ*. Please check the [MetaMask tutorial](how_to_install_metamask.md) first.
+The easiest way to delegate your stake is to use our dApp *Your HQ*. One instance is hosted at [https://hq.q.org](https://hq.q.org). You will need to have a running MetaMask wallet plug-in before being able to interact with the relevant delegation smart contract through *Your HQ*. Please check the [MetaMask tutorial](how-to-install-metamask.md) first.
 
 ## Delegation
 

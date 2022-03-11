@@ -8,13 +8,13 @@ There are three different types of auctions:
   - System Debt: If DeFi system significantly lacks of synthetic asset (e.g. QUSD), any user can bid in QUSD to receive a lot of Q tokens
   - System Surplus: If DeFi system significantly created a surplus in synthetic asset (e.g. QUSD), these tokens can be purchased by bidding Q tokens to receive a certain lot size of synthetic asset
 
-Auctions don't happen automatically, they need to be triggered by any user within Q system. Auctions can only be triggered if certain thresholds or limits are reached. Whereas this (collateral price) limit for borrowing vaults is depending on the collateralized asset's price, both system dept and surplus auctions are framed by a set of parameters that define thresholds, lot sizes and others. Please check the [Q DeFi Risk Expert Panel parameter list](dapp_dashboard.md#dashboard) for a list of all relevant parameters.
+Auctions don't happen automatically, they need to be triggered by any user within Q system. Auctions can only be triggered if certain thresholds or limits are reached. Whereas this (collateral price) limit for borrowing vaults is depending on the collateralized asset's price, both system dept and surplus auctions are framed by a set of parameters that define thresholds, lot sizes and others. Please check the [Q DeFi Risk Expert Panel parameter list](dapp-dashboard.md#dashboard) for a list of all relevant parameters.
 
 ## Information Boxes
 
 ### Auction Stats
 
-Shows your available Q balance according to the connected wallet account as well as funds in Q vault and synthetic asset balance (QUSD). A click on "Manage" will redirect you to [Q vault](dapp_qvault.md).
+Shows your available Q balance according to the connected wallet account as well as funds in Q vault and synthetic asset balance (QUSD). A click on "Manage" will redirect you to [Q vault](dapp-qvault.md).
 
 ### QUSD System Balance
 

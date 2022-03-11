@@ -29,35 +29,35 @@ Here is why you should consider renaming the files:
 nav:
     - Introduction:
       - What is Q? : index.md
-      - Q onboarding in 5 minutes : five_minutes.md
+      - Q onboarding in 5 minutes : five-minutes.md
       - Example intro page: example-page-for-q.md
     - Tutorials:
       - Basic setup:
-        - Install and setup MetaMask : how_to_install_metamask.md
-        - Use the Q mobile wallet : how_to_install_q_wallet.md
-        - Delegate Q to a validator : how_to_delegate_to_validator.md
-        - Exercise your governance rights : how_to_exercise_governance_rights.md
-        - Become a root node : how_to_become_a_root_node.md
-        - Layer 0 governance of root nodes: layer0_governance.md
-        - Become an expert in an expert panel : how_to_be_an_expert_in_expert_panel.md
-        - Earn extra Q tokens : how_to_earn_extra_Q_tokens.md
-        - Obtain a loan against a collateral : how_to_obtain_a_loan_against_a_collateral.md
-        - Verify and update the Q constitution: how_to_verify_q_constitution_hash.md
+        - Install and setup MetaMask : how-to-install-metamask.md
+        - Use the Q mobile wallet : how-to-install-q-wallet.md
+        - Delegate Q to a validator : how-to-delegate-to-validator.md
+        - Exercise your governance rights : how-to-exercise-governance-rights.md
+        - Become a root node : how-to-become-a-root-node.md
+        - Layer 0 governance of root nodes: layer0-governance.md
+        - Become an expert in an expert panel : how-to-be-an-expert-in-expert-panel.md
+        - Earn extra Q tokens : how-to-earn-extra-Q-tokens.md
+        - Obtain a loan against a collateral : how-to-obtain-a-loan-against-a-collateral.md
+        - Verify and update the Q constitution: how-to-verify-q-constitution-hash.md
       - Technical how to’s:
-        - Setup a Q fullnode : how_to_setup_fullnode.md
-        - Setup a validator node : how_to_setup_validator.md
-        - Setup the token OmniBridge : how_to_setup_omnibridge.md
-        - Interact with smart contracts : how_to_interact_with_smart_contracts_with_remix.md
-        - Export private key: how_to_export_key.md
+        - Setup a Q fullnode : how-to-setup-fullnode.md
+        - Setup a validator node : how-to-setup-validator.md
+        - Setup the token OmniBridge : how-to-setup-omnibridge.md
+        - Interact with smart contracts : how-to-interact-with-smart-contracts-with-remix.md
+        - Export private key: how-to-export-key.md
     - Your HQ dApp:
       - Overview:
-        - Dashboard: dapp_dashboard.md
-        - Governance: dapp_governance.md
-        - Q Vault: dapp_qvault.md
-        - Consensus Services: dapp_consensusservices.md
-        - Saving & Borrowing: dapp_savingborrowing.md
-        - Decentralized Auctions: dapp_decentralizedauctions.md
-        - Time Locks: dapp_timelocks.md
+        - Dashboard: dapp-dashboard.md
+        - Governance: dapp-governance.md
+        - Q Vault: dapp-qvault.md
+        - Consensus Services: dapp-consensusservices.md
+        - Saving & Borrowing: dapp-savingborrowing.md
+        - Decentralized Auctions: dapp-decentralizedauctions.md
+        - Time Locks: dapp-timelocks.md
 ```
 
 ## Special HTML Elements

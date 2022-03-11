@@ -2,7 +2,7 @@
 
 ## Install MetaMask
 
-First install the browser add-on 'MetaMask'. After successful installation, add a custom network and enter the Q network configuration details that are documented within [MetaMask tutorial](how_to_install_metamask.md). Finally, create two new accounts so you can later send Q tokens from one to another.
+First install the browser add-on 'MetaMask'. After successful installation, add a custom network and enter the Q network configuration details that are documented within [MetaMask tutorial](how-to-install-metamask.md). Finally, create two new accounts so you can later send Q tokens from one to another.
 
 ## Get your first Q
 
@@ -18,4 +18,4 @@ Within MetaMask, click on "send", then "transfer between my accounts" and select
 
 ## Earn rewards
 
-Now open a new tab and head over to `https://hq.q.org`. If you have MetaMask still activated and connected to Q mainnet, you should be browsing the Q decentralised app that allows users to [excercise governance rights](how_to_exercise_governance_rights.md), [earn rewards on Q tokens](how_to_earn_extra_Q_tokens.md) or do some [saving and borrowing with Q DeFi](how_to_obtain_a_loan_against_a_collateral.md).
+Now open a new tab and head over to `https://hq.q.org`. If you have MetaMask still activated and connected to Q mainnet, you should be browsing the Q decentralised app that allows users to [excercise governance rights](how-to-exercise-governance-rights.md), [earn rewards on Q tokens](how-to-earn-extra-Q-tokens.md) or do some [saving and borrowing with Q DeFi](how-to-obtain-a-loan-against-a-collateral.md).

@@ -2,10 +2,10 @@
 
 You can of course leave your Q token on your wallet alone, but the Q vault opens up a variety of opportunities to utilize your Q assets, that is:
 
-- Earn rewards on Q token deposits (see [here](how_to_earn_extra_Q_tokens) for more details)
-- Lock tokens for voting (see [here](how_to_exercise_governance_rights) for more details)
-- Delegate voting power (see [here](how_to_exercise_governance_rights) for more details)
-- Delegate staking power and earn delegation rewards (see [here](how_to_delegate_to_validator) for more details)
+- Earn rewards on Q token deposits (see [here](how-to-earn-extra-Q-tokens.md) for more details)
+- Lock tokens for voting (see [here](how-to-exercise-governance-rights.md) for more details)
+- Delegate voting power (see [here](how-to-exercise-governance-rights.md) for more details)
+- Delegate staking power and earn delegation rewards (see [here](how-to-delegate-to-validator.md) for more details)
 
 ![Screenshot](img/qvault.png)
 *Screenshot of dApp: Q Vault*

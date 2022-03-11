@@ -4,7 +4,7 @@
 
 OmniBridge is a component that allows to bridge assets from other blockchains (e.g. Ethereum Rinkeby, Ethereum Mainnet, ..) onto Q. This is used for bridging and transferring collaterals for the creation of Q synthetic assets. Due to their role within Q, validators are predisposed to run an OmniBridge instance.
 
-First please make sure you have a running validator node as described [here](how_to_setup_validator.md).
+First please make sure you have a running validator node as described [here](how-to-setup-validator.md).
 
 Also please make sure that you have the private key of the validator account as you need it in the config later. If you have a keystore file, you can use [extract-get-private-key.js + manual](https://gitlab.com/q-dev/mainnet-public-tools/-/tree/master/js-tools) to extract your private key from it.
 

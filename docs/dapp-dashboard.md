@@ -2,7 +2,7 @@
 
 ## What is "Your HQ"?
 
-The easiest way to interact with the Q network is to use the dApp *Your HQ*. It consists of a GUI that is integrated with the Q smart contracts through a JS SDK. It is open source and can be found on the Q project [gitlab](https://gitlab.com/q-dev). One publicly available UI instance is hosted at [https://hq.q.org/](https://hq.q.org/). You will need to have a running MetaMask wallet plug-in before being able to interact with the relevant delegation smart contract through *Your HQ*. Please check the [MetaMask tutorial](how_to_install_metamask.md) first.
+The easiest way to interact with the Q network is to use the dApp *Your HQ*. It consists of a GUI that is integrated with the Q smart contracts through a JS SDK. It is open source and can be found on the Q project [gitlab](https://gitlab.com/q-dev). One publicly available UI instance is hosted at [https://hq.q.org/](https://hq.q.org/). You will need to have a running MetaMask wallet plug-in before being able to interact with the relevant delegation smart contract through *Your HQ*. Please check the [MetaMask tutorial](how-to-install-metamask.md) first.
 
 The following chapters explain the main purpose for each dApp section and give background information on how to interact with Q system.
 
@@ -51,7 +51,7 @@ Block height shows the current blocksize, i.e. the number of validated blocks. R
 
 ### Constitution
 
-Q is based on a legal contract that everyone participating in Q agrees upon: the constitution. It includes rules and responsibilities of all parties. Because it might be subject to change (e.g. through amendments or other text or parameter changes), it is extremely important that everyone knows what the current constitution is. The hash displayed here ensures that everyone can verify the current constitution on his own (see [here](how_to_verify_q_constitution_hash)). Also you are able to download previous constitution versions and compare hashes and their contents.
+Q is based on a legal contract that everyone participating in Q agrees upon: the constitution. It includes rules and responsibilities of all parties. Because it might be subject to change (e.g. through amendments or other text or parameter changes), it is extremely important that everyone knows what the current constitution is. The hash displayed here ensures that everyone can verify the current constitution on his own (see [here](how-to-verify-q-constitution-hash.md)). Also you are able to download previous constitution versions and compare hashes and their contents.
 
 ### Governance
 

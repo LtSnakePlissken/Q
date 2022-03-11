@@ -22,11 +22,11 @@ Since this implies discretionary decisions to be made, a dedicated expert panel 
 
 ## Run a full node
 
-Since the fundamental responsibility of a root node lies in the monitoring of on-chain operations conducted by validators, a root node shall operate its own full node to be able to screen blocks and transactions. Check our [full node tutorial](how_to_setup_fullnode.md) to learn how to set up a full node.
+Since the fundamental responsibility of a root node lies in the monitoring of on-chain operations conducted by validators, a root node shall operate its own full node to be able to screen blocks and transactions. Check our [full node tutorial](how-to-setup-fullnode.md) to learn how to set up a full node.
 
 ## Root Node Stake
 
-To be able to sign transactions with your root node address, you need to import the private key into a compatible wallet application such as [MetaMask](how_to_install_metamask.md). Check this [tutorial](how_to_export_key.md) to learn how to export the private key created during full node installation.
+To be able to sign transactions with your root node address, you need to import the private key into a compatible wallet application such as [MetaMask](how-to-install-metamask.md). Check this [tutorial](how-to-export-key.md) to learn how to export the private key created during full node installation.
 
 Next step is to add Q tokens as stake to show your commitment to the project and put some "skin into the game". Please note that adding stake is optional for root nodes but the more stake you add, the higher the chance you get voted into the panel.
 

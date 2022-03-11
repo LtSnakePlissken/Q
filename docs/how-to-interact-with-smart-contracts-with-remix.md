@@ -2,7 +2,7 @@
 
 ## Requirements
 
-To get started with Remix, you need a MetaMask wallet connected to Q mainnet. You can find detailed instructions on working with MetaMask [here](how_to_install_metamask.md).
+To get started with Remix, you need a MetaMask wallet connected to Q mainnet. You can find detailed instructions on working with MetaMask [here](how-to-install-metamask.md).
 
 ## Remix
 

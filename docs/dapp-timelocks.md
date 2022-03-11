@@ -20,7 +20,7 @@ The time lock mechanism is designed using a 2-step linear release logic. A start
 
 ## Time lock categories
 
-Using the dApp "Your HQ", any Q token holder is able to create a time lock. Simply head to https://hq.q.org and make sure you have the MetaMask plugin  [installed](how_to_install_metamask.md).
+Using the dApp "Your HQ", any Q token holder is able to create a time lock. Simply head to https://hq.q.org and make sure you have the MetaMask plugin  [installed](how-to-install-metamask.md).
 
 Within the advanced mode of "Your HQ", click on "Time Locks" within navigation bar and you will be redirected to the time lock overview page. By default, it shows all existing time locks for your active wallet address (i.e. the one you are currently using for dApp interaction).
 

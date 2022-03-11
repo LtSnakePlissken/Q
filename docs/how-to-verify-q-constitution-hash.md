@@ -4,7 +4,7 @@ The Q constitution is the underlying document for the agreement between Q stakeh
 
 ## Get the current constitution
 
-You can choose the level of trust for the first step: For a minimum reliance on other nodes, setup and run your own Q fullnode and set up MetaMask to be able to interact with Your HQ later (see [fullnode setup tutorial](how_to_setup_fullnode.md) and [MetaMask tutorial](how_to_install_metamask.md)). For a higher level of trust, you can connect to the default node provided in the MetaMask tutorial and follow the discussions in the Q community.
+You can choose the level of trust for the first step: For a minimum reliance on other nodes, setup and run your own Q fullnode and set up MetaMask to be able to interact with Your HQ later (see [fullnode setup tutorial](how-to-setup-fullnode.md) and [MetaMask tutorial](how-to-install-metamask.md)). For a higher level of trust, you can connect to the default node provided in the MetaMask tutorial and follow the discussions in the Q community.
 
 As a next step, visit the ([Your HQ dApp](https://hq.q.org/) and check `Constitution Hash` on the dashboard. This is the hash of the current version. Click on `Download` to get to the latest version and save it. The constitution service provides a file in asciidoc format. This format allows for efficient ways to compare the content of different versions and to calculate the SHA256 hash of it. Further, a human readable format can be obtained by converting to PDF, HTML, etc.
 
@@ -44,4 +44,4 @@ Every update to the content of the current constitution file will change its has
 > **Warning: ** *Windows and UNIX based operation systems use different line ending formats. This will result in different SHA256 hashes, even though the actual content is identical. UNIX based line endings are preffered. If you are on Windows, use a tool like Notepad++ and make sure the correct format is applied. See [this](https://support.nesi.org.nz/hc/en-gb/articles/218032857-Converting-from-Windows-style-to-UNIX-style-line-endings) for a tutorial.*
 
 
-Once you have the updated version and calculated the hash, make the file(s) available for public review and [start a Q constitution update proposal](how_to_exercise_governance_rights.md).
+Once you have the updated version and calculated the hash, make the file(s) available for public review and [start a Q constitution update proposal](how-to-exercise-governance-rights.md).
