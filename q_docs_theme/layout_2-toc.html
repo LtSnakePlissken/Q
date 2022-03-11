@@ -1,0 +1,38 @@
+<div class="toc toc--static@lg position-sticky@lg js-toc">
+
+    <!-- toc mobile -->
+    <button class="reset toc__control padding-sm padding-xs@md no-js:is-hidden js-tab-focus js-toc__control"
+        aria-controls="toc">
+        <span class="toc__control-text">
+            <i class="js-toc__control-label">In this article <span class="sr-only">- press button to select new
+                    section.</span></i>
+            <i aria-hidden="true">Select</i>
+        </span>
+
+        <svg class="icon toc__icon-arrow margin-left-xxxs no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+            <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2">
+                <path d="M3 3l10 10"></path>
+                <path d="M13 3L3 13"></path>
+            </g>
+        </svg>
+    </button>
+
+    <!-- toc -->
+    <nav class="toc__nav">
+        <ul class="toc__list js-toc__list">
+            <li class="toc__label" tabindex="0">In this article</li>
+            {% for toc_item in page.toc %}
+            <li><a class="toc__link js-smooth-scroll" href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+            {% if toc_item.children %}
+            <ul class="toc__list">
+                {% for toc_item in toc_item.children %}
+                <li><a class="toc__link js-smooth-scroll" href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+
+</div>

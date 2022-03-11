@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/dark-mode.js"></script>
+  <title>Tutorials | Documentation template by CodyHouse</title>
+</head>
+<body>
+  <div class="side-template-v3">
+    <!-- mobile header -->
+    <header class="side-template-v3__mobile-header">
+      <div class="container height-100% flex items-center justify-between">
+        <a class="side-template-v3__logo" href="index.html">
+          <svg width="104" height="30" viewBox="0 0 104 30">
+            <title>Go to homepage</title>
+            <path d="M37.54 24.08V3.72h4.92v16.37h8.47v4zM60.47 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8 8 0 015.64-2.18 8.07 8.07 0 015.68 2.2 8.49 8.49 0 012 5.69 8.63 8.63 0 01-1.78 5.38 7.6 7.6 0 01-5.89 2.49zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.79 3-2.79 4.26.32 4.23 2.82 4.23zM95.49 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8.4 8.4 0 0111.31 0 8.43 8.43 0 012 5.69 8.6 8.6 0 01-1.77 5.38 7.6 7.6 0 01-5.89 2.51zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.8 3-2.8 4.26.31 4.23 2.83 4.23zM77.66 30c-5.74 0-7-3.25-7.23-4.52l4.6-.26c.41.91 1.17 1.41 2.76 1.41a2.45 2.45 0 002.82-2.53v-2.68a7 7 0 01-1.7 1.75 6.12 6.12 0 01-5.85-.08c-2.41-1.37-3-4.25-3-6.66 0-.89.12-3.67 1.45-5.42a5.67 5.67 0 014.64-2.4c1.2 0 3 .25 4.46 2.82V8.81h4.85v15.33a5.2 5.2 0 01-2.12 4.32A9.92 9.92 0 0177.66 30zm.15-9.66c2.53 0 2.81-2.69 2.81-3.91s-.31-4-2.81-4-2.81 2.8-2.81 4 .27 3.91 2.81 3.91zM55.56 3.72h9.81v2.41h-9.81z" fill="var(--color-contrast-higher)" />
+            <circle cx="15" cy="15" r="15" fill="var(--color-primary)" />
+          </svg>
+        </a>
+  
+        <button class="btn btn--subtle" aria-controls="sidenav-v3">Menu</button>
+      </div>
+    </header>
+    <!-- end mobile header -->
+  
+    <div class="container max-width-lg">
+      <div class="flex@md items-start@md">
+        <aside id="sidenav-v3" class="sidebar sidebar--static@md js-sidebar">
+          <div class="sidebar__panel flex flex-column">
+            <!-- sidebar header - mobile only -->
+            <header class="sidebar__header bg padding-sm border-bottom z-index-2">
+              <h1 class="text-base font-medium text-truncate">Menu</h1>
+  
+              <button class="reset sidebar__close-btn js-sidebar__close-btn js-tab-focus">
+                <svg class="icon icon--xs" viewBox="0 0 16 16">
+                  <title>Close panel</title>
+                  <g stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                    <line x1="13.5" y1="2.5" x2="2.5" y2="13.5"></line>
+                    <line x1="2.5" y1="2.5" x2="13.5" y2="13.5"></line>
+                  </g>
+                </svg>
+              </button>
+            </header>
+            
+            <!-- sidebar main content -->
+            <div class="position-relative z-index-1 padding-sm padding-left-0@md padding-top-0@md flex-grow@md">
+              <!-- desktop logo  -->
+              <div class="side-template-v3__logo-wrapper padding-top-sm padding-bottom-xxxs padding-left-xxxs margin-bottom-lg bg-dark display@md">
+                <a class="side-template-v3__logo" href="index.html">
+                  <svg width="104" height="30" viewBox="0 0 104 30">
+                    <title>Go to homepage</title>
+                    <path d="M37.54 24.08V3.72h4.92v16.37h8.47v4zM60.47 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8 8 0 015.64-2.18 8.07 8.07 0 015.68 2.2 8.49 8.49 0 012 5.69 8.63 8.63 0 01-1.78 5.38 7.6 7.6 0 01-5.89 2.49zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.79 3-2.79 4.26.32 4.23 2.82 4.23zM95.49 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8.4 8.4 0 0111.31 0 8.43 8.43 0 012 5.69 8.6 8.6 0 01-1.77 5.38 7.6 7.6 0 01-5.89 2.51zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.8 3-2.8 4.26.31 4.23 2.83 4.23zM77.66 30c-5.74 0-7-3.25-7.23-4.52l4.6-.26c.41.91 1.17 1.41 2.76 1.41a2.45 2.45 0 002.82-2.53v-2.68a7 7 0 01-1.7 1.75 6.12 6.12 0 01-5.85-.08c-2.41-1.37-3-4.25-3-6.66 0-.89.12-3.67 1.45-5.42a5.67 5.67 0 014.64-2.4c1.2 0 3 .25 4.46 2.82V8.81h4.85v15.33a5.2 5.2 0 01-2.12 4.32A9.92 9.92 0 0177.66 30zm.15-9.66c2.53 0 2.81-2.69 2.81-3.91s-.31-4-2.81-4-2.81 2.8-2.81 4 .27 3.91 2.81 3.91zM55.56 3.72h9.81v2.41h-9.81z" fill="var(--color-contrast-higher)" />
+                    <circle cx="15" cy="15" r="15" fill="var(--color-primary)" />
+                  </svg>
+                </a>
+              </div>
+              <!-- end desktop logo  -->
+  
+              <!-- mobile only search -->
+              <div class="search-input search-input--icon-left margin-bottom-sm hide@md">
+                <form action="search-results.html">
+                  <input class="search-input__input form-control" type="search" name="search-input" id="search-input" placeholder="Search..." aria-label="Search">
+                
+                  <button class="search-input__btn">
+                    <svg class="icon" viewBox="0 0 20 20"><title>Submit</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="8" cy="8" r="6"/><line x1="12.242" y1="12.242" x2="18" y2="18"/></g></svg>
+                  </button>
+                </form>
+              </div>
+              <!-- end mobile only search -->
+
+              <div class="exsidenav js-exsidenav">
+                <nav class="exsidenav__pop-nav" aria-label="Popular links">
+                  <ul>
+                    <li>
+                      <a class="exsidenav__pop-link" href="index.html">
+                        <svg class="icon" viewBox="0 0 16 16">
+                          <g>
+                            <path d="M14,14H11V12h2V4H11V2h3a1,1,0,0,1,1,1V13A1,1,0,0,1,14,14Z" opacity="0.5"></path>
+                            <path d="M8.584.188a.994.994,0,0,0-.9-.136l-6,2A1,1,0,0,0,1,3V13a1,1,0,0,0,.684.948l6,2A.983.983,0,0,0,8,16a1,1,0,0,0,1-1V1A1,1,0,0,0,8.584.188ZM6,9A1,1,0,1,1,7,8,1,1,0,0,1,6,9Z"></path>
+                          </g>
+                        </svg>
+                        <span>Getting started</span>
+                      </a>
+                    </li>
+  
+                    <li>
+                      <a class="exsidenav__pop-link" href="tutorials.html" aria-current="page">
+                        <svg class="icon" viewBox="0 0 16 16">
+                          <g>
+                            <path d="M2,8h12c0.6,0,1-0.4,1-1V1c0-0.6-0.4-1-1-1H2C1.4,0,1,0.4,1,1v6C1,7.6,1.4,8,2,8z" opacity="0.5"></path>
+                            <path d="M16,10H0v2h4l-1.8,2.4c-0.3,0.4-0.2,1.1,0.2,1.4C2.6,15.9,2.8,16,3,16c0.3,0,0.6-0.1,0.8-0.4 L6.5,12H7v2h2v-2h0.5l2.7,3.6c0.2,0.3,0.5,0.4,0.8,0.4c0.2,0,0.4-0.1,0.6-0.2c0.4-0.3,0.5-1,0.2-1.4L12,12h4V10z"></path>
+                          </g>
+                        </svg>
+                        <span>Tutorials</span>
+                      </a>
+                    </li>
+  
+                    <li>
+                      <a class="exsidenav__pop-link" href="faq.html">
+                        <svg class="icon" viewBox="0 0 16 16">
+                          <g>
+                            <path d="M8,0C3.6,0,0,3.6,0,8s3.6,8,8,8s8-3.6,8-8S12.4,0,8,0z M9,12H7V7h2V12z M8,6C7.4,6,7,5.6,7,5s0.4-1,1-1 s1,0.4,1,1S8.6,6,8,6z"></path>
+                          </g>
+                        </svg>
+                        <span>FAQ</span>
+                      </a>
+                    </li>
+
+                    <li class="hide@md">
+                      <a class="exsidenav__pop-link" href="login.html">
+                        <svg class="icon" viewBox="0 0 16 16">
+                          <path d="M14,0H6A2,2,0,0,0,4,2V4A1,1,0,0,0,6,4V2h8V14H6V12a1,1,0,0,0-2,0v2a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V2A2,2,0,0,0,14,0Z"/>
+                          <path d="M8,11.5a.5.5,0,0,0,.327.469.5.5,0,0,0,.552-.144l3-3.5a.5.5,0,0,0,0-.65l-3-3.5A.5.5,0,0,0,8,4.5V7H1A1,1,0,0,0,1,9H8Z" opacity="0.5"/>
+                        </svg>
+                        <span>Login</span>
+                      </a>
+                    </li>
+
+                    <li class="hide@md">
+                      <a class="exsidenav__pop-link" href="sign-up.html">
+                        <svg class="icon" viewBox="0 0 16 16">
+                          <circle cx="7" cy="3.5" r="3.5"/>
+                          <path d="M15.5,12H14V10.5a.5.5,0,0,0-.5-.5h-1a.5.5,0,0,0-.5.5V12H10.5a.5.5,0,0,0-.5.5v1a.5.5,0,0,0,.5.5H12v1.5a.5.5,0,0,0,.5.5h1a.5.5,0,0,0,.5-.5V14h1.5a.5.5,0,0,0,.5-.5v-1A.5.5,0,0,0,15.5,12Z" opacity="0.5"/>
+                          <path d="M8,13A4.988,4.988,0,0,1,9.469,9.46,6.918,6.918,0,0,0,7,9,7.025,7.025,0,0,0,.027,15.462a.5.5,0,0,0,.5.538h8.5A4.956,4.956,0,0,1,8,13Z"/>
+                        </svg>
+                        <span>Signup</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+  
+                <nav aria-label="Main">
+                  <ul class="exsidenav__list">
+                    <li class="exsidenav__label-wrapper">
+                      <span class="exsidenav__label">API</span>
+                    </li>
+  
+                    <li>
+                      <button class="reset exsidenav__control js-exsidenav__control">
+                        <span>Syntax</span>
+  
+                        <svg class="icon no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+                          <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M3 3l10 10"></path>
+                            <path d="M13 3L3 13"></path>
+                          </g>
+                        </svg>
+                      </button>
+  
+                      <ul class="exsidenav__list">
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Overview</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Structure</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Comments</a>
+                        </li>
+  
+                        <li>
+                          <button class="reset exsidenav__control js-exsidenav__control">
+                            <span>Functions</span>
+  
+                            <svg class="icon no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+                              <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <path d="M3 3l10 10"></path>
+                                <path d="M13 3L3 13"></path>
+                              </g>
+                            </svg>
+                          </button>
+  
+                          <ul class="exsidenav__list">
+                            <li>
+                              <a class="exsidenav__link" href="basic-page.html">expression()</a>
+                            </li>
+  
+                            <li>
+                              <a class="exsidenav__link" href="basic-page.html">url()</a>
+                            </li>
+                          </ul>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Older APIs</a>
+                        </li>
+                      </ul>
+                    </li>
+  
+                    <li>
+                      <button class="reset exsidenav__control js-exsidenav__control">
+                        <span>Interface</span>
+  
+                        <svg class="icon no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+                          <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M3 3l10 10"></path>
+                            <path d="M13 3L3 13"></path>
+                          </g>
+                        </svg>
+                      </button>
+  
+                      <ul class="exsidenav__list">
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Overview</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Inspector</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Timeline</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Toolbar</a>
+                        </li>
+                      </ul>
+                    </li>
+  
+                    <li>
+                      <button class="reset exsidenav__control js-exsidenav__control">
+                        <span>Examples</span>
+  
+                        <svg class="icon no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+                          <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M3 3l10 10"></path>
+                            <path d="M13 3L3 13"></path>
+                          </g>
+                        </svg>
+                      </button>
+  
+                      <ul class="exsidenav__list">
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Overview</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Customers</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Discounts</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Orders</a>
+                        </li>
+                      </ul>
+                    </li>
+  
+                    <li class="exsidenav__label-wrapper">
+                      <span class="exsidenav__label">Testing</span>
+                    </li>
+  
+                    <li>
+                      <button class="reset exsidenav__control js-exsidenav__control">
+                        <span>Invoicing</span>
+  
+                        <svg class="icon no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+                          <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M3 3l10 10"></path>
+                            <path d="M13 3L3 13"></path>
+                          </g>
+                        </svg>
+                      </button>
+  
+                      <ul class="exsidenav__list">
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Overview</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">How invoicing works</a>
+                        </li>
+  
+                        <li class="exsidenav__label-wrapper">
+                          <span class="exsidenav__label">Customers</span>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Managing customers</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Taxes</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            <!-- sidebar footer -->
+            <footer class="side-template-v3__footer margin-top-auto position-sticky bottom-0 z-index-2 padding-x-sm padding-left-0@md">
+              <div class="border-top border-alpha padding-y-xs flex justify-between items-center">
+                <p class="text-sm color-contrast-medium">&copy; MyProject</p>
+
+                <ul class="radio-switch" id="switch-light-dark">
+                  <li class="radio-switch__item">
+                    <input class="radio-switch__input sr-only" type="radio" name="radio-switch-name" id="radio-switch-1" checked value="light">
+                    <label class="radio-switch__label" for="radio-switch-1"><svg class="icon icon--xs" viewBox="0 0 16 16">
+                        <title>Enable light mode</title>
+                        <path d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.414-1.414zM14 7h2v2h-2zM12.95 14.433l-1.415-1.414 1.414-1.414 1.415 1.413zM7 14h2v2H7zM2.98 14.363L1.566 12.95l1.415-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.707L4.465 3.12 3.05 4.535 1.636 3.121z" />
+                        <path d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z" />
+                      </svg></label>
+                  </li>
+                
+                  <li class="radio-switch__item">
+                    <input class="radio-switch__input sr-only" type="radio" name="radio-switch-name" id="radio-switch-2" value="dark">
+                    <label class="radio-switch__label" for="radio-switch-2"><svg class="icon icon--xs" viewBox="0 0 16 16">
+                        <title>Enable dark mode</title>
+                        <path d="M6,0C2.5,0.9,0,4.1,0,7.9C0,12.4,3.6,16,8.1,16c3.8,0,6.9-2.5,7.9-6C9.9,11.7,4.3,6.1,6,0z"></path>
+                      </svg></label>
+                    <div aria-hidden="true" class="radio-switch__marker"></div>
+                  </li>
+                </ul>
+              </div>
+            </footer>
+          </div>
+        </aside>
+  
+        <main class="side-template-v3__main position-relative z-index-1 flex-grow sidebar-loaded:show js-side-template-v3__main">
+          <!-- desktop header -->
+          <header class="side-template-v3__desktop-header display@md">
+            <div class="flex-grow grid gap-md justify-between padding-left-md">
+              <div class="col col-5@lg">
+                <div class="search-input search-input--icon-left autocomplete position-relative js-autocomplete" data-autocomplete-dropdown-visible-class="autocomplete--results-visible">
+                  <form action="search-results.html">
+                    <input autocomplete="off" class="search-input__input form-control js-autocomplete__input" type="search" name="main-search-input" id="main-search-input" placeholder="Start typing 'in'..." aria-label="Search">
+                  
+                    <button class="search-input__btn">
+                      <svg class="icon" viewBox="0 0 20 20"><title>Submit</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="8" cy="8" r="6"/><line x1="12.242" y1="12.242" x2="18" y2="18"/></g></svg>
+                    </button>
+                  </form>
+                
+                  <span class="search-input__shortcut" aria-hidden="true">/</span>
+
+                  <div class="autocomplete__loader position-absolute top-0 right-0 padding-right-xxs height-100% flex items-center" aria-hidden="true">
+                    <div class="circle-loader circle-loader--v1">
+                      <div class="circle-loader__circle"></div>
+                    </div>
+                  </div>
+
+                  <div class="autocomplete__results js-autocomplete__results">
+                    <ul id="autocomplete1" class="autocomplete__list js-autocomplete__list">
+                      <li class="autocomplete__item js-autocomplete__item is-hidden">
+                        <a data-autocomplete-url class="text-decoration-none color-contrast-higher block padding-y-xs padding-x-sm autocomplete__link">
+                          <span class="block" data-autocomplete-label></span>
+                          <span class="block text-xs color-contrast-medium margin-top-xxxxs" data-autocomplete-category></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="sr-only" aria-live="polite" aria-atomic="true"><span class="js-autocomplete__aria-results">0</span> results found.</p>
+                </div>
+              </div>
+
+              <div class="col-content">
+                <ul class="flex gap-sm items-center">
+                  <li><a class="link-subtle" href="login.html">Login</a></li>
+                  <li><a class="btn btn--primary" href="sign-up.html">Signup</a></li>
+                </ul>
+              </div>
+            </div>
+          </header>
+          <!-- end desktop header -->
+
+          <div class="padding-y-md padding-left-md@md">
+            <!-- start main content -->
+            <div class="grid gap-md gap-lg@lg flex-row-reverse@lg">
+              <div class="col-3@lg">
+                <div class="toc toc--static@lg position-sticky@lg js-toc">
+                  <button class="reset toc__control padding-sm padding-xs@md no-js:is-hidden js-tab-focus js-toc__control" aria-controls="toc">
+                    <span class="toc__control-text">
+                      <i class="js-toc__control-label">On this page <span class="sr-only">- press button to select new section.</span></i>
+                      <i aria-hidden="true">Select</i>
+                    </span>
+                
+                    <svg class="icon toc__icon-arrow margin-left-xxxs no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+                      <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M3 3l10 10"></path>
+                        <path d="M13 3L3 13"></path>
+                      </g>
+                    </svg>
+                  </button>
+          
+                  <nav class="toc__nav">
+                    <ul class="toc__list js-toc__list">
+                      <li class="toc__label" tabindex="0">On this page</li>
+                      <li><a class="toc__link js-smooth-scroll" href="#getting-started">Getting started</a></li>
+                      <li><a class="toc__link js-smooth-scroll" href="#elements">Elements</a></li>
+                      <li><a class="toc__link js-smooth-scroll" href="#layout">Layout &amp; Design</a></li>
+                      <li><a class="toc__link js-smooth-scroll" href="#interactions">Interactions</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+  
+              <div class="col-9@lg">
+                <div class="text-component margin-bottom-lg">
+                  <h1>Tutorials</h1>
+                  <p class="color-contrast-medium">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, quia quo? Ea ipsam nemo perspiciatis, quaerat eaque at eum iste.</p>
+                </div>
+
+                <div class="margin-bottom-lg">
+                  <h2 id="getting-started" class="toc-content__target hash-link margin-bottom-sm">Getting started <a class="hash-link__anchor reset js-smooth-scroll" href="#getting-started" aria-hidden="true">#</a></h2>
+
+                  <ul class="grid gap-sm">
+                    <li>
+                      <a class="power-link flex items-center justify-between" href="#0" aria-controls="modal-video-iframe" data-url="https://www.youtube.com/embed/RM3-IMRIEB4" role="button">
+                        <div>
+                          <p>Understanding how browsers render code</p>
+                          <p class="color-contrast-low text-sm margin-top-xxxxs">03:00</p>
+                        </div>
+
+                        <svg class="icon icon--md margin-left-sm" viewBox="0 0 32 32"><g><path d="M16,0C7.178,0,0,7.178,0,16s7.178,16,16,16s16-7.178,16-16S24.822,0,16,0z M23.537,16.844l-11,7 C12.373,23.947,12.187,24,12,24c-0.165,0-0.331-0.041-0.481-0.123C11.199,23.701,11,23.365,11,23V9c0-0.365,0.199-0.701,0.519-0.877 c0.32-0.175,0.71-0.162,1.019,0.033l11,7C23.825,15.34,24,15.658,24,16S23.825,16.66,23.537,16.844z"></path></g></svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="power-link flex items-center justify-between" href="basic-page.html">
+                        <div>
+                          <p>Inspecting website code</p>
+                          <p class="color-contrast-low text-sm margin-top-xxxxs">2 min read</p>
+                        </div>
+
+                        <svg class="icon icon--md margin-left-sm" viewBox="0 0 32 32"><g><path d="M8,28c0,1.103-0.897,2-2,2s-2-0.897-2-2V2h21v21h2V1c0-0.552-0.448-1-1-1H3C2.448,0,2,0.448,2,1v27 c0,2.206,1.794,4,4,4h21c2.206,0,4-1.794,4-4v-3H8V28z"></path><path d="M20,8H9C8.448,8,8,7.552,8,7s0.448-1,1-1h11c0.552,0,1,0.448,1,1S20.552,8,20,8z"></path><path d="M20,14H9c-0.552,0-1-0.448-1-1s0.448-1,1-1h11c0.552,0,1,0.448,1,1S20.552,14,20,14z"></path><path d="M20,20H9c-0.552,0-1-0.448-1-1s0.448-1,1-1h11c0.552,0,1,0.448,1,1S20.552,20,20,20z"></path></g></svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="power-link flex items-center justify-between" href="#0" aria-controls="modal-video-iframe" data-url="https://www.youtube.com/embed/LuIHEev-yVg" role="button">
+                        <div>
+                          <p>Understanding HTML and CSS</p>
+                          <p class="color-contrast-low text-sm margin-top-xxxxs">10:20</p>
+                        </div>
+
+                        <svg class="icon icon--md margin-left-sm" viewBox="0 0 32 32"><g><path d="M16,0C7.178,0,0,7.178,0,16s7.178,16,16,16s16-7.178,16-16S24.822,0,16,0z M23.537,16.844l-11,7 C12.373,23.947,12.187,24,12,24c-0.165,0-0.331-0.041-0.481-0.123C11.199,23.701,11,23.365,11,23V9c0-0.365,0.199-0.701,0.519-0.877 c0.32-0.175,0.71-0.162,1.019,0.033l11,7C23.825,15.34,24,15.658,24,16S23.825,16.66,23.537,16.844z"></path></g></svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="margin-bottom-lg">
+                  <h2 id="elements" class="toc-content__target hash-link margin-bottom-sm">Elements <a class="hash-link__anchor reset js-smooth-scroll" href="#elements" aria-hidden="true">#</a></h2>
+
+                  <ul class="grid gap-sm">
+                    <li>
+                      <a class="power-link flex items-center justify-between" href="#0" aria-controls="modal-video-iframe" data-url="https://www.youtube.com/embed/HqU-MjgKVAI" role="button">
+                        <div>
+                          <p>Add a section</p>
+                          <p class="color-contrast-low text-sm margin-top-xxxxs">03:00</p>
+                        </div>
+
+                        <svg class="icon icon--md margin-left-sm" viewBox="0 0 32 32"><g><path d="M16,0C7.178,0,0,7.178,0,16s7.178,16,16,16s16-7.178,16-16S24.822,0,16,0z M23.537,16.844l-11,7 C12.373,23.947,12.187,24,12,24c-0.165,0-0.331-0.041-0.481-0.123C11.199,23.701,11,23.365,11,23V9c0-0.365,0.199-0.701,0.519-0.877 c0.32-0.175,0.71-0.162,1.019,0.033l11,7C23.825,15.34,24,15.658,24,16S23.825,16.66,23.537,16.844z"></path></g></svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="power-link flex items-center justify-between" href="#0" aria-controls="modal-video-iframe" data-url="https://www.youtube.com/embed/QQZnV-P9VMs" role="button">
+                        <div>
+                          <p>Style a section</p>
+                          <p class="color-contrast-low text-sm margin-top-xxxxs">02:11</p>
+                        </div>
+
+                        <svg class="icon icon--md margin-left-sm" viewBox="0 0 32 32"><g><path d="M16,0C7.178,0,0,7.178,0,16s7.178,16,16,16s16-7.178,16-16S24.822,0,16,0z M23.537,16.844l-11,7 C12.373,23.947,12.187,24,12,24c-0.165,0-0.331-0.041-0.481-0.123C11.199,23.701,11,23.365,11,23V9c0-0.365,0.199-0.701,0.519-0.877 c0.32-0.175,0.71-0.162,1.019,0.033l11,7C23.825,15.34,24,15.658,24,16S23.825,16.66,23.537,16.844z"></path></g></svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="power-link flex items-center justify-between" href="#0" aria-controls="modal-video-iframe" data-url="https://www.youtube.com/embed/vAfaRNQIJ-A" role="button">
+                        <div>
+                          <p>Minimum height</p>
+                          <p class="color-contrast-low text-sm margin-top-xxxxs">10:20</p>
+                        </div>
+
+                        <svg class="icon icon--md margin-left-sm" viewBox="0 0 32 32"><g><path d="M16,0C7.178,0,0,7.178,0,16s7.178,16,16,16s16-7.178,16-16S24.822,0,16,0z M23.537,16.844l-11,7 C12.373,23.947,12.187,24,12,24c-0.165,0-0.331-0.041-0.481-0.123C11.199,23.701,11,23.365,11,23V9c0-0.365,0.199-0.701,0.519-0.877 c0.32-0.175,0.71-0.162,1.019,0.033l11,7C23.825,15.34,24,15.658,24,16S23.825,16.66,23.537,16.844z"></path></g></svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="power-link flex items-center justify-between" href="#0" aria-controls="modal-video-iframe" data-url="https://www.youtube.com/embed/PsES1ecHJhY" role="button">
+                        <div>
+                          <p>Viewport height</p>
+                          <p class="color-contrast-low text-sm margin-top-xxxxs">06:35</p>
+                        </div>
+
+                        <svg class="icon icon--md margin-left-sm" viewBox="0 0 32 32"><g><path d="M16,0C7.178,0,0,7.178,0,16s7.178,16,16,16s16-7.178,16-16S24.822,0,16,0z M23.537,16.844l-11,7 C12.373,23.947,12.187,24,12,24c-0.165,0-0.331-0.041-0.481-0.123C11.199,23.701,11,23.365,11,23V9c0-0.365,0.199-0.701,0.519-0.877 c0.32-0.175,0.71-0.162,1.019,0.033l11,7C23.825,15.34,24,15.658,24,16S23.825,16.66,23.537,16.844z"></path></g></svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="margin-bottom-lg">
+                  <h2 id="layout" class="toc-content__target hash-link margin-bottom-sm">Layout & Design <a class="hash-link__anchor reset js-smooth-scroll" href="#layout" aria-hidden="true">#</a></h2>
+
+                  <ul class="grid gap-sm">
+                    <li>
+                      <a class="power-link flex items-center justify-between" href="#0" aria-controls="modal-video-iframe" data-url="https://www.youtube.com/embed/JlDS3hNB_fg" role="button">
+                        <div>
+                          <p>Add spacing to an element</p>
+                          <p class="color-contrast-low text-sm margin-top-xxxxs">03:00</p>
+                        </div>
+
+                        <svg class="icon icon--md margin-left-sm" viewBox="0 0 32 32"><g><path d="M16,0C7.178,0,0,7.178,0,16s7.178,16,16,16s16-7.178,16-16S24.822,0,16,0z M23.537,16.844l-11,7 C12.373,23.947,12.187,24,12,24c-0.165,0-0.331-0.041-0.481-0.123C11.199,23.701,11,23.365,11,23V9c0-0.365,0.199-0.701,0.519-0.877 c0.32-0.175,0.71-0.162,1.019,0.033l11,7C23.825,15.34,24,15.658,24,16S23.825,16.66,23.537,16.844z"></path></g></svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="power-link flex items-center justify-between" href="#0" aria-controls="modal-video-iframe" data-url="https://www.youtube.com/embed/yYwF39nYhhw" role="button">
+                        <div>
+                          <p>Change spacing units</p>
+                          <p class="color-contrast-low text-sm margin-top-xxxxs">02:11</p>
+                        </div>
+
+                        <svg class="icon icon--md margin-left-sm" viewBox="0 0 32 32"><g><path d="M16,0C7.178,0,0,7.178,0,16s7.178,16,16,16s16-7.178,16-16S24.822,0,16,0z M23.537,16.844l-11,7 C12.373,23.947,12.187,24,12,24c-0.165,0-0.331-0.041-0.481-0.123C11.199,23.701,11,23.365,11,23V9c0-0.365,0.199-0.701,0.519-0.877 c0.32-0.175,0.71-0.162,1.019,0.033l11,7C23.825,15.34,24,15.658,24,16S23.825,16.66,23.537,16.844z"></path></g></svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="power-link flex items-center justify-between" href="#0" aria-controls="modal-video-iframe" data-url="https://www.youtube.com/embed/Vqpy0dntHdk" role="button">
+                        <div>
+                          <p>Add negative margin</p>
+                          <p class="color-contrast-low text-sm margin-top-xxxxs">10:20</p>
+                        </div>
+
+                        <svg class="icon icon--md margin-left-sm" viewBox="0 0 32 32"><g><path d="M16,0C7.178,0,0,7.178,0,16s7.178,16,16,16s16-7.178,16-16S24.822,0,16,0z M23.537,16.844l-11,7 C12.373,23.947,12.187,24,12,24c-0.165,0-0.331-0.041-0.481-0.123C11.199,23.701,11,23.365,11,23V9c0-0.365,0.199-0.701,0.519-0.877 c0.32-0.175,0.71-0.162,1.019,0.033l11,7C23.825,15.34,24,15.658,24,16S23.825,16.66,23.537,16.844z"></path></g></svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="margin-bottom-lg">
+                  <h2 id="interactions" class="toc-content__target hash-link margin-bottom-sm">Interactions <a class="hash-link__anchor reset js-smooth-scroll" href="#interactions" aria-hidden="true">#</a></h2>
+
+                  <ul class="grid gap-sm">
+                    <li>
+                      <a class="power-link flex items-center justify-between" href="#0" aria-controls="modal-video-iframe" data-url="https://www.youtube.com/embed/NlokGlVU1IE" role="button">
+                        <div>
+                          <p>Intro to interactions</p>
+                          <p class="color-contrast-low text-sm margin-top-xxxxs">03:00</p>
+                        </div>
+
+                        <svg class="icon icon--md margin-left-sm" viewBox="0 0 32 32"><g><path d="M16,0C7.178,0,0,7.178,0,16s7.178,16,16,16s16-7.178,16-16S24.822,0,16,0z M23.537,16.844l-11,7 C12.373,23.947,12.187,24,12,24c-0.165,0-0.331-0.041-0.481-0.123C11.199,23.701,11,23.365,11,23V9c0-0.365,0.199-0.701,0.519-0.877 c0.32-0.175,0.71-0.162,1.019,0.033l11,7C23.825,15.34,24,15.658,24,16S23.825,16.66,23.537,16.844z"></path></g></svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="power-link flex items-center justify-between" href="#0" aria-controls="modal-video-iframe" data-url="https://www.youtube.com/embed/A6gYSyiEvjM" role="button">
+                        <div>
+                          <p>Page loader animation</p>
+                          <p class="color-contrast-low text-sm margin-top-xxxxs">02:11</p>
+                        </div>
+
+                        <svg class="icon icon--md margin-left-sm" viewBox="0 0 32 32"><g><path d="M16,0C7.178,0,0,7.178,0,16s7.178,16,16,16s16-7.178,16-16S24.822,0,16,0z M23.537,16.844l-11,7 C12.373,23.947,12.187,24,12,24c-0.165,0-0.331-0.041-0.481-0.123C11.199,23.701,11,23.365,11,23V9c0-0.365,0.199-0.701,0.519-0.877 c0.32-0.175,0.71-0.162,1.019,0.033l11,7C23.825,15.34,24,15.658,24,16S23.825,16.66,23.537,16.844z"></path></g></svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="power-link flex items-center justify-between" href="#0" aria-controls="modal-video-iframe" data-url="https://www.youtube.com/embed/A6gYSyiEvjM" role="button">
+                        <div>
+                          <p>3D movement and parallax</p>
+                          <p class="color-contrast-low text-sm margin-top-xxxxs">10:20</p>
+                        </div>
+
+                        <svg class="icon icon--md margin-left-sm" viewBox="0 0 32 32"><g><path d="M16,0C7.178,0,0,7.178,0,16s7.178,16,16,16s16-7.178,16-16S24.822,0,16,0z M23.537,16.844l-11,7 C12.373,23.947,12.187,24,12,24c-0.165,0-0.331-0.041-0.481-0.123C11.199,23.701,11,23.365,11,23V9c0-0.365,0.199-0.701,0.519-0.877 c0.32-0.175,0.71-0.162,1.019,0.033l11,7C23.825,15.34,24,15.658,24,16S23.825,16.66,23.537,16.844z"></path></g></svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="power-link flex items-center justify-between" href="#0" aria-controls="modal-video-iframe" data-url="https://www.youtube.com/embed/A6gYSyiEvjM" role="button">
+                        <div>
+                          <p>Scroll progress indicator</p>
+                          <p class="color-contrast-low text-sm margin-top-xxxxs">06:35</p>
+                        </div>
+
+                        <svg class="icon icon--md margin-left-sm" viewBox="0 0 32 32"><g><path d="M16,0C7.178,0,0,7.178,0,16s7.178,16,16,16s16-7.178,16-16S24.822,0,16,0z M23.537,16.844l-11,7 C12.373,23.947,12.187,24,12,24c-0.165,0-0.331-0.041-0.481-0.123C11.199,23.701,11,23.365,11,23V9c0-0.365,0.199-0.701,0.519-0.877 c0.32-0.175,0.71-0.162,1.019,0.033l11,7C23.825,15.34,24,15.658,24,16S23.825,16.66,23.537,16.844z"></path></g></svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="power-link flex items-center justify-between" href="#0" aria-controls="modal-video-iframe" data-url="https://www.youtube.com/embed/A6gYSyiEvjM" role="button">
+                        <div>
+                          <p>Reveal on scroll</p>
+                          <p class="color-contrast-low text-sm margin-top-xxxxs">09:11</p>
+                        </div>
+
+                        <svg class="icon icon--md margin-left-sm" viewBox="0 0 32 32"><g><path d="M16,0C7.178,0,0,7.178,0,16s7.178,16,16,16s16-7.178,16-16S24.822,0,16,0z M23.537,16.844l-11,7 C12.373,23.947,12.187,24,12,24c-0.165,0-0.331-0.041-0.481-0.123C11.199,23.701,11,23.365,11,23V9c0-0.365,0.199-0.701,0.519-0.877 c0.32-0.175,0.71-0.162,1.019,0.033l11,7C23.825,15.34,24,15.658,24,16S23.825,16.66,23.537,16.844z"></path></g></svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="margin-y-lg">
+                  <p class="color-contrast-medium text-sm margin-bottom-sm text-right">Last updated: 2022-01-01</p>
+                  <div class="border-top" role="presentation"></div>
+                </div>
+
+                <!-- emoji rating -->
+                <div class="emoji-rate bg-dark radius-md js-emoji-rate">
+                  <div class="padding-md text-center">
+                    <p class="margin-bottom-xs">Was this page helpful?</p>
+                  
+                    <ul class="emoji-rate__list inline-flex gap-xs">
+                      <li>
+                        <input id="emoji-rate-option-no" class="sr-only emoji-rate__native-input" type="radio" name="emoji-rate-options">
+                  
+                        <label class="emoji-rate__custom-input emoji-rate__custom-input--no" for="emoji-rate-option-no">
+                          <span class="sr-only">No</span>
+                  
+                          <svg class="emoji-rate__icon" viewBox="0 0 40 40" aria-hidden="true">
+                            <circle id="emoji-rate-no-bg" cx="20" cy="20" r="20" fill="var(--color-contrast-lower)" />
+                            <g id="emoji-rate-no-eyes">
+                              <circle cx="11.5" cy="19.5" r="2.5" fill="currentColor" />
+                              <path d="M7,15a18.059,18.059,0,0,0,4,2,18.06,18.06,0,0,0,5,1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                              <circle cx="28.5" cy="19.5" r="2.5" fill="currentColor" />
+                              <path d="M33,15a18.059,18.059,0,0,1-4,2,18.06,18.06,0,0,1-5,1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            </g>
+                            <path id="emoji-rate-no-mouth" d="M16,29a5,5,0,0,1,8,0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                          </svg>
+                        </label>
+                      </li>
+                  
+                      <li>
+                        <input id="emoji-rate-option-partially" class="sr-only emoji-rate__native-input" type="radio" name="emoji-rate-options">
+                  
+                        <label class="emoji-rate__custom-input emoji-rate__custom-input--partially" for="emoji-rate-option-partially">
+                          <span class="sr-only">Partially</span>
+                  
+                          <svg class="emoji-rate__icon" viewBox="0 0 40 40" aria-hidden="true">
+                            <circle id="emoji-rate-partially-bg" cx="20" cy="20" r="20" fill="var(--color-contrast-lower)" />
+                            <g id="emoji-rate-partially-eyes">
+                              <circle cx="11.5" cy="19.5" r="2.5" fill="currentColor" />
+                              <circle cx="28.5" cy="19.5" r="2.5" fill="currentColor" />
+                            </g>
+                            <line id="emoji-rate-partially-mouth" x1="15" y1="28" x2="25" y2="28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                          </svg>
+                        </label>
+                  
+                        <svg class="emoji-rate__hand-icon" viewBox="0 0 40 40" aria-hidden="true">
+                          <path id="emoji-rate-partially-hand" d="M17.279,28.031,4.323,29.1l-.33-3.986a2,2,0,0,0-3.986.33l.825,9.966a5.005,5.005,0,0,0,5.4,4.57l3.987-.33a3,3,0,0,0,2.742-3.237l-.33-3.986,4.983-.413a2,2,0,1,0-.33-3.986Z" fill="#e2ac4b"/>
+                        </svg>
+                      </li>
+                  
+                      <li>
+                        <input id="emoji-rate-option-yes" class="sr-only emoji-rate__native-input" type="radio" name="emoji-rate-options">
+                  
+                        <label class="emoji-rate__custom-input emoji-rate__custom-input--yes" for="emoji-rate-option-yes">
+                          <span class="sr-only">Yes</span>
+                  
+                          <svg class="emoji-rate__icon" viewBox="0 0 40 40" aria-hidden="true">
+                            <circle id="emoji-rate-yes-bg" cx="20" cy="20" r="20" fill="var(--color-contrast-lower)" />
+                            <g id="emoji-rate-yes-eyes">
+                              <path d="M9,19a3,3,0,0,1,6,0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                              <path d="M31,19a3,3,0,0,0-6,0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            </g>
+                            <g id="emoji-rate-yes-mouth">
+                              <path d="M26,25H14a1,1,0,0,0-1,1,7,7,0,0,0,14,0A1,1,0,0,0,26,25Z" fill="currentColor" />
+                              <path id="emoji-rate-yes-tongue" d="M20,29a9.942,9.942,0,0,0-5.317,1.541,6.978,6.978,0,0,0,10.634,0A9.942,9.942,0,0,0,20,29Z" fill="var(--color-contrast-medium)" />
+                            </g>
+                          </svg>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                
+                  <div class="overflow-hidden padding-bottom-md padding-x-md is-hidden js-emoji-rate__comment">
+                    <label class="inline-block text-sm color-contrast-medium margin-bottom-xs" for="emoji-rate-msg">Share your feedback:</label>
+                
+                    <textarea class="form-control width-100%" rows="4" name="emoji-rate-msg" id="emoji-rate-msg"></textarea>
+                
+                    <div class="margin-top-xs text-right">
+                      <input class="btn btn--primary" type="button" value="Submit">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- previous/next articles -->
+                <div class="padding-top-md">
+                  <ul class="grid">
+                    <li class="col-6">
+                      <a class="text-decoration-none inline-block hover:reduce-opacity" href="basic-page.html">
+                        <p class="color-contrast-medium text-sm">&larr; Previous</p>
+                        <p>Inspector Basics</p>
+                      </a>
+                    </li>
+  
+                    <li class="col-6 text-right">
+                      <a class="text-decoration-none inline-block hover:reduce-opacity" href="basic-page.html">
+                        <p class="color-contrast-medium text-sm">Next &rarr;</p>
+                        <p>Timeline API</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- end main content -->
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- modal video -->
+    <div class="modal modal--is-loading flex flex-center bg-black bg-opacity-90% padding-x-md js-modal" id="modal-video-iframe">
+      <div class="modal__content width-100% max-width-md max-height-100% overflow-auto shadow-md" role="alertdialog" aria-labelledby="modal-video-iframe-title" aria-describedby="">
+
+        <p class="sr-only" id="modal-video-iframe-title">A video is being shown</p>
+
+        <figure class="aspect-ratio-16:9">
+          <iframe src="" class="js-modal-video__media" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </figure>
+      </div>
+
+      <div class="modal__loader" aria-hidden="true">
+        <svg class="icon icon--lg color-bg icon--is-spinning">
+          <path d="M24,48A24,24,0,1,1,48,24,24.027,24.027,0,0,1,24,48ZM24,4A20,20,0,1,0,44,24,20.023,20.023,0,0,0,24,4Z" opacity="0.4"></path>
+          <path d="M48,24H44A20.023,20.023,0,0,0,24,4V0A24.028,24.028,0,0,1,48,24Z"></path>
+        </svg>
+      </div>
+
+      <button class="reset modal__close-btn modal__close-btn--outer  js-modal__close js-tab-focus">
+        <svg class="icon icon--sm" viewBox="0 0 24 24">
+          <title>Close modal window</title>
+          <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="3" x2="21" y2="21" />
+            <line x1="21" y1="3" x2="3" y2="21" />
+          </g>
+        </svg>
+      </button>
+    </div>
+  </div>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>

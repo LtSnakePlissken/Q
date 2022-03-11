@@ -1,0 +1,14 @@
+<footer
+    class="side-template-v3__footer margin-top-auto bottom-0 z-index-2 padding-x-md padding-left-0@md">
+    <div class="border-top border-alpha padding-y-sm flex justify-between items-center">
+        
+
+        {% if config.theme.layout.copyright %}
+        <p class="text-sm color-contrast-medium">&copy; {{ build_date_utc.strftime('%Y') }} – {{ config.theme.text_variables.project_name }}</p>
+        {% endif %}
+
+        {% if config.theme.layout.theme_switch %}
+        {% include "layout_2-theme_switch.html" %}
+        {% endif %}
+    </div>
+</footer>

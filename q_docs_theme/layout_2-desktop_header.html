@@ -1,0 +1,60 @@
+<header class="side-template-v3__desktop-header display@md">
+    <div class="flex-grow grid gap-md justify-between padding-left-md">
+        <div class="col col-5@lg">
+            {% if config.theme.layout.search %}
+            <div class="search-input search-input--icon-left autocomplete position-relative js-autocomplete"
+                data-autocomplete-dropdown-visible-class="autocomplete--results-visible">
+                <form action="search-results.html">
+                    <input autocomplete="off" class="search-input__input form-control js-autocomplete__input"
+                        type="search" name="main-search-input" id="main-search-input" placeholder="Start typing 'in'..."
+                        aria-label="Search">
+
+                    <button class="search-input__btn">
+                        <svg class="icon" viewBox="0 0 20 20">
+                            <title>Submit</title>
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2">
+                                <circle cx="8" cy="8" r="6" />
+                                <line x1="12.242" y1="12.242" x2="18" y2="18" />
+                            </g>
+                        </svg>
+                    </button>
+                </form>
+
+                <span class="search-input__shortcut" aria-hidden="true">/</span>
+
+                <div class="autocomplete__loader position-absolute top-0 right-0 padding-right-xxs height-100% flex items-center"
+                    aria-hidden="true">
+                    <div class="circle-loader circle-loader--v1">
+                        <div class="circle-loader__circle"></div>
+                    </div>
+                </div>
+
+                <div class="autocomplete__results js-autocomplete__results">
+                    <ul id="autocomplete1" class="autocomplete__list js-autocomplete__list">
+                        <li class="autocomplete__item js-autocomplete__item is-hidden">
+                            <a data-autocomplete-url
+                                class="text-decoration-none color-contrast-higher block padding-y-xs padding-x-sm autocomplete__link">
+                                <span class="block" data-autocomplete-label></span>
+                                <span class="block text-xs color-contrast-medium margin-top-xxxxs"
+                                    data-autocomplete-category></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="sr-only" aria-live="polite" aria-atomic="true"><span
+                        class="js-autocomplete__aria-results">0</span> results found.</p>
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="col-content">
+            <ul class="flex gap-sm items-center">
+                <li><a class="btn btn--subtle" href="login.html">Login</a></li>
+                <li><a class="btn" href="sign-up.html">Signup</a></li>
+            </ul>
+        </div>
+        
+    </div>
+</header>

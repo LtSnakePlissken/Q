@@ -1,0 +1,22 @@
+
+
+{% if nav_item.children %}
+<!-- Items ohne Link -->
+<li class="exsidenav__label-wrapper">
+    <span class="exsidenav__label">{{ nav_item.title }}</span>
+    {% for nav_item in nav_item.children %}
+        {% include "layout_1-nav_sidebar_sub.html" %}
+    {% endfor %}
+</li>
+{% else %}
+
+<!-- Link ohne children -->
+<li {% if nav_item.active %}class="active"{% endif %}>
+    <!-- Links Level 1 -->
+    <a class="exsidenav__link" href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
+</li>
+
+{% endif %}
+
+
+

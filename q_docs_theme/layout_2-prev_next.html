@@ -1,0 +1,45 @@
+<!-- Start: Next / Prev -->
+{% if page.next_page or page.previous_page %}
+<div class="margin-top-lg padding-y-md border-top border-alpha">
+    <ul class="grid">
+        <li class="col-6">
+        {% if page.previous_page %}
+        <a class="pn-link text-decoration-none inline-block" href="{{ page.previous_page.url|url }}">
+        {% else %}
+        <a class="pn-link disabled text-decoration-none inline-block">
+        {% endif %}
+            <p class="color-contrast-medium text-xs text-uppercase letter-spacing-lg">Previous Article</p>
+            <p>{% if page.previous_page %}
+                {{ page.previous_page.title }}
+                {% else %}
+                You are at the beginning
+                {% endif %}</p>
+        {% if page.previous_page %}
+        </a>
+        {% else %}
+        </a>
+        {% endif %}
+        </li>
+
+        <li class="col-6 text-right">
+        {% if page.next_page %}
+        <a class="text-decoration-none inline-block" href="{{ page.next_page.url|url }}">
+        {% else %}
+        <a class="pn-link disabled text-decoration-none inline-block">
+        {% endif %}
+            <p class="color-contrast-medium text-xs text-uppercase letter-spacing-lg">Next Article</p>
+            <p>{% if page.next_page %}
+                {{ page.next_page.title }}
+                {% else %}
+                You reached the end
+                {% endif %}</p>
+        {% if page.next_page %}
+        </a>
+        {% else %}
+        </a>
+        {% endif %}
+        </li>
+    </ul>
+</div>
+{% endif %}
+<!-- END: Next / Prev -->

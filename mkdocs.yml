@@ -1,38 +1,89 @@
-site_name: Q Documentation
-site_url: https://pages.gitlab.io/mkdocs
+# Global site config
+site_name: Q Testnet Documentation
+site_url: https://docs.qtestnet.org
 site_dir: public
+use_directory_urls: true
+
+
+# Theme config
+theme:
+    name: null
+    custom_dir: 'q_docs_theme/'
+    include_search_page: true # Instructs the search plugin to include the search.html template
+    search_index_only: false
+    static_templates:
+      - 404.html
+    highlightjs: true
+    hljs_languages: []
+    navigation_depth: 4
+    analytics:
+      gtag: null
+      anonymize_ip: false
+    text_variables:
+      project_name: '<span>Q Foundation</span>' # HTML allowed
+    layout:
+      type: 2
+      toc: true
+      meta: false
+      menu_footer: true
+      copyright: true
+      prev_next: true
+      community_links: true
+      # 👇 👇 👇 work in progress
+      search: false # wip
+      popular_links: false # wip
+      desktop_header: false # wip
+      breadcrumbs: false # wip
+      theme_switch: false # wip
+      # 👆 👆 👆 work in progress
+
+# Plugin config
+plugins: ['search'] # Enables plugins; default: search
+
+# MD Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - tables
+  - footnotes
+  - attr_list
+  - def_list
+  - md_in_html
+  - fenced_code
+  - sane_lists
+  # - nl2br
+
+
+# Navigation config
 nav:
     - Introduction:
-      - What is Q?: index.md
-    - Tutorials:
+      - What is Q? : index.md
+      - Test Intro Page: example-page-for-q.md
       - Q onboarding in 5 minutes : five_minutes.md
-      - Install and setup MetaMask : how_to_install_metamask.md
-      - Use the Q mobile wallet : how_to_install_q_wallet.md
-      - Delegate Q to a validator : how_to_delegate_to_validator.md
-      - Exercise your governance rights : how_to_exercise_governance_rights.md
-      - Become a root node : how_to_become_a_root_node.md
-      - Layer 0 governance of root nodes: layer0_governance.md
-      - Become an expert in an expert panel : how_to_be_an_expert_in_expert_panel.md
-      - Earn extra Q tokens : how_to_earn_extra_Q_tokens.md
-      - Obtain a loan against a collateral : how_to_obtain_a_loan_against_a_collateral.md
-      - Verify and update the Q constitution: how_to_verify_q_constitution_hash.md
+    - Tutorials:
+      - Basic Setup:
+        - Install and setup MetaMask : how_to_install_metamask.md
+        - Use the Q mobile wallet : how_to_install_q_wallet.md
+        - Delegate Q to a validator : how_to_delegate_to_validator.md
+        - Exercise your governance rights : how_to_exercise_governance_rights.md
+        - Become a root node : how_to_become_a_root_node.md
+        - Layer 0 governance of root nodes: layer0_governance.md
+        - Become an expert in an expert panel : how_to_be_an_expert_in_expert_panel.md
+        - Earn extra Q tokens : how_to_earn_extra_Q_tokens.md
+        - Obtain a loan against a collateral : how_to_obtain_a_loan_against_a_collateral.md
+        - Verify and update the Q constitution: how_to_verify_q_constitution_hash.md
+      - Technical How To's:
+        - Setup a Q fullnode : how_to_setup_fullnode.md
+        - Setup a validator node : how_to_setup_validator.md
+        - Setup the token OmniBridge : how_to_setup_omnibridge.md
+        - Interact with smart contracts : how_to_interact_with_smart_contracts_with_remix.md
+        - Export private key: how_to_export_key.md
     - Your HQ dApp:
-      - Dashboard: dapp_dashboard.md
-      - Governance: dapp_governance.md
-      - Q Vault: dapp_qvault.md
-      - Consensus Services: dapp_consensusservices.md
-      - Saving & Borrowing: dapp_savingborrowing.md
-      - Decentralized Auctions: dapp_decentralizedauctions.md
-      - Time Locks: dapp_timelocks.md
-    - Technical How To's:
-      - Setup a Q fullnode : how_to_setup_fullnode.md
-      - Setup a validator node : how_to_setup_validator.md
-      - Setup a Root Node: how_to_setup_rootnode.md
-      - Setup the token OmniBridge : how_to_setup_omnibridge.md
-      - Setup Sentry Node: how-to-setup-sentry-node.md
-      - Use clef to unlock account with prompt: clef-tutorial.md
-      - Interact with smart contracts : how_to_interact_with_smart_contracts_with_remix.md
-      - Purge validator slashings : how_to_purge_vn_slashings.md
-      - Export private key: how_to_export_key.md
-      - Unlock Account: how-to-unlock-account.md
-theme: readthedocs
+      - Overview:
+        - Dashboard: dapp_dashboard.md
+        - Governance: dapp_governance.md
+        - Q Vault: dapp_qvault.md
+        - Consensus Services: dapp_consensusservices.md
+        - Saving & Borrowing: dapp_savingborrowing.md
+        - Decentralized Auctions: dapp_decentralizedauctions.md
+        - Time Locks: dapp_timelocks.md

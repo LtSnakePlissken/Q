@@ -1,0 +1,29 @@
+
+{% if nav_item.children %}
+<!-- Link mit aufklappen -->
+<li>
+    <button class="reset exsidenav__control js-exsidenav__control" {% if nav_item.active %}aria-expanded="true"{% endif %}>
+        <span>{{ nav_item.title }}</span>
+        <svg class="icon no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+        <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M3 3l10 10"></path>
+            <path d="M13 3L3 13"></path>
+        </g>
+        </svg>
+    </button>
+
+    <ul class="exsidenav__list">
+        {% for nav_item in nav_item.children %}
+            {% include "layout_2-nav_sidebar.html" %}
+        {% endfor %}
+    </ul>
+</li>
+{% else %}
+
+<!-- Link ohne children -->
+<li {% if nav_item.active %}class="active"{% endif %}>
+    <!-- Links Level 1 -->
+    <a class="exsidenav__link lvl-1" href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
+</li>
+
+{% endif %}

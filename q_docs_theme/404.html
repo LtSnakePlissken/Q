@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>404 Page not found — {{ config.site_name }}</title>
+    <meta name="robots" content="index,follow"/>
+    {% block favicon_set %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "assets/img/favicon/apple-touch-icon.png?v=1.6"|url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "assets/img/favicon/favicon-32x32.png?v=1.6"|url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "assets/img/favicon/favicon-16x16.png?v=1.6"|url }}">
+    <link rel="manifest" href="{{ "assets/img/favicon/site.webmanifest?v=1.6"|url }}">
+    <link rel="mask-icon" color="#0b2545" href="{{ "assets/img/favicon/safari-pinned-tab.svg?v=1.6"|url }}">
+    <link rel="shortcut icon" href="{{ "assets/img/favicon/favicon.ico?v=1.6"|url }}">
+    <meta name="msapplication-config" content="{{ "assets/img/favicon/browserconfig.xml?v=1.6"|url }}">
+    <meta name="msapplication-TileColor" content="#0b2545">
+    <meta name="theme-color" content="#0b2545">
+    {% endblock %}
+
+    {%- block styles %}
+        {%- if config.theme.highlightjs %}
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-light.min.css" /> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css" />
+        {%- endif %}
+        <link rel="stylesheet" href="{{ 'assets/css/style.css'|url }}" />
+        {%- for path in extra_css %}
+            <link href="{{ path }}" rel="stylesheet" />
+        {%- endfor %}
+    {%- endblock %}
+
+    {%- block libs %}
+        {% if page %}
+        <script>
+            // Current page data
+            var mkdocs_page_name = {{ page.title|tojson }};
+            var mkdocs_page_input_path = {{ page.file.src_path|string|tojson }};
+            var mkdocs_page_url = {{ page.abs_url|tojson }};
+        </script>
+        {% endif %}
+        <script src="{{ 'assets/js/libs/jquery-3.6.0.min.js'|url }}" defer></script>
+        <script src="{{ 'assets/js/dark-mode.js'|url }}"></script>
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha512-UDJtJXfzfsiPPgnI5S1000FPLBHMhvzAMX15I+qG2E2OAzC9P1JzUwJOfnypXiOH7MRPaqzhPbBGDNNj7zBfoA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <![endif]-->
+        {%- if config.theme.highlightjs %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+        {%- for lang in config.theme.hljs_languages %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/{{lang}}.min.js"></script>
+        {%- endfor %}
+        <script>hljs.initHighlightingOnLoad();</script>
+        {%- endif %}
+    {%- endblock %}
+
+    {%- block extrahead %}
+    {% endblock %}
+
+    {%- block analytics %}
+        {%- if config.theme.analytics.gtag %}
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.theme.analytics.gtag }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '{{ config.theme.analytics.gtag }}'{%- if config.theme.analytics.anonymize_ip %}, {'anonymize_ip': true}{%- endif %});
+        </script>
+        {%- elif config.google_analytics %}
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', '{{ config.google_analytics[0] }}', '{{ config.google_analytics[1] }}');
+            {%- if config.theme.analytics.anonymize_ip %}ga('set', 'anonymizeIp', true);{%- endif %}
+            ga('send', 'pageview');
+        </script>
+        {% endif %}
+    {%- endblock %}
+
+
+    <!--
+    MkDocs version      : {{ mkdocs_version }}
+    Docs Build Date UTC : {{ build_date_utc }}
+    --> 
+</head>
+<body class="bg-primary min-height-100vh flex flex-center padding-md">
+
+  <section class="fof">
+    <div class="container max-width-sm">
+      <div class="text-component text-center margin-bottom-lg">
+        <h1>Page not found</h1>
+        <p>Sorry, but the page you were looking for could not be found.</p>
+        <p><a class="link" href="{{ nav.homepage.url|url }}">Go to homepage</a> or <a href="https://q.org">visit our website</a>.</p>
+      </div>
+  
+      <div class="fof__animation" aria-lable="404 animation">
+        <svg id="i-fof" viewBox="0 0 520 450"><g id="i-fof-ship"><path id="i-fof-capsule" d="M260,9a53,53,0,0,0-53,53H313A53,53,0,0,0,260,9Z" fill="var(--color-contrast-lower)"/><path id="i-fof-ship-top" d="M448,73H72s78-37,188-37S448,73,448,73Z" fill="var(--color-contrast-low)"/><path id="i-fof-ship-bottom" d="M448,73A1185.633,1185.633,0,0,0,72,73c80.173,34.484,144.2,37,188,37C370,110,448,73,448,73Z" fill="var(--color-contrast-high)"/></g><g id="i-fof-browser"><rect id="i-fof-browser-canvas" x="179" y="243" width="160" height="109" rx="6" transform="translate(131.361 -75.723) rotate(22.162)" fill="var(--color-contrast-higher)"/><g id="i-fof-browser-dots" fill="var(--color-bg)"><circle cx="211.713" cy="228.029" r="3"/><circle cx="221.9" cy="232.179" r="3"/><circle cx="232.088" cy="236.328" r="3"/></g><rect id="i-fof-browser-body" x="180.737" y="258.557" width="152" height="89" rx="2" transform="translate(133.29 -74.459) rotate(22.162)" fill="var(--color-bg)"/><g id="i-fof-emoji"><path d="M248.626,322.968A22,22,0,1,1,277.3,310.893,22,22,0,0,1,248.626,322.968Z" fill="#ffd764"/><path d="M264.3,311a7,7,0,1,1,9.124-3.843A7,7,0,0,1,264.3,311Z" fill="#fff"/><path d="M245.778,303.452a7,7,0,1,1,9.123-3.842A7,7,0,0,1,245.778,303.452Z" fill="#fff"/><path d="M258.5,317.274l-12.966-5.281a1,1,0,0,1,.755-1.853l12.966,5.282a1,1,0,0,1-.755,1.852Z" fill="#444"/><path d="M247.287,299.747a3,3,0,1,1,3.91-1.646A3,3,0,0,1,247.287,299.747Z" fill="#444"/><path d="M265.809,307.292a3,3,0,1,1,3.91-1.647A3,3,0,0,1,265.809,307.292Z" fill="#444"/></g></g><polygon id="i-fof-radar-body" points="415 410 105 410 196 106 324 106 415 410" fill="#4ad36b" opacity="0.5"/><ellipse id="i-fof-radar-bottom" cx="260" cy="410" rx="155" ry="28" fill="#4ad36b"/><ellipse id="i-fof-shadow" cx="282" cy="410" rx="72" ry="10" opacity="0.4" fill="var(--color-black)"/><ellipse id="i-fof-radar-top" cx="260" cy="106" rx="64" ry="6" fill="#4ad36b"/></svg>
+      </div>
+    </div>
+  </section>
+
+    {%- block scripts %}
+        <script>var base_url = '{{ base_url }}';</script>
+        <script src="{{ 'assets/js/scripts.js'|url }}" defer></script>
+        {%- for path in extra_javascript %}
+        <script src="{{ path }}" defer></script>
+        {%- endfor %}
+        <script defer>
+            
+        </script>
+    {%- endblock %}
+    
+</body>
+</html>
+</html>

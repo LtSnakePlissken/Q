@@ -1,0 +1,15 @@
+<nav class="toc__nav margin-bottom-md">
+    <ul class="toc__list js-toc__list">
+        <li class="toc__label" tabindex="0">In this article</li>
+        {% for toc_item in page.toc %}
+        <li><a class="toc__link js-smooth-scroll" href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+        {% if toc_item.children %}
+        <ul class="toc__list">
+            {% for toc_item in toc_item.children %}
+            <li><a class="toc__link js-smooth-scroll" href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</nav>

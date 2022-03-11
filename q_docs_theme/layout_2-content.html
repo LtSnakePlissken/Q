@@ -1,0 +1,37 @@
+
+
+<div class="side-template-v3__main position-relative z-index-1 flex-grow padding-y-sm padding-left-sm@md max-width-adaptive-md">
+  <div class="grid gap-md flex-row-reverse@md">
+    <div class="col-3@md">
+      <div class="toc toc--static@md position-sticky@md js-toc">
+        <button class="reset toc__control padding-sm no-js:is-hidden js-tab-focus js-toc__control" aria-controls="toc">
+          <span class="toc__control-text">
+            <i class="js-toc__control-label">In this article <span class="sr-only">- press button to select new section.</span></i>
+            <i aria-hidden="true">Select</i>
+          </span>
+      
+          <svg class="toc__icon-arrow icon icon--xs margin-left-xxxs no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+            <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <path d="M3 3l10 10"></path>
+              <path d="M13 3L3 13"></path>
+            </g>
+          </svg>
+        </button>
+
+        {% include "toc.html" %}
+
+      </div>
+    </div>
+    
+    <div class="col-9@md">
+      <!-- start main content -->
+      <main class="text-component article toc-content js-toc-content">
+        {{ page.content }}
+      </main>
+      <!-- end main content -->
+      {% include "layout_2-next_prev.html" %}
+    </div>
+  </div>
+</div>
+
+

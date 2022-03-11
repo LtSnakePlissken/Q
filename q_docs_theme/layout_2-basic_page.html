@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/dark-mode.js"></script>
+  <title>Basic Page | Documentation template by CodyHouse</title>
+</head>
+<body>
+  <div class="side-template-v3">
+    <!-- mobile header -->
+    <header class="side-template-v3__mobile-header">
+      <div class="container height-100% flex items-center justify-between">
+        <a class="side-template-v3__logo" href="index.html">
+          <svg width="104" height="30" viewBox="0 0 104 30">
+            <title>Go to homepage</title>
+            <path d="M37.54 24.08V3.72h4.92v16.37h8.47v4zM60.47 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8 8 0 015.64-2.18 8.07 8.07 0 015.68 2.2 8.49 8.49 0 012 5.69 8.63 8.63 0 01-1.78 5.38 7.6 7.6 0 01-5.89 2.49zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.79 3-2.79 4.26.32 4.23 2.82 4.23zM95.49 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8.4 8.4 0 0111.31 0 8.43 8.43 0 012 5.69 8.6 8.6 0 01-1.77 5.38 7.6 7.6 0 01-5.89 2.51zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.8 3-2.8 4.26.31 4.23 2.83 4.23zM77.66 30c-5.74 0-7-3.25-7.23-4.52l4.6-.26c.41.91 1.17 1.41 2.76 1.41a2.45 2.45 0 002.82-2.53v-2.68a7 7 0 01-1.7 1.75 6.12 6.12 0 01-5.85-.08c-2.41-1.37-3-4.25-3-6.66 0-.89.12-3.67 1.45-5.42a5.67 5.67 0 014.64-2.4c1.2 0 3 .25 4.46 2.82V8.81h4.85v15.33a5.2 5.2 0 01-2.12 4.32A9.92 9.92 0 0177.66 30zm.15-9.66c2.53 0 2.81-2.69 2.81-3.91s-.31-4-2.81-4-2.81 2.8-2.81 4 .27 3.91 2.81 3.91zM55.56 3.72h9.81v2.41h-9.81z" fill="var(--color-contrast-higher)" />
+            <circle cx="15" cy="15" r="15" fill="var(--color-primary)" />
+          </svg>
+        </a>
+  
+        <button class="btn btn--subtle" aria-controls="sidenav-v3">Menu</button>
+      </div>
+    </header>
+    <!-- end mobile header -->
+  
+    <div class="container max-width-lg">
+      <div class="flex@md items-start@md">
+        <aside id="sidenav-v3" class="sidebar sidebar--static@md js-sidebar">
+          <div class="sidebar__panel flex flex-column">
+            <!-- sidebar header - mobile only -->
+            <header class="sidebar__header bg padding-sm border-bottom z-index-2">
+              <h1 class="text-base font-medium text-truncate">Menu</h1>
+  
+              <button class="reset sidebar__close-btn js-sidebar__close-btn js-tab-focus">
+                <svg class="icon icon--xs" viewBox="0 0 16 16">
+                  <title>Close panel</title>
+                  <g stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                    <line x1="13.5" y1="2.5" x2="2.5" y2="13.5"></line>
+                    <line x1="2.5" y1="2.5" x2="13.5" y2="13.5"></line>
+                  </g>
+                </svg>
+              </button>
+            </header>
+            
+            <!-- sidebar main content -->
+            <div class="position-relative z-index-1 padding-sm padding-left-0@md padding-top-0@md flex-grow@md">
+              <!-- desktop logo  -->
+              <div class="side-template-v3__logo-wrapper padding-top-sm padding-bottom-xxxs padding-left-xxxs margin-bottom-lg bg-dark display@md">
+                <a class="side-template-v3__logo" href="index.html">
+                  <svg width="104" height="30" viewBox="0 0 104 30">
+                    <title>Go to homepage</title>
+                    <path d="M37.54 24.08V3.72h4.92v16.37h8.47v4zM60.47 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8 8 0 015.64-2.18 8.07 8.07 0 015.68 2.2 8.49 8.49 0 012 5.69 8.63 8.63 0 01-1.78 5.38 7.6 7.6 0 01-5.89 2.49zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.79 3-2.79 4.26.32 4.23 2.82 4.23zM95.49 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8.4 8.4 0 0111.31 0 8.43 8.43 0 012 5.69 8.6 8.6 0 01-1.77 5.38 7.6 7.6 0 01-5.89 2.51zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.8 3-2.8 4.26.31 4.23 2.83 4.23zM77.66 30c-5.74 0-7-3.25-7.23-4.52l4.6-.26c.41.91 1.17 1.41 2.76 1.41a2.45 2.45 0 002.82-2.53v-2.68a7 7 0 01-1.7 1.75 6.12 6.12 0 01-5.85-.08c-2.41-1.37-3-4.25-3-6.66 0-.89.12-3.67 1.45-5.42a5.67 5.67 0 014.64-2.4c1.2 0 3 .25 4.46 2.82V8.81h4.85v15.33a5.2 5.2 0 01-2.12 4.32A9.92 9.92 0 0177.66 30zm.15-9.66c2.53 0 2.81-2.69 2.81-3.91s-.31-4-2.81-4-2.81 2.8-2.81 4 .27 3.91 2.81 3.91zM55.56 3.72h9.81v2.41h-9.81z" fill="var(--color-contrast-higher)" />
+                    <circle cx="15" cy="15" r="15" fill="var(--color-primary)" />
+                  </svg>
+                </a>
+              </div>
+              <!-- end desktop logo  -->
+  
+              <!-- mobile only search -->
+              <div class="search-input search-input--icon-left margin-bottom-sm hide@md">
+                <form action="search-results.html">
+                  <input class="search-input__input form-control" type="search" name="search-input" id="search-input" placeholder="Search..." aria-label="Search">
+                
+                  <button class="search-input__btn">
+                    <svg class="icon" viewBox="0 0 20 20"><title>Submit</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="8" cy="8" r="6"/><line x1="12.242" y1="12.242" x2="18" y2="18"/></g></svg>
+                  </button>
+                </form>
+              </div>
+              <!-- end mobile only search -->
+
+              <div class="exsidenav js-exsidenav">
+                <nav class="exsidenav__pop-nav" aria-label="Popular links">
+                  <ul>
+                    <li>
+                      <a class="exsidenav__pop-link" href="index.html">
+                        <svg class="icon" viewBox="0 0 16 16">
+                          <g>
+                            <path d="M14,14H11V12h2V4H11V2h3a1,1,0,0,1,1,1V13A1,1,0,0,1,14,14Z" opacity="0.5"></path>
+                            <path d="M8.584.188a.994.994,0,0,0-.9-.136l-6,2A1,1,0,0,0,1,3V13a1,1,0,0,0,.684.948l6,2A.983.983,0,0,0,8,16a1,1,0,0,0,1-1V1A1,1,0,0,0,8.584.188ZM6,9A1,1,0,1,1,7,8,1,1,0,0,1,6,9Z"></path>
+                          </g>
+                        </svg>
+                        <span>Getting started</span>
+                      </a>
+                    </li>
+  
+                    <li>
+                      <a class="exsidenav__pop-link" href="tutorials.html">
+                        <svg class="icon" viewBox="0 0 16 16">
+                          <g>
+                            <path d="M2,8h12c0.6,0,1-0.4,1-1V1c0-0.6-0.4-1-1-1H2C1.4,0,1,0.4,1,1v6C1,7.6,1.4,8,2,8z" opacity="0.5"></path>
+                            <path d="M16,10H0v2h4l-1.8,2.4c-0.3,0.4-0.2,1.1,0.2,1.4C2.6,15.9,2.8,16,3,16c0.3,0,0.6-0.1,0.8-0.4 L6.5,12H7v2h2v-2h0.5l2.7,3.6c0.2,0.3,0.5,0.4,0.8,0.4c0.2,0,0.4-0.1,0.6-0.2c0.4-0.3,0.5-1,0.2-1.4L12,12h4V10z"></path>
+                          </g>
+                        </svg>
+                        <span>Tutorials</span>
+                      </a>
+                    </li>
+  
+                    <li>
+                      <a class="exsidenav__pop-link" href="faq.html">
+                        <svg class="icon" viewBox="0 0 16 16">
+                          <g>
+                            <path d="M8,0C3.6,0,0,3.6,0,8s3.6,8,8,8s8-3.6,8-8S12.4,0,8,0z M9,12H7V7h2V12z M8,6C7.4,6,7,5.6,7,5s0.4-1,1-1 s1,0.4,1,1S8.6,6,8,6z"></path>
+                          </g>
+                        </svg>
+                        <span>FAQ</span>
+                      </a>
+                    </li>
+
+                    <li class="hide@md">
+                      <a class="exsidenav__pop-link" href="login.html">
+                        <svg class="icon" viewBox="0 0 16 16">
+                          <path d="M14,0H6A2,2,0,0,0,4,2V4A1,1,0,0,0,6,4V2h8V14H6V12a1,1,0,0,0-2,0v2a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V2A2,2,0,0,0,14,0Z"/>
+                          <path d="M8,11.5a.5.5,0,0,0,.327.469.5.5,0,0,0,.552-.144l3-3.5a.5.5,0,0,0,0-.65l-3-3.5A.5.5,0,0,0,8,4.5V7H1A1,1,0,0,0,1,9H8Z" opacity="0.5"/>
+                        </svg>
+                        <span>Login</span>
+                      </a>
+                    </li>
+
+                    <li class="hide@md">
+                      <a class="exsidenav__pop-link" href="sign-up.html">
+                        <svg class="icon" viewBox="0 0 16 16">
+                          <circle cx="7" cy="3.5" r="3.5"/>
+                          <path d="M15.5,12H14V10.5a.5.5,0,0,0-.5-.5h-1a.5.5,0,0,0-.5.5V12H10.5a.5.5,0,0,0-.5.5v1a.5.5,0,0,0,.5.5H12v1.5a.5.5,0,0,0,.5.5h1a.5.5,0,0,0,.5-.5V14h1.5a.5.5,0,0,0,.5-.5v-1A.5.5,0,0,0,15.5,12Z" opacity="0.5"/>
+                          <path d="M8,13A4.988,4.988,0,0,1,9.469,9.46,6.918,6.918,0,0,0,7,9,7.025,7.025,0,0,0,.027,15.462a.5.5,0,0,0,.5.538h8.5A4.956,4.956,0,0,1,8,13Z"/>
+                        </svg>
+                        <span>Signup</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+  
+                <nav aria-label="Main">
+                  <ul class="exsidenav__list">
+                    <li class="exsidenav__label-wrapper">
+                      <span class="exsidenav__label">API</span>
+                    </li>
+  
+                    <li>
+                      <button class="reset exsidenav__control js-exsidenav__control">
+                        <span>Syntax</span>
+  
+                        <svg class="icon no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+                          <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M3 3l10 10"></path>
+                            <path d="M13 3L3 13"></path>
+                          </g>
+                        </svg>
+                      </button>
+  
+                      <ul class="exsidenav__list">
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html" aria-current="page">Overview</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Structure</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Comments</a>
+                        </li>
+  
+                        <li>
+                          <button class="reset exsidenav__control js-exsidenav__control">
+                            <span>Functions</span>
+  
+                            <svg class="icon no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+                              <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <path d="M3 3l10 10"></path>
+                                <path d="M13 3L3 13"></path>
+                              </g>
+                            </svg>
+                          </button>
+  
+                          <ul class="exsidenav__list">
+                            <li>
+                              <a class="exsidenav__link" href="basic-page.html">expression()</a>
+                            </li>
+  
+                            <li>
+                              <a class="exsidenav__link" href="basic-page.html">url()</a>
+                            </li>
+                          </ul>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Older APIs</a>
+                        </li>
+                      </ul>
+                    </li>
+  
+                    <li>
+                      <button class="reset exsidenav__control js-exsidenav__control">
+                        <span>Interface</span>
+  
+                        <svg class="icon no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+                          <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M3 3l10 10"></path>
+                            <path d="M13 3L3 13"></path>
+                          </g>
+                        </svg>
+                      </button>
+  
+                      <ul class="exsidenav__list">
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Overview</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Inspector</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Timeline</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Toolbar</a>
+                        </li>
+                      </ul>
+                    </li>
+  
+                    <li>
+                      <button class="reset exsidenav__control js-exsidenav__control">
+                        <span>Examples</span>
+  
+                        <svg class="icon no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+                          <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M3 3l10 10"></path>
+                            <path d="M13 3L3 13"></path>
+                          </g>
+                        </svg>
+                      </button>
+  
+                      <ul class="exsidenav__list">
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Overview</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Customers</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Discounts</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Orders</a>
+                        </li>
+                      </ul>
+                    </li>
+  
+                    <li class="exsidenav__label-wrapper">
+                      <span class="exsidenav__label">Testing</span>
+                    </li>
+  
+                    <li>
+                      <button class="reset exsidenav__control js-exsidenav__control">
+                        <span>Invoicing</span>
+  
+                        <svg class="icon no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+                          <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M3 3l10 10"></path>
+                            <path d="M13 3L3 13"></path>
+                          </g>
+                        </svg>
+                      </button>
+  
+                      <ul class="exsidenav__list">
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Overview</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">How invoicing works</a>
+                        </li>
+  
+                        <li class="exsidenav__label-wrapper">
+                          <span class="exsidenav__label">Customers</span>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Managing customers</a>
+                        </li>
+  
+                        <li>
+                          <a class="exsidenav__link" href="basic-page.html">Taxes</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            <!-- sidebar footer -->
+            <footer class="side-template-v3__footer margin-top-auto position-sticky bottom-0 z-index-2 padding-x-sm padding-left-0@md">
+              <div class="border-top border-alpha padding-y-xs flex justify-between items-center">
+                <p class="text-sm color-contrast-medium">&copy; MyProject</p>
+
+                <ul class="radio-switch" id="switch-light-dark">
+                  <li class="radio-switch__item">
+                    <input class="radio-switch__input sr-only" type="radio" name="radio-switch-name" id="radio-switch-1" checked value="light">
+                    <label class="radio-switch__label" for="radio-switch-1"><svg class="icon icon--xs" viewBox="0 0 16 16">
+                        <title>Enable light mode</title>
+                        <path d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.414-1.414zM14 7h2v2h-2zM12.95 14.433l-1.415-1.414 1.414-1.414 1.415 1.413zM7 14h2v2H7zM2.98 14.363L1.566 12.95l1.415-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.707L4.465 3.12 3.05 4.535 1.636 3.121z" />
+                        <path d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z" />
+                      </svg></label>
+                  </li>
+                
+                  <li class="radio-switch__item">
+                    <input class="radio-switch__input sr-only" type="radio" name="radio-switch-name" id="radio-switch-2" value="dark">
+                    <label class="radio-switch__label" for="radio-switch-2"><svg class="icon icon--xs" viewBox="0 0 16 16">
+                        <title>Enable dark mode</title>
+                        <path d="M6,0C2.5,0.9,0,4.1,0,7.9C0,12.4,3.6,16,8.1,16c3.8,0,6.9-2.5,7.9-6C9.9,11.7,4.3,6.1,6,0z"></path>
+                      </svg></label>
+                    <div aria-hidden="true" class="radio-switch__marker"></div>
+                  </li>
+                </ul>
+              </div>
+            </footer>
+          </div>
+        </aside>
+  
+        <main class="side-template-v3__main position-relative z-index-1 flex-grow sidebar-loaded:show js-side-template-v3__main">
+          <!-- desktop header -->
+          <header class="side-template-v3__desktop-header display@md">
+            <div class="flex-grow grid gap-md justify-between padding-left-md">
+              <div class="col col-5@lg">
+                <div class="search-input search-input--icon-left autocomplete position-relative js-autocomplete" data-autocomplete-dropdown-visible-class="autocomplete--results-visible">
+                  <form action="search-results.html">
+                    <input autocomplete="off" class="search-input__input form-control js-autocomplete__input" type="search" name="main-search-input" id="main-search-input" placeholder="Start typing 'in'..." aria-label="Search">
+                  
+                    <button class="search-input__btn">
+                      <svg class="icon" viewBox="0 0 20 20"><title>Submit</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="8" cy="8" r="6"/><line x1="12.242" y1="12.242" x2="18" y2="18"/></g></svg>
+                    </button>
+                  </form>
+                
+                  <span class="search-input__shortcut" aria-hidden="true">/</span>
+
+                  <div class="autocomplete__loader position-absolute top-0 right-0 padding-right-xxs height-100% flex items-center" aria-hidden="true">
+                    <div class="circle-loader circle-loader--v1">
+                      <div class="circle-loader__circle"></div>
+                    </div>
+                  </div>
+
+                  <div class="autocomplete__results js-autocomplete__results">
+                    <ul id="autocomplete1" class="autocomplete__list js-autocomplete__list">
+                      <li class="autocomplete__item js-autocomplete__item is-hidden">
+                        <a data-autocomplete-url class="text-decoration-none color-contrast-higher block padding-y-xs padding-x-sm autocomplete__link">
+                          <span class="block" data-autocomplete-label></span>
+                          <span class="block text-xs color-contrast-medium margin-top-xxxxs" data-autocomplete-category></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p class="sr-only" aria-live="polite" aria-atomic="true"><span class="js-autocomplete__aria-results">0</span> results found.</p>
+                </div>
+              </div>
+
+              <div class="col-content">
+                <ul class="flex gap-sm items-center">
+                  <li><a class="link-subtle" href="login.html">Login</a></li>
+                  <li><a class="btn btn--primary" href="sign-up.html">Signup</a></li>
+                </ul>
+              </div>
+            </div>
+          </header>
+          <!-- end desktop header -->
+
+          <div class="padding-y-md padding-left-md@md">
+            <!-- start main content -->
+            <div class="grid gap-md gap-lg@lg flex-row-reverse@lg">
+              <div class="col-3@lg">
+                <div class="toc toc--static@lg position-sticky@lg js-toc">
+                  <button class="reset toc__control padding-sm padding-xs@md no-js:is-hidden js-tab-focus js-toc__control" aria-controls="toc">
+                    <span class="toc__control-text">
+                      <i class="js-toc__control-label">In this article <span class="sr-only">- press button to select new section.</span></i>
+                      <i aria-hidden="true">Select</i>
+                    </span>
+                
+                    <svg class="icon toc__icon-arrow margin-left-xxxs no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+                      <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M3 3l10 10"></path>
+                        <path d="M13 3L3 13"></path>
+                      </g>
+                    </svg>
+                  </button>
+          
+                  <nav class="toc__nav">
+                    <ul class="toc__list js-toc__list">
+                      <li class="toc__label" tabindex="0">In this article</li>
+                      <li><a class="toc__link js-smooth-scroll" href="#overview">Overview</a></li>
+                      <li>
+                        <a class="toc__link js-smooth-scroll" href="#basic-test">Basic test</a>
+                  
+                        <ul class="toc__list">
+                          <li><a class="toc__link js-smooth-scroll" href="#card-numbers">Card numbers</a></li>
+                          <li><a class="toc__link js-smooth-scroll" href="#int-card-numbers">Internation cards</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="toc__link js-smooth-scroll" href="#hot-exit">Hot Exit</a></li>
+                      <li><a class="toc__link js-smooth-scroll" href="#common-questions">Common questions</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+  
+              <div class="col-9@lg">
+                <nav class="breadcrumbs text-sm margin-bottom-sm" aria-label="Breadcrumbs">
+                  <ol class="flex flex-wrap gap-xxs">
+                    <li class="breadcrumbs__item">
+                      <a href="#0" class="color-inherit">Syntax</a>
+                      <span class="color-contrast-lower margin-left-xxs" aria-hidden="true">/</span>
+                    </li>
+                    
+                    <li class="breadcrumbs__item" aria-current="page">Overview</li>
+                  </ol>
+                </nav>
+                
+                <div class="text-component article js-toc-content">
+                  <h1 id="overview" class="toc-content__target">Test your integration</h1>
+
+                  <p class="text-md color-contrast-medium">Learn about the different methods to test your integration before going live.</p>
+    
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus, aut officia minus sequi quae <a href="#0">molestias beatae</a>, qui ipsa mollitia alias accusamus voluptate ratione provident numquam iure quia aliquam tempore possimus consequatur vel. Iure atque enim in? Magnam quis cupiditate quia labore quaerat, eligendi nobis, ab similique harum nostrum nulla aliquam dolore adipisci ut. Eaque doloremque iure veniam nobis asperiores!</p>
+
+                  <aside class="note note--warning text-component__block">
+                    <div class="flex items-center">
+                      <svg class="icon icon--md margin-right-sm" viewBox="0 0 30 30">
+                        <path d="M12.4 2.563L.377 24.518A3.023 3.023 0 0 0 3.006 29h23.987a3.023 3.023 0 0 0 2.632-4.477L17.66 2.569a2.992 2.992 0 0 0-5.26-.006z" fill="var(--color-warning-dark)" opacity=".25"></path>
+                        <path fill="none" stroke="var(--color-warning-dark)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19v-9"></path>
+                        <circle cx="15" cy="23.5" r="1.5" fill="var(--color-warning-dark)"></circle>
+                      </svg>
+                  
+                      <p class="note__title  color-contrast-higher"><strong>Important</strong></p>
+                    </div>
+                  
+                    <div class="flex margin-top-xxxs">
+                      <!-- spacer - occupy same space of icon above 👆 -->
+                      <svg class="icon icon--md margin-right-sm" aria-hidden="true"></svg>
+                  
+                      <div class="note__content text-component">
+                        <!-- note content -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quibusdam fugit eveniet porro mollitia ratione quisquam culpa autem.</p>
+                        <!-- end note content -->
+                      </div>
+                    </div>
+                  </aside>
+    
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, tempore aperiam est animi iusto incidunt. Vitae eius modi animi atque impedit ea nulla nihil maxime, natus soluta asperiores ex ad sequi.</p>
+    
+                  <h2 id="basic-test" class="toc-content__target hash-link">Basic test <a class="hash-link__anchor reset js-smooth-scroll" href="#basic-test" aria-hidden="true">#</a></h2>
+    
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, animi. <mark>Praesentium esse magnam sequi aut, repellat pariatur beatae quis</mark>. Quidem harum dolores ab velit neque suscipit vitae pariatur, perspiciatis voluptatum molestiae facere ad tempora. Non omnis fugiat libero magnam sapiente vel. Optio a, enim explicabo totam amet omnis accusantium! Quod.</p>
+                
+                  <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt soluta similique quia.</blockquote>
+                
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat fuga architecto accusamus?</p>
+                
+                  <ul class="list list--ul">
+                    <li>Lorem, ipsum</li>
+                    <li>
+                      Lorem ipsum dolor sit amet
+                      <ul class="list list--ul">
+                        <li>Lorem, ipsum</li>
+                        <li>Lorem, ipsum</li>
+                      </ul>
+                    </li>
+                    <li>Lorem, ipsum</li>
+                  </ul>
+
+                  <h3 id="card-numbers" class="toc-content__target hash-link">Card numbers <a class="hash-link__anchor reset js-smooth-scroll" href="#card-numbers" aria-hidden="true">#</a></h3>
+                
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas unde nihil alias culpa voluptas quibusdam aliquam, veniam nostrum. Vitae molestiae quia minima aut eligendi quidem expedita consequuntur recusandae ad itaque.</p>
+                
+                  <h3 id="int-card-numbers" class="toc-content__target hash-link">International test card numbers <a class="hash-link__anchor reset js-smooth-scroll" href="#int-card-numbers" aria-hidden="true">#</a></h3>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, pariatur, nihil, assumenda praesentium similique voluptatem quae ipsa incidunt voluptatum ipsum porro maxime nulla obcaecati sunt eveniet consectetur commodi cumque eius labore esse ullam delectus numquam. Et adipisci officia sequi ut veniam doloribus minima corporis, minus quod! Magnam amet repellat aperiam!</p>
+
+                  <h2 id="hot-exit" class="toc-content__target hash-link">Hot exit <a class="hash-link__anchor reset js-smooth-scroll" href="#hot-exit" aria-hidden="true">#</a></h2>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos fuga architecto beatae cupiditate aliquam id optio dolorem minus eveniet, culpa perspiciatis possimus iste, nostrum labore voluptates quia dolor sint expedita illo eligendi! Illum tempore voluptate minima a qui inventore incidunt.</p>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae delectus hic animi repudiandae et iusto praesentium repellat. Ducimus neque aliquid officiis maiores eos expedita explicabo minus quos officia quidem iste est consectetur tempora suscipit perferendis accusantium dolor excepturi ex blanditiis, laborum praesentium illo! Perspiciatis vel illo repudiandae laboriosam nostrum consequatur quos voluptatum ullam reiciendis, corporis, quaerat dolore autem? Quas minus voluptas quia perferendis inventore fugit deserunt fuga similique, vitae, nemo nulla. Eaque asperiores at fugit earum corrupti ipsam amet.</p>
+
+                  <div class="tbl">
+                    <table class="tbl__table text-unit-em text-sm border-bottom border-2" aria-label="Table Example">
+                      <thead class="tbl__header border-bottom border-2">
+                        <tr class="tbl__row">
+                          <th class="tbl__cell text-left" scope="col">
+                            <span class="text-xs text-uppercase letter-spacing-lg font-semibold">API Name</span>
+                          </th>
+                  
+                          <th class="tbl__cell text-left" scope="col">
+                            <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Country</span>
+                          </th>
+                          
+                          <th class="tbl__cell text-right" scope="col">
+                            <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Status</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      
+                      <tbody class="tbl__body">
+                        <tr class="tbl__row">
+                          <td class="tbl__cell" role="cell">Enterprise Usage API</td>
+                  
+                          <td class="tbl__cell" role="cell">USA</td>
+                  
+                          <td class="tbl__cell text-right" role="cell">
+                            <span class="inline-block text-sm bg-success bg-opacity-20% color-success-darker radius-full padding-y-xxxs padding-x-xs ws-nowrap">Online</span>
+                          </td>
+                        </tr>
+                  
+                        <tr class="tbl__row">
+                          <td class="tbl__cell" role="cell">Standard endpoints</td>
+                  
+                          <td class="tbl__cell" role="cell">United Kingdom</td>
+                  
+                          <td class="tbl__cell text-right" role="cell">
+                            <span class="inline-block text-sm bg-error bg-opacity-20% color-error-darker radius-full padding-y-xxxs padding-x-xs ws-nowrap">Offline</span>
+                          </td>
+                        </tr>
+                  
+                        <tr class="tbl__row">
+                          <td class="tbl__cell" role="cell">Media endpoints</td>
+                  
+                          <td class="tbl__cell" role="cell">Italy</td>
+                  
+                          <td class="tbl__cell text-right" role="cell">
+                            <span class="inline-block text-sm bg-success bg-opacity-20% color-success-darker radius-full padding-y-xxxs padding-x-xs ws-nowrap">Online</span>
+                          </td>
+                        </tr>
+                  
+                        <tr class="tbl__row">
+                          <td class="tbl__cell" role="cell">Enterprise Console</td>
+                  
+                          <td class="tbl__cell" role="cell">USA</td>
+                  
+                          <td class="tbl__cell text-right" role="cell">
+                            <span class="inline-block text-sm bg-success bg-opacity-20% color-success-darker radius-full padding-y-xxxs padding-x-xs ws-nowrap">Online</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h2 id="common-questions" class="toc-content__target hash-link">Common questions <a class="hash-link__anchor reset js-smooth-scroll" href="#common-questions" aria-hidden="true">#</a></h2>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos fuga architecto beatae cupiditate aliquam id optio dolorem minus eveniet, culpa perspiciatis possimus iste, nostrum labore voluptates quia dolor sint expedita illo eligendi! Illum tempore voluptate minima a qui inventore incidunt.</p>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae delectus hic animi repudiandae et iusto praesentium repellat. Ducimus neque aliquid officiis maiores eos expedita explicabo minus quos officia quidem iste est consectetur tempora suscipit perferendis accusantium dolor excepturi ex blanditiis, laborum praesentium illo! Perspiciatis vel illo repudiandae laboriosam nostrum consequatur quos voluptatum ullam reiciendis, corporis, quaerat dolore autem? Quas minus voluptas quia perferendis inventore fugit deserunt fuga similique, vitae, nemo nulla. Eaque asperiores at fugit earum corrupti ipsam amet.</p>
+                </div>
+
+                <div class="margin-y-lg">
+                  <p class="color-contrast-medium text-sm margin-bottom-sm text-right">Last updated: 2022-01-01</p>
+                  <div class="border-top" role="presentation"></div>
+                </div>
+
+                <!-- emoji rating -->
+                <div class="emoji-rate bg-dark radius-md js-emoji-rate">
+                  <div class="padding-md text-center">
+                    <p class="margin-bottom-xs">Was this page helpful?</p>
+                  
+                    <ul class="emoji-rate__list inline-flex gap-xs">
+                      <li>
+                        <input id="emoji-rate-option-no" class="sr-only emoji-rate__native-input" type="radio" name="emoji-rate-options">
+                  
+                        <label class="emoji-rate__custom-input emoji-rate__custom-input--no" for="emoji-rate-option-no">
+                          <span class="sr-only">No</span>
+                  
+                          <svg class="emoji-rate__icon" viewBox="0 0 40 40" aria-hidden="true">
+                            <circle id="emoji-rate-no-bg" cx="20" cy="20" r="20" fill="var(--color-contrast-lower)" />
+                            <g id="emoji-rate-no-eyes">
+                              <circle cx="11.5" cy="19.5" r="2.5" fill="currentColor" />
+                              <path d="M7,15a18.059,18.059,0,0,0,4,2,18.06,18.06,0,0,0,5,1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                              <circle cx="28.5" cy="19.5" r="2.5" fill="currentColor" />
+                              <path d="M33,15a18.059,18.059,0,0,1-4,2,18.06,18.06,0,0,1-5,1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            </g>
+                            <path id="emoji-rate-no-mouth" d="M16,29a5,5,0,0,1,8,0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                          </svg>
+                        </label>
+                      </li>
+                  
+                      <li>
+                        <input id="emoji-rate-option-partially" class="sr-only emoji-rate__native-input" type="radio" name="emoji-rate-options">
+                  
+                        <label class="emoji-rate__custom-input emoji-rate__custom-input--partially" for="emoji-rate-option-partially">
+                          <span class="sr-only">Partially</span>
+                  
+                          <svg class="emoji-rate__icon" viewBox="0 0 40 40" aria-hidden="true">
+                            <circle id="emoji-rate-partially-bg" cx="20" cy="20" r="20" fill="var(--color-contrast-lower)" />
+                            <g id="emoji-rate-partially-eyes">
+                              <circle cx="11.5" cy="19.5" r="2.5" fill="currentColor" />
+                              <circle cx="28.5" cy="19.5" r="2.5" fill="currentColor" />
+                            </g>
+                            <line id="emoji-rate-partially-mouth" x1="15" y1="28" x2="25" y2="28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                          </svg>
+                        </label>
+                  
+                        <svg class="emoji-rate__hand-icon" viewBox="0 0 40 40" aria-hidden="true">
+                          <path id="emoji-rate-partially-hand" d="M17.279,28.031,4.323,29.1l-.33-3.986a2,2,0,0,0-3.986.33l.825,9.966a5.005,5.005,0,0,0,5.4,4.57l3.987-.33a3,3,0,0,0,2.742-3.237l-.33-3.986,4.983-.413a2,2,0,1,0-.33-3.986Z" fill="#e2ac4b"/>
+                        </svg>
+                      </li>
+                  
+                      <li>
+                        <input id="emoji-rate-option-yes" class="sr-only emoji-rate__native-input" type="radio" name="emoji-rate-options">
+                  
+                        <label class="emoji-rate__custom-input emoji-rate__custom-input--yes" for="emoji-rate-option-yes">
+                          <span class="sr-only">Yes</span>
+                  
+                          <svg class="emoji-rate__icon" viewBox="0 0 40 40" aria-hidden="true">
+                            <circle id="emoji-rate-yes-bg" cx="20" cy="20" r="20" fill="var(--color-contrast-lower)" />
+                            <g id="emoji-rate-yes-eyes">
+                              <path d="M9,19a3,3,0,0,1,6,0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                              <path d="M31,19a3,3,0,0,0-6,0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            </g>
+                            <g id="emoji-rate-yes-mouth">
+                              <path d="M26,25H14a1,1,0,0,0-1,1,7,7,0,0,0,14,0A1,1,0,0,0,26,25Z" fill="currentColor" />
+                              <path id="emoji-rate-yes-tongue" d="M20,29a9.942,9.942,0,0,0-5.317,1.541,6.978,6.978,0,0,0,10.634,0A9.942,9.942,0,0,0,20,29Z" fill="var(--color-contrast-medium)" />
+                            </g>
+                          </svg>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                
+                  <div class="overflow-hidden padding-bottom-md padding-x-md is-hidden js-emoji-rate__comment">
+                    <label class="inline-block text-sm color-contrast-medium margin-bottom-xs" for="emoji-rate-msg">Share your feedback:</label>
+                
+                    <textarea class="form-control width-100%" rows="4" name="emoji-rate-msg" id="emoji-rate-msg"></textarea>
+                
+                    <div class="margin-top-xs text-right">
+                      <input class="btn btn--primary" type="button" value="Submit">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- previous/next articles -->
+                <div class="padding-top-md">
+                  <ul class="grid">
+                    <li class="col-6">
+                      <a class="text-decoration-none inline-block hover:reduce-opacity" href="#0">
+                        <p class="color-contrast-medium text-sm">&larr; Previous</p>
+                        <p>Inspector Basics</p>
+                      </a>
+                    </li>
+  
+                    <li class="col-6 text-right">
+                      <a class="text-decoration-none inline-block hover:reduce-opacity" href="#0">
+                        <p class="color-contrast-medium text-sm">Next &rarr;</p>
+                        <p>Timeline API</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- end main content -->
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>
