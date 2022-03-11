@@ -58,7 +58,6 @@ markdown_extensions:
 nav:
     - Introduction:
       - What is Q? : index.md
-      - Test Intro Page: example-page-for-q.md
       - Q onboarding in 5 minutes : five_minutes.md
     - Tutorials:
       - Basic Setup:
@@ -71,13 +70,18 @@ nav:
         - Become an expert in an expert panel : how_to_be_an_expert_in_expert_panel.md
         - Earn extra Q tokens : how_to_earn_extra_Q_tokens.md
         - Obtain a loan against a collateral : how_to_obtain_a_loan_against_a_collateral.md
-        - Verify and update the Q constitution: how_to_verify_q_constitution_hash.md
+        - Verify and update the Q constitution : how_to_verify_q_constitution_hash.md
       - Technical How To's:
         - Setup a Q fullnode : how_to_setup_fullnode.md
         - Setup a validator node : how_to_setup_validator.md
+        - Setup a Root Node: how_to_setup_rootnode.md
         - Setup the token OmniBridge : how_to_setup_omnibridge.md
+        - Setup Sentry Node : how-to-setup-sentry-node.md
+        - Use clef to unlock account with prompt: clef-tutorial.md
         - Interact with smart contracts : how_to_interact_with_smart_contracts_with_remix.md
-        - Export private key: how_to_export_key.md
+        - Purge validator slashings : how_to_purge_vn_slashings.md
+        - Export private key : how_to_export_key.md
+        - Unlock Account : how-to-unlock-account.md
     - Your HQ dApp:
       - Overview:
         - Dashboard: dapp_dashboard.md
