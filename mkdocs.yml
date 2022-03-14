@@ -34,7 +34,7 @@ theme:
       desktop_header: 1 # wip
       popular_links: false # wip
       breadcrumbs: false # wip
-      theme_switch: true # wip
+      theme_switch: false # wip
       # 👆 👆 👆 work in progress
 
 # Plugin config
