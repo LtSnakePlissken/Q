@@ -1,20 +1,191 @@
-{% extends "base.html" %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ config.site_name }}</title>
+    <meta name="robots" content="index,follow"/>
+    {% block favicon_set %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "assets/img/favicon/apple-touch-icon.png?v=1.6"|url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "assets/img/favicon/favicon-32x32.png?v=1.6"|url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "assets/img/favicon/favicon-16x16.png?v=1.6"|url }}">
+    <link rel="manifest" href="{{ "assets/img/favicon/site.webmanifest?v=1.6"|url }}">
+    <link rel="mask-icon" color="#0b2545" href="{{ "assets/img/favicon/safari-pinned-tab.svg?v=1.6"|url }}">
+    <link rel="shortcut icon" href="{{ "assets/img/favicon/favicon.ico?v=1.6"|url }}">
+    <meta name="msapplication-config" content="{{ "assets/img/favicon/browserconfig.xml?v=1.6"|url }}">
+    <meta name="msapplication-TileColor" content="#0b2545">
+    <meta name="theme-color" content="#0b2545">
+    {% endblock %}
 
-{% block extrahead %}
-  <script>var base_url = '{{ base_url }}';</script>
-{% endblock %}
+    {% block styles %}
+        {% if config.theme.highlightjs %}
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-light.min.css" /> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css" />
+        {% endif %}
+        <link rel="stylesheet" href="{{ 'assets/css/style.css'|url }}" />
+        {% for path in extra_css %}
+            <link href="{{ path }}" rel="stylesheet" />
+        {% endfor %}
+    {% endblock %}
 
-{% block content %}
+    {% block libs %}
+        {% if page %}
+        <script>
+            // Current page data
+            var mkdocs_page_name = {{ page.title|tojson }};
+            var mkdocs_page_input_path = {{ page.file.src_path|string|tojson }};
+            var mkdocs_page_url = {{ page.abs_url|tojson }};
+        </script>
+        {% endif %}
+        <script src="{{ 'assets/js/libs/jquery-3.6.0.min.js'|url }}" defer></script>
+        <script src="{{ 'assets/js/dark-mode.js'|url }}"></script>
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha512-UDJtJXfzfsiPPgnI5S1000FPLBHMhvzAMX15I+qG2E2OAzC9P1JzUwJOfnypXiOH7MRPaqzhPbBGDNNj7zBfoA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <![endif]-->
+        {% if config.theme.highlightjs %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+        {% for lang in config.theme.hljs_languages %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/{{lang}}.min.js"></script>
+        {% endfor %}
+        <script>hljs.initHighlightingOnLoad();</script>
+        {% endif %}
+    {% endblock %}
 
-  <h1 id="search">Search Results</h1>
+    {% block extrahead %}
+    {% endblock %}
 
-  <form id="content_search" action="search.html">
-    <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-    <input name="q" id="mkdocs-search-query" type="text" class="search_input search-query ui-autocomplete-input" placeholder="Search the Docs" autocomplete="off">
-  </form>
+    {% block analytics %}
+        {% if config.theme.analytics.gtag %}
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.theme.analytics.gtag }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-  <div id="mkdocs-search-results">
-    Sorry, page not found.
+            gtag('config', '{{ config.theme.analytics.gtag }}'{% if config.theme.analytics.anonymize_ip %}, {'anonymize_ip': true}{% endif %});
+        </script>
+        {% elif config.google_analytics %}
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', '{{ config.google_analytics[0] }}', '{{ config.google_analytics[1] }}');
+            {% if config.theme.analytics.anonymize_ip %}ga('set', 'anonymizeIp', true);{% endif %}
+            ga('send', 'pageview');
+        </script>
+        {% endif %}
+    {% endblock %}
+
+
+    <!--
+    MkDocs version      : {{ mkdocs_version }}
+    Docs Build Date UTC : {{ build_date_utc }}
+    --> 
+</head>
+
+
+
+
+
+
+
+
+<body><!-- Layout Version 2 -->
+  <div class="side-template-v3 {% if config.theme.layout.desktop_header %}dtp-header{% endif %}">
+
+    <!-- mobile header -->
+    <header class="side-template-v3__mobile-header">
+      <div class="container height-100% flex items-center justify-between">
+        <a class="side-template-v3__logo" href="{{ base_url }}">
+          <svg class="color-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.922 35.38" preserveAspectRatio="xMinYMin meet">
+            <title>Go to homepage</title>
+            <path d="M80.124,79.241c.2-.253.395-.511.582-.772l3.54,2.161H89.2l-7.138-4.359a17.947,17.947,0,0,0,1.173-2.779,19.691,19.691,0,0,0,1.014-6.1,19.14,19.14,0,0,0-1.039-6.129,18.65,18.65,0,0,0-3.136-5.72,15.436,15.436,0,0,0-5.334-4.217A17.174,17.174,0,0,0,67.07,49.73a16.266,16.266,0,0,0-7.408,1.593,15.751,15.751,0,0,0-5.26,4.2,17.848,17.848,0,0,0-3.11,5.72,19.771,19.771,0,0,0-1.012,6.154,21.211,21.211,0,0,0,.959,6.276,17.259,17.259,0,0,0,3.009,5.718,14.608,14.608,0,0,0,5.334,4.125,18.337,18.337,0,0,0,7.867,1.545,16.235,16.235,0,0,0,7.433-1.593c.308-.156.605-.322.9-.494l3.5,2.138h4.955l-6.171-3.763A15.32,15.32,0,0,0,80.124,79.241ZM69.743,76.259H64.787l7.964,4.853c-.09.062-.177.126-.269.177A9.184,9.184,0,0,1,67.4,82.666,10.313,10.313,0,0,1,62.03,81.33a10.727,10.727,0,0,1-3.658-3.561,16.6,16.6,0,0,1-2.06-4.955,22.846,22.846,0,0,1-.658-5.426,21.375,21.375,0,0,1,.69-5.324,17.047,17.047,0,0,1,2.124-4.947,11.661,11.661,0,0,1,3.6-3.623,9.215,9.215,0,0,1,5.062-1.377,9.707,9.707,0,0,1,5.242,1.377,11.387,11.387,0,0,1,3.644,3.649A17.757,17.757,0,0,1,78.16,62.1a20.529,20.529,0,0,1,.708,5.309,21.238,21.238,0,0,1-.692,5.281c-.092.354-.195.708-.3,1.041L74.7,71.8H69.744l7.145,4.352a16.846,16.846,0,0,1-.839,1.5,12.606,12.606,0,0,1-1.274,1.687Z" transform="translate(-50.28 -49.73)" fill="currentColor" fill-rule="evenodd"/>
+          </svg>
+        </a>
+  
+        <button class="btn btn--subtle" aria-controls="sidenav-v3">Menu</button>
+      </div>
+    </header>
+    <!-- end mobile header -->
+  
+  
+    <!-- container -->
+    <div class="container max-width-lg flex@md items-start@md">
+  
+        <!-- sidebar -->
+        {% include "layout_2-sidebar.html" %}
+  
+  
+        <!-- content section:
+          * desktop header
+          * main column
+            * toc
+            * content
+              * breadcrumbs
+              * meta
+              * rating
+              * prev_next
+        -->
+        <main class="side-template-v3__main position-relative z-index-1 flex-grow sidebar-loaded:show js-side-template-v3__main">
+  
+          <!-- desktop header -->
+          {% if config.theme.layout.desktop_header %}
+            {% include "layout_2-desktop_header.html" %}
+          {% endif %}
+  
+  
+          <div class="padding-left-md@md padding-top-lg padding-top-0@md">
+  
+            <!-- start main content -->
+            <div class="grid gap-md gap-lg@lg flex-row-reverse@lg">
+  
+              <!-- main column -->
+              <div class="col-12">
+                  
+                <!-- the content -->
+                <div class="text-component article js-toc-content">
+
+                  <h1 id="search">Search Results</h1>
+                  
+
+                  
+                  <div id="mkdocs-search-results">
+                    <p class="margin-bottom-lg margin-bottom-sm">Sorry, there were no results … please try another search phrase.</p>
+                  </div>
+
+                </div>
+  
+              </div>
+  
+            </div>
+            <!-- end main content -->
+            
+          </div>
+  
+        </main>
+        
+    </div>
+    <!-- end container -->
+  
   </div>
 
+{% block extra_content %}
 {% endblock %}
+
+{% block scripts %}
+    <script>var base_url = '{{ base_url }}';</script>
+    <script src="{{ 'assets/js/scripts.js'|url }}" defer></script>
+    {% for path in extra_javascript %}
+    <script src="{{ path }}" defer></script>
+    {% endfor %}
+    <script defer>
+        
+    </script>
+{% endblock %}
+    
+</body>
+</html>

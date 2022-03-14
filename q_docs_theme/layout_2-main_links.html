@@ -6,24 +6,6 @@
         {% endfor %}
     </ul>
 
-    <!-- search -->
-    {% if config.theme.layout.search %}
-    <div class="margin-0 margin-top-md margin-bottom-xxs margin-left-xxs">
-        <!--
-        Create a search form that sends the user to the search.html file - this is
-        the other file in the template which adds search to the theme. The only
-        requirement here is that there is a text input with the name 'q' and the
-        action and methods match below.
-        -->
-        <div role="search">
-            <form action="{{ " search.html"|url }}" method="get">
-                <label class="exsidenav__label block margin-bottom-xs" for="q">Search</label>
-                <input type="search" name="q" placeholder="Search docs" />
-            </form>
-        </div>
-    </div>
-    {% endif %}
-
     <!-- social -->
     {% if config.theme.layout.community_links %}
       {% include "layout_2-community_links.html" %}

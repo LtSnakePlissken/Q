@@ -1,6 +1,6 @@
 # Global site config
 site_name: Q Testnet Documentation
-site_url: https://docs.qtestnet.org
+site_url: https://docs.q.org
 site_dir: public
 use_directory_urls: true
 
@@ -20,7 +20,7 @@ theme:
       gtag: null
       anonymize_ip: false
     text_variables:
-      project_name: '<span>Q Foundation</span>' # HTML allowed
+      project_name: '<span>Q Development AG</span>' # HTML allowed
     layout:
       type: 2
       toc: true
@@ -30,9 +30,9 @@ theme:
       prev_next: true
       community_links: true
       # 👇 👇 👇 work in progress
-      search: false # wip
+      search: 1 # wip
+      desktop_header: 1 # wip
       popular_links: false # wip
-      desktop_header: false # wip
       breadcrumbs: false # wip
       theme_switch: false # wip
       # 👆 👆 👆 work in progress
@@ -58,6 +58,7 @@ markdown_extensions:
 nav:
     - Introduction:
       - What is Q? : index.md
+      - Test Intro Page: example-page-for-q.md
       - Q onboarding in 5 minutes : five-minutes.md
     - Tutorials:
       - Basic Setup:

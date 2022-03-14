@@ -19,18 +19,18 @@
     <meta name="theme-color" content="#0b2545">
     {% endblock %}
 
-    {%- block styles %}
-        {%- if config.theme.highlightjs %}
+    {% block styles %}
+        {% if config.theme.highlightjs %}
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-light.min.css" /> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css" />
-        {%- endif %}
+        {% endif %}
         <link rel="stylesheet" href="{{ 'assets/css/style.css'|url }}" />
-        {%- for path in extra_css %}
+        {% for path in extra_css %}
             <link href="{{ path }}" rel="stylesheet" />
-        {%- endfor %}
-    {%- endblock %}
+        {% endfor %}
+    {% endblock %}
 
-    {%- block libs %}
+    {% block libs %}
         {% if page %}
         <script>
             // Current page data
@@ -44,29 +44,29 @@
         <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha512-UDJtJXfzfsiPPgnI5S1000FPLBHMhvzAMX15I+qG2E2OAzC9P1JzUwJOfnypXiOH7MRPaqzhPbBGDNNj7zBfoA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <![endif]-->
-        {%- if config.theme.highlightjs %}
+        {% if config.theme.highlightjs %}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
-        {%- for lang in config.theme.hljs_languages %}
+        {% for lang in config.theme.hljs_languages %}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/{{lang}}.min.js"></script>
-        {%- endfor %}
+        {% endfor %}
         <script>hljs.initHighlightingOnLoad();</script>
-        {%- endif %}
-    {%- endblock %}
-
-    {%- block extrahead %}
+        {% endif %}
     {% endblock %}
 
-    {%- block analytics %}
-        {%- if config.theme.analytics.gtag %}
+    {% block extrahead %}
+    {% endblock %}
+
+    {% block analytics %}
+        {% if config.theme.analytics.gtag %}
         <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.theme.analytics.gtag }}"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', '{{ config.theme.analytics.gtag }}'{%- if config.theme.analytics.anonymize_ip %}, {'anonymize_ip': true}{%- endif %});
+            gtag('config', '{{ config.theme.analytics.gtag }}'{% if config.theme.analytics.anonymize_ip %}, {'anonymize_ip': true}{% endif %});
         </script>
-        {%- elif config.google_analytics %}
+        {% elif config.google_analytics %}
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -74,11 +74,11 @@
             })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
             ga('create', '{{ config.google_analytics[0] }}', '{{ config.google_analytics[1] }}');
-            {%- if config.theme.analytics.anonymize_ip %}ga('set', 'anonymizeIp', true);{%- endif %}
+            {% if config.theme.analytics.anonymize_ip %}ga('set', 'anonymizeIp', true);{% endif %}
             ga('send', 'pageview');
         </script>
         {% endif %}
-    {%- endblock %}
+    {% endblock %}
 
 
     <!--
@@ -102,16 +102,16 @@
     </div>
   </section>
 
-    {%- block scripts %}
+    {% block scripts %}
         <script>var base_url = '{{ base_url }}';</script>
         <script src="{{ 'assets/js/scripts.js'|url }}" defer></script>
-        {%- for path in extra_javascript %}
+        {% for path in extra_javascript %}
         <script src="{{ path }}" defer></script>
-        {%- endfor %}
+        {% endfor %}
         <script defer>
             
         </script>
-    {%- endblock %}
+    {% endblock %}
     
 </body>
 </html>

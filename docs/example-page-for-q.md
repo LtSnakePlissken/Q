@@ -6,7 +6,7 @@ This page is an example for the maintainers of the documentation and a guide how
 
 We changed the structure of the navigation as a proposal for improvement. We recommend to create more main navigation items for a better hierarchy.
 
-One other hint regarding the file naming: currently the Markdown documents are named using ` _ ` (underscore) instead of a ` - ` (hyphen).
+One other hint regarding the file naming: currently the Markdown documents are named using ` _ ` (underscore) instead of a ` - ` (dash).
 
 Here is why you should consider renaming the files:
 <ul class="grid gap-sm" style="list-style: none">
@@ -63,6 +63,39 @@ nav:
 ## Special HTML Elements
 
 Yes! it is possible to add HTML directly in the `/docs/*.md` files. It will be rendered perfectly. Please find some examples below:
+
+
+### Buttons
+
+<div class="flex flex-wrap">
+  <ul class="flex flex-column gap-sm flex-grow radius-md no-list-icon bg-primary padding-md">
+    <li class="block border-bottom border-alpha text-uppercase text-xs letter-spacing-lg color-contrast-medium padding-bottom-sm">Primary</li>
+    <li><button class="btn btn--primary btn--sm">Button sm</button></li>
+    <li><button class="btn btn--primary">Button</button></li>
+    <li><button class="btn btn--primary btn--md">Button md</button></li>
+  </ul>
+
+  <ul class="flex flex-column gap-sm flex-grow radius-md no-list-icon bg padding-md">
+    <li class="block border-bottom border-alpha text-uppercase text-xs letter-spacing-lg color-contrast-medium padding-bottom-sm">Primary (inverted)</li>
+    <li><button class="btn btn--primary-inverted btn--sm">Button sm</button></li>
+    <li><button class="btn btn--primary-inverted">Button</button></li>
+    <li><button class="btn btn--primary-inverted btn--md">Button md</button></li>
+  </ul>
+
+  <ul class="flex flex-column gap-sm flex-grow radius-md no-list-icon padding-md">
+    <li class="block border-bottom border-alpha text-uppercase text-xs letter-spacing-lg color-contrast-medium padding-bottom-sm">Subtle</li>
+    <li><button class="btn btn--subtle btn--sm">Button sm</button></li>
+    <li><button class="btn btn--subtle">Button</button></li>
+    <li><button class="btn btn--subtle btn--md">Button md</button></li>
+  </ul>
+
+  <ul class="flex flex-column gap-sm flex-grow radius-md no-list-icon padding-md">
+    <li class="block border-bottom border-alpha text-uppercase text-xs letter-spacing-lg color-contrast-medium padding-bottom-sm">Accent</li>
+    <li><button class="btn btn--accent btn--sm">Button sm</button></li>
+    <li><button class="btn btn--accent">Button</button></li>
+    <li><button class="btn btn--accent btn--md">Button md</button></li>
+  </ul>
+</div>
 
 ### Tutorial Videos?
 
@@ -236,10 +269,6 @@ Yes. Videos are also possible. Just change the data-attribute. Opens in a modal.
                   <div class="list-v2__content">
                     <div class="text-component margin-bottom-md">
                       <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt natus totam deleniti corporis cupiditate non aperiam adipisci quasi repellendus possimus.</p>
-                    </div>
-
-                    <div>
-                      <a class="btn btn--primary" href="tutorials.html">Tutorials →</a>
                     </div>
                   </div>
                 </li>

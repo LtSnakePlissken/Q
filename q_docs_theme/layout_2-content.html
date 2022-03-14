@@ -26,10 +26,13 @@
     <div class="col-9@md">
       <!-- start main content -->
       <main class="text-component article toc-content js-toc-content">
+
+      {% block content %}
         {{ page.content }}
+      {% endblock %}
       </main>
       <!-- end main content -->
-      {% include "layout_2-next_prev.html" %}
+      {% include "layout_2-prev_next.html" %}
     </div>
   </div>
 </div>
