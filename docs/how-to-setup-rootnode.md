@@ -6,18 +6,8 @@ You must prepare your server / machine to begin. One possibility is to use a loc
 
 ## Basic configuration
 
-Clone the repository `https://gitlab.com/q-dev/testnet-public-tools` and go to the rootnode directory. This directory contains docker-compose file for quick launching of full node with .env file for ports configuration and genesis.json - config of genesis block of Q TestNet.
+Clone the repository `https://gitlab.com/q-dev/mainnet-public-tools` and go to the rootnode directory. This directory contains docker-compose file for quick launching of full node with .env file for ports configuration and genesis.json - config of genesis block of Q MainNet.
 
-## Testnet redeployment
-
-In case Q testnet was redeployed, you will be required to update the root node files and configs. To do so, within directory \rootnode, use the following commands:
-
-1. `docker-compose down -v` to stop current root node and delete volume
-2. `git pull` to pull latest configs
-3. `docker-compose pull` to pull (and overwrite) the latest docker images
-4. `docker-compose up -d` to restart with new configs & images
-
-Now your root node should restart and synchronise with the testnet again. Please ensure you have enough Q staked on your root node. Check [this section](#Put-stake-in-roots-contract) for more information.
 
 ## Generate a keypair for root node
 
@@ -57,7 +47,7 @@ Whether you chose to provide your own vanity keys or use the above command to cr
 
 ## Get Q tokens
 
-In order to become a root node, you will need to make an onchain proposal to [add yourself to the root node panel](how-to-become-a-root-node.md). You need Q tokens for this. For Q testnet, you can get some Q using the faucet located at `https://faucet.qtestnet.org/{address}` (Where {address} should be replaced by the address you created in the previous step 3. In our example the link should be https://faucet.qtestnet.org/0xb3FF24F818b0ff6Cc50de951bcB8f86b52287DAc). Verify that tokens were sent by looking up your address within [Block Explorer](https://explorer.qtestnet.org/).
+In order to become a validator, you will need to put some stake in validators contract, so you need Q tokens for this. We are working on a public listing of the Q token at the moment.
 
 ## Configure setup
 
@@ -69,7 +59,7 @@ Edit .env file in rootnode directory. Put your address without leading 0x from t
 
 ## Put stake in roots contract
 
-You can use the dApp "Your HQ" that can be found at [https://hq.qtestnet.org](https://hq.qtestnet.org).
+You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org).
 
 ## Launch root node
 

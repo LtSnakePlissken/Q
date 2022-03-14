@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Any Q token holder can act as an expert in n expert panel dedicated to a special topic. In order to become an expert, a Q token holder needs to be proposed to enter a panel and needs to be voted in. Please have a look at the according [governance tutorial](how-to-exercise-governance-rights.md) to learn more on proposals and voting mechanisms in Q.
+Any Q token holder can act as an expert in an expert panel dedicated to a special topic. In order to become an expert, a Q token holder needs to be proposed to enter a panel and needs to be voted in. Please have a look at the according [governance tutorial](how-to-exercise-governance-rights.md) to learn more on proposals and voting mechanisms in Q.
 
 ## Proposal creation
 
