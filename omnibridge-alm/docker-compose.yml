@@ -1,0 +1,13 @@
+---
+version: '3'
+services:
+  ui:
+    image: ${ALM_IMAGE}
+    ports:
+    - "${PORT}:${PORT}"
+    env_file: ./.env
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    entrypoint: yarn start
+    volumes: ['./.env:/mono/alm/.env']

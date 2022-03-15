@@ -1,0 +1,9 @@
+---
+version: '3'
+services:
+  omnibridge_ui:
+    env_file: ./.env
+    image: "${IMAGE}"
+    ports:
+      - "${PORT}:80"
+    restart: unless-stopped
