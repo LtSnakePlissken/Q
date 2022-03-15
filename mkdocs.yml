@@ -37,19 +37,19 @@ theme:
     community_links:
       medium: 
         show: true
-        url: 'https://medium.com/'
+        url: 'https://medium.com/q-blockchain'
       reddit: 
         show: true
-        url: 'https://reddit.com/'
+        url: 'https://www.reddit.com/r/QBlockchain/'
       discord: 
         show: true
         url: 'https://discord.com/'
       telegram: 
         show: true
-        url: 'https://telegram.com/'
+        url: 'https://telegram.org/'
       gitlab: 
         show: true
-        url: 'https://gitlab.com/'
+        url: 'https://gitlab.com/q-dev'
     layout:
       toc: true
       meta: false
