@@ -98,6 +98,13 @@
     {% include "layout_2.html" %}
 
     {% block extra_content %}
+    <script>
+        var searchDefaultValues = [
+            {% for value in config.theme.search_default_values %}
+            {label: '{{ value.label }}', category: '{{ value.category }}', url: '{{ value.url }}'},
+            {% endfor %}
+        ];
+    </script>
     {% endblock %}
 
     {% block scripts %}

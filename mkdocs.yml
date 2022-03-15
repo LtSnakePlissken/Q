@@ -21,24 +21,54 @@ theme:
       anonymize_ip: false
     text_variables:
       project_name: '<span>Q Development AG</span>' # HTML allowed
+    search_default_values: # Up to 3 elements are visible in the search box
+      - value:
+        label: 'What is Q?'
+        category: 'Introduction'
+        url: '/' # External URL also possible, format: 'https://www.q.org'
+      - value:
+        label: 'Dashboard'
+        category: 'HQ App > Overview'
+        url: '/dapp_dashboard/'
+      - value:
+        label: 'Example page'
+        category: 'Introduction'
+        url: '/example-page-for-q/'
+    community_links:
+      medium: 
+        show: true
+        url: 'https://medium.com/'
+      reddit: 
+        show: true
+        url: 'https://reddit.com/'
+      discord: 
+        show: true
+        url: 'https://discord.com/'
+      telegram: 
+        show: true
+        url: 'https://telegram.com/'
+      gitlab: 
+        show: true
+        url: 'https://gitlab.com/'
     layout:
-      type: 2
       toc: true
       meta: false
       menu_footer: true
       copyright: true
       prev_next: true
       community_links: true
+      search: true
+      desktop_header: true
       # 👇 👇 👇 work in progress
-      search: 1 # wip
-      desktop_header: 1 # wip
       popular_links: false # wip
       breadcrumbs: false # wip
       theme_switch: false # wip
       # 👆 👆 👆 work in progress
 
 # Plugin config
-plugins: ['search'] # Enables plugins; default: search
+# All plugins: https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins#search--tables-of-content
+plugins:
+    - search
 
 # MD Extensions
 markdown_extensions:
