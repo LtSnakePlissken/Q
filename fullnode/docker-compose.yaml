@@ -16,7 +16,7 @@ services:
     image: qblockchain/q-client:mainnet
     depends_on: 
       - node-init
-    entrypoint: ["geth", "--datadir=/data", "--http", "--http.corsdomain=*", "--http.addr=0.0.0.0", "--syncmode=full", "--rpc.allow-unprotected-txs", "--networkid=35441", "--verbosity=3", "--bootnodes=$BOOTNODE_ADDR", "--miner.gasprice=50000000000", "--txpool.pricelimit=47619047619", "--http", "--http.addr=0.0.0.0", "--http.corsdomain=*", "--http.api=net,web3,eth,debug"]
+    entrypoint: ["geth", "--datadir=/data", "--http", "--http.corsdomain=*", "--http.addr=0.0.0.0", "--syncmode=full", "--rpc.allow-unprotected-txs", "--networkid=35441", "--verbosity=3", "--root.addresses=$INITIALROOTS", "--root.timestamp=$ROOTTIMESTAMP", "--bootnodes=$BOOTNODE_ADDR", "--miner.gasprice=50000000000", "--txpool.pricelimit=47619047619", "--http", "--http.addr=0.0.0.0", "--http.corsdomain=*", "--http.api=net,web3,eth,debug"]
     volumes:
       - node-data:/data
     ports:

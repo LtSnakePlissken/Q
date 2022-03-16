@@ -15,7 +15,7 @@ services:
 
   node:
     image: $QCLIENT_IMAGE
-    entrypoint: ["geth", "--datadir=/data", "--nat=extip:$IP", "--port=$EXT_PORT", "--unlock=$ADDRESS",  "--password=/data/keystore/pwd.txt", "--mine", "--miner.threads=1", "--syncmode=full", "--rpc.allow-unprotected-txs", "--networkid=35441", "--verbosity=3", "--miner.gasprice=1", "--bootnodes=enode://22adab037308f02abbb0fd7e831c75afa367b36615b2a0358a5c4673912cf384de6c8e688371822488622ebee383aeea5d41087160cb70484a9f1671876871b1@bootnode.q.org:30301"]
+    entrypoint: ["geth", "--datadir=/data", "--nat=extip:$IP", "--port=$EXT_PORT", "--unlock=$ADDRESS",  "--password=/data/keystore/pwd.txt", "--miner.etherbase=$ADDRESS", "--mine", "--miner.threads=1", "--syncmode=full", "--rpc.allow-unprotected-txs", "--networkid=35441", "--verbosity=3", "--miner.gasprice=1", "--root.addresses=$INITIALROOTS", "--root.timestamp=$ROOTTIMESTAMP", "--bootnodes=enode://22adab037308f02abbb0fd7e831c75afa367b36615b2a0358a5c4673912cf384de6c8e688371822488622ebee383aeea5d41087160cb70484a9f1671876871b1@bootnode.q.org:30301"]
     volumes:
       - ./keystore:/data/keystore
       - ./additional:/data/additional
