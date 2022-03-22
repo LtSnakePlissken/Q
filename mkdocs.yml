@@ -35,19 +35,19 @@ theme:
         category: 'Introduction'
         url: '/example-page-for-q/'
     community_links:
-      medium: 
+      medium:
         show: true
         url: 'https://medium.com/q-blockchain'
-      reddit: 
+      reddit:
         show: true
         url: 'https://www.reddit.com/r/QBlockchain/'
-      discord: 
+      discord:
         show: true
         url: 'https://discord.com/'
-      telegram: 
+      telegram:
         show: true
         url: 'https://telegram.org/'
-      gitlab: 
+      gitlab:
         show: true
         url: 'https://gitlab.com/q-dev'
     layout:
@@ -88,30 +88,29 @@ markdown_extensions:
 nav:
     - Introduction:
       - What is Q? : index.md
-      - Test Intro Page: example-page-for-q.md
-      - Q onboarding in 5 minutes : five-minutes.md
+      - Q Onboarding in 5 Minutes : five-minutes.md
     - Tutorials:
       - Basic Setup:
         - Install and setup MetaMask : how-to-install-metamask.md
-        - Use the Q mobile wallet : how-to-install-q-wallet.md
-        - Delegate Q to a validator : how-to-delegate-to-validator.md
-        - Exercise your governance rights : how-to-exercise-governance-rights.md
-        - Become a root node : how-to-become-a-root-node.md
-        - Layer 0 governance of root nodes: layer0-governance.md
-        - Become an expert in an expert panel : how-to-be-an-expert-in-expert-panel.md
-        - Earn extra Q tokens : how-to-earn-extra-Q-tokens.md
-        - Obtain a loan against a collateral : how-to-obtain-a-loan-against-a-collateral.md
-        - Verify and update the Q constitution : how-to-verify-q-constitution-hash.md
+        - Use the Q Mobile Wallet : how-to-install-q-wallet.md
+        - Delegate Q to a Validator : how-to-delegate-to-validator.md
+        - Exercise your Governance Rights : how-to-exercise-governance-rights.md
+        - Become a Root Node : how-to-become-a-root-node.md
+        - Layer 0 Governance of Root Nodes: layer0-governance.md
+        - Become an Expert in an Expert Panel : how-to-be-an-expert-in-expert-panel.md
+        - Earn extra Q Tokens : how-to-earn-extra-Q-tokens.md
+        - Obtain a Loan against a Collateral : how-to-obtain-a-loan-against-a-collateral.md
+        - Verify and update the Q Constitution : how-to-verify-q-constitution-hash.md
       - Technical How To's:
-        - Setup a Q fullnode : how-to-setup-fullnode.md
-        - Setup a validator node : how-to-setup-validator.md
+        - Setup a Q Fullnode : how-to-setup-fullnode.md
+        - Setup a Validator Node : how-to-setup-validator.md
         - Setup a Root Node: how-to-setup-rootnode.md
-        - Setup the token OmniBridge : how-to-setup-omnibridge.md
+        - Setup the Token OmniBridge : how-to-setup-omnibridge.md
         - Setup Sentry Node : how-to-setup-sentry-node.md
-        - Use clef to unlock account with prompt: clef-tutorial.md
-        - Interact with smart contracts : how-to-interact-with-smart-contracts-with-remix.md
-        - Purge validator slashings : how-to-purge-vn-slashings.md
-        - Export private key : how-to-export-key.md
+        - Use clef to unlock Account with Prompt: clef-tutorial.md
+        - Interact with Smart Contracts : how-to-interact-with-smart-contracts-with-remix.md
+        - Purge Validator Slashings : how-to-purge-vn-slashings.md
+        - Export Private Key : how-to-export-key.md
         - Unlock Account : how-to-unlock-account.md
     - Your HQ dApp:
       - Overview:
