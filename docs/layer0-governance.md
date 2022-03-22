@@ -84,10 +84,38 @@ Output means that if on-chain list is adopted, active list will contain new addr
 Now let’s set new active root list. To do so one root node should propose new list and others should accept it.
 
 ### Propose new root node list based on on-chain root list
+### Propose new root node list based on on-chain root list
 
 Run:
 
+      gov.proposeOnchainRootList()
+
+Example Output:
+
+      "0x55e82161cb160f29215ee89b4d35f5f0ebeaf83996ebb2f0ef6481087d2507a6"
+
+This proposes a new RootList based on the current on-chain root list. If you want to manually propose a root list,
+
+run:
+
+      gov.proposeRootListUpdate({
+      nodes: [
+        "0xfd3ba4c7ebda55c038316c776f2479b2909da7a5",
+        "0xbada551878e60b7d9173452695c1b3d190c3a3dc",
+        "0x0ab8d42796bc11a0c028a25a79cf31d8eabc65cd"
+      ],
+      timestamp: 1647852102
+      })
+
+To verify the proposed root list, use this command:
+
+Run (if another root node has proposed the list):
+
       gov.proposedRootList()
+
+Run (if you have proposed the root list yourself):
+
+      gov.desiredRootList()
 
 Example Output:
 
