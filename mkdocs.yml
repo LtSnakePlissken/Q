@@ -42,10 +42,10 @@ theme:
         show: true
         url: 'https://www.reddit.com/r/QBlockchain/'
       discord:
-        show: true
+        show: false
         url: 'https://discord.com/'
       telegram:
-        show: true
+        show: false
         url: 'https://telegram.org/'
       gitlab:
         show: true
