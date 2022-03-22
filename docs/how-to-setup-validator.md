@@ -44,6 +44,16 @@ Whether you chose to provide your own vanity keys or use the above command to cr
 
 > **Note: ** *Following our example, pwd.txt contains the password to encrypted file "UTC--2021-01-18T11-36-28.705754426Z--b3ff24f818b0ff6cc50de951bcb8f86b52287dac" in clear text.*
 
+If you want to change the password in the future, you need to stop the node first.
+
+    docker-compose down
+
+Then start password reset procedure with
+
+    docker-compose run node --datadir /data account update 0xb3ff24f818b0ff6cc50de951bcb8f86b52287dac
+
+> **Note: ** *You need to remove address _0xb3ff24f818b0ff6cc50de951bcb8f86b52287dac_ and add your account address instead.*
+
 ## Get Q tokens
 
 In order to become a validator, you will need to put some stake in validators contract, so you need Q tokens for this. We are working on a public listing of the Q token at the moment.
