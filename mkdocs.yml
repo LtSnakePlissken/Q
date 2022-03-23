@@ -29,11 +29,11 @@ theme:
       - value:
         label: 'Dashboard'
         category: 'HQ App > Overview'
-        url: '/dapp_dashboard/'
+        url: '/dapp-dashboard/'
       - value:
-        label: 'Example page'
+        label: 'Onboarding in 5 Minutes'
         category: 'Introduction'
-        url: '/example-page-for-q/'
+        url: '/five-minutes/'
     community_links:
       medium:
         show: true
