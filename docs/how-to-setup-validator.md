@@ -66,22 +66,9 @@ Edit .env file in validator directory. Put your address without leading 0x from 
     IP=193.19.228.94
     EXT_PORT=30303
 
-Next, you need to edit config.json as this file is required for staking. Put your address from above into the address field and password from keystore/pwd.txt into the password field. Resulting config.json should be similar to this:
-
-    {
-      "address": "b3FF24F818b0ff6Cc50de951bcB8f86b52287DAc",`  
-      "password": "supersecurepassword",`  
-      "keystoreDirectory": "/data",`  
-      "rpc": "https://rpc.q.org"`  
-    }
-
 ## Put Stake in Validators Contract
 
-As was mentioned previously, you need to put stake to validators contract in order to become a validator. There’s a script that does it for you:
-
-    docker run --rm -v $PWD:/data -v $PWD/config.json:/build/config.json qblockchain/js-interface:mainnet validators.js
-
-Alternatively, you can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org).
+As was mentioned previously, you need to put stake to validators contract in order to become a validator. You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org).
 
 ## Launch Validator Node
 
