@@ -1,6 +1,6 @@
-# How to become a root node
+# How to become a Root Node
 
-## Role and responsibilities
+## Role and Responsibilities
 
 Root nodes monitor the operations happening on the Q blockchain layer and thus ensure that actions on Q from any network participant are compliant to the Q constitution. The current constitution can be downloaded [here](https://q.org/).
 
@@ -20,7 +20,7 @@ For Q mainnet, the onboarding of root nodes is bound to root node eligibility an
 
 Since this implies discretionary decisions to be made, a dedicated expert panel for root node onboarding decisions takes over this task. Please check Q Constitution, Article 5.
 
-## Run a full node
+## Run a Full Node
 
 Since the fundamental responsibility of a root node lies in the monitoring of on-chain operations conducted by validators, a root node shall operate its own full node to be able to screen blocks and transactions. Check our [full node tutorial](how-to-setup-fullnode.md) to learn how to set up a full node.
 

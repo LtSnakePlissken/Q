@@ -1,6 +1,6 @@
 # How to setup the OmniBridge
 
-## Basic requirements
+## Basic Requirements
 
 OmniBridge is a component that allows to bridge assets from other blockchains (e.g. Ethereum Rinkeby, Ethereum Mainnet, ..) onto Q. This is used for bridging and transferring collaterals for the creation of Q synthetic assets. Due to their role within Q, validators are predisposed to run an OmniBridge instance.
 
@@ -8,14 +8,14 @@ First please make sure you have a running validator node as described [here](how
 
 Also please make sure that you have the private key of the validator account as you need it in the config later. If you have a keystore file, you can use [extract-get-private-key.js + manual](https://gitlab.com/q-dev/mainnet-public-tools/-/tree/master/js-tools) to extract your private key from it.
 
-## Download repo and configuration
+## Download Repo and Configuration
 Clone the latest master of the [mainnet-public-tools repository](https://gitlab.com/q-dev/mainnet-public-tools/-/tree/master/). It should contain, amongst others, the three following folders:
 
 * omnibridge-oracle : The core OmniBridge client
 * omnibridge-ui : A graphical user interface to use the bridge on your local server
 * omnibridge-alm : The monitor component to track the status of bridge transactions on the blockchain
 
-## Configure OmniBridge-oracle
+## Configure OmniBridge-Oracle
 
 Go into the **omnibridge-oracle** directory. This directory contains a docker-compose file for quickly launching the bridge oracle and some example environment configurations. Copy the file `.env.mainnet` locally to `.env`. Adjust the following parameters:
 
@@ -24,7 +24,7 @@ Go into the **omnibridge-oracle** directory. This directory contains a docker-co
 * COMMON_HOME_RPC_URL : You can keep the default, use https://rpc.q.org or use the RPC endpoint of our own full node if you are operating one.
 * COMMON_FOREIGN_RPC_URL : Provide an RPC endpoint of a client of the blockchain on the other side of the bridge. Q mainnet bridges to the Ethereum mainnet. You can use your own ethereum client, a public endpoint or [create an infura account](https://infura.io/) for free to get a personal Ethereum mainnet access point (e.g. https://rinkeby.infura.io/v3/1673abc....).
 
-## Launch the oracle
+## Launch the Oracle
 To start the client with docker-compose make the call
 
 `docker-compose up -d`

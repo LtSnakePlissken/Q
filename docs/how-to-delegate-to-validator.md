@@ -1,4 +1,4 @@
-# How to delegate Q to a validator
+# How to delegate Q to a Validator
 
 ## Intro
 

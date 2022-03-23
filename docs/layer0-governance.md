@@ -1,4 +1,4 @@
-# Layer 0 governance of root nodes
+# Layer 0 Governance of Root Nodes
 
 Usually, the Q governance takes place on-chain, but pure on-chain governance allows malicious nodes to gain control over the network in case they receive the on-chain majority. In such a case, maliciously acting validators can avoid loosing their majority by transaction blacklisting and censoring. To avoid this, Q introduces Layer 0 governance (or L0 governance). It's purpose is to allow root nodes to find countermeasures to heal and correct the on-chain governance structures in case it has been compromised by malicious validators.
 
@@ -13,11 +13,11 @@ Currently, L0 governance allows to maintain two kinds of lists:
 
 To perform L0 governance actions you need to understand how to access `q-client console`. You can access q-client console by running command `docker-compose exec node geth attach data/geth.ipc` on the node with unlocked root node account.
 
-## Updating the root node lists
+## Updating the Root Node Lists
 
 First of all it is good to understand how to see current active root node list.
 
-### See active root node list
+### See active Root Node List
 
 Run:
 
@@ -41,7 +41,7 @@ Description:
 
 Active L0 root node list is not always the same as on-chain. Usually after adding root node using voting, we need to propagate new root node list via L0 governance. Let’s say we added address `0xF691ea2E16B1017CE4893C2D2b91e745a3E501ad` as a root node, now on-chain root node list contains four addresses instead of three. To check it we can use another L0 governance method.
 
-### See current on-chain root node list
+### See current on-chain Root Node List
 
 Run:
 
@@ -58,7 +58,7 @@ Example Output:
 
 As you can see, now we have four addresses in `nodes` section. But it would be much easier to see only the difference between `active` and `on-chain` root node lists. For this we have another method.
 
-### See difference between active and on-chain root node lists
+### See difference between active and on-chain Root Node Lists
 
 Run:
 
@@ -83,8 +83,7 @@ Output means that if on-chain list is adopted, active list will contain new addr
 
 Now let’s set new active root list. To do so one root node should propose new list and others should accept it.
 
-### Propose new root node list based on on-chain root list
-### Propose new root node list based on on-chain root list
+### Propose new Root Node List based on on-chain Root List
 
 Run:
 
@@ -128,7 +127,7 @@ Example Output:
 
 We can see list of new root node addresses and who signed it. But usually to make a decision, we need to check only if `on-chain` list is the same as `proposed` list.
 
-### See difference between proposed and on-chain root node lists
+### See difference between proposed and on-chain Root Node Lists
 
 Run:
 
@@ -148,7 +147,7 @@ If `Diff` parameter for both objects is `null`, then it means that both lists co
 
 Now, we are sure that proposed list contains all addresses from on-chain root node list and we can accept it.
 
-### Accept proposed root node list
+### Accept proposed Root Node List
 
 Run:
 
@@ -156,11 +155,11 @@ Run:
 
 This action will sign the proposed root node list and propagate it to other nodes. Once there is enough signatures, `proposed` root node list will become `active` and will reflect what we have `on-chain`.
 
-## Updating the validator exclusion list
+## Updating the Validator Exclusion List
 
 Before updating we can check current exclusion list.
 
-### See current validator exclusion list
+### See current Validator Exclusion List
 
 Run:
 
@@ -189,7 +188,7 @@ Example Output (no validators excluded):
 
 If we want to update validator exclusion list, we can do it by creating proposal on L0 by root node account.
 
-### Propose validator exclusion list update
+### Propose Validator Exclusion List Update
 
 Run:
 
@@ -211,7 +210,7 @@ In this example we proposed to ban validator with address `0x4a14d788d86d021670e
 
 After one root node proposed update, this proposal should be available on other nodes. To check it, we can call another method to see proposed root list.
 
-### See proposed validator exclusion list
+### See proposed Validator Exclusion List
 
 Run:
 
@@ -231,7 +230,7 @@ Example Output:
 
 Now, we are sure that proposed list contains all required addresses and we can accept it.
 
-### Accept proposed exclusion list
+### Accept proposed Exclusion List
 
 Run:
 

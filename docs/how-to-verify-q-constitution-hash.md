@@ -1,8 +1,8 @@
-# How to verify the the Q constitution
+# How to verify the Q Constitution
 
 The Q constitution is the underlying document for the agreement between Q stakeholders. It is therefore key to verify any document claiming to be the current version or an update of the current Q constitution. The hashing algorithm in use is SHA256 and the according hash (checksum) of each document version is anchored on the Q blockchain.
 
-## Get the current constitution
+## Get the current Constitution
 
 You can choose the level of trust for the first step: For a minimum reliance on other nodes, setup and run your own Q fullnode and set up MetaMask to be able to interact with Your HQ later (see [fullnode setup tutorial](how-to-setup-fullnode.md) and [MetaMask tutorial](how-to-install-metamask.md)). For a higher level of trust, you can connect to the default node provided in the MetaMask tutorial and follow the discussions in the Q community.
 
@@ -10,7 +10,7 @@ As a next step, visit the ([Your HQ dApp](https://hq.q.org/) and check `Constitu
 
 As an example within this tutorial, let's assume you found the version `0x6e373b129fe2fd2e8ff0fa857df072d1324fda62e4b03ea4fb8431e3e15bcc1c` on the dashboard and downloaded the file `6e373b129fe2fd2e8ff0fa857df072d1324fda62e4b03ea4fb8431e3e15bcc1c.adoc` which corresponds to a Q constitution with SHA256 hash `6e373b129fe2fd2e8ff0fa857df072d1324fda62e4b03ea4fb8431e3e15bcc1c`. Please note that the prefix `0x` is added to the file name to get the identifier.
 
-## Verify the constitution version hash
+## Verify the Constitution Version Hash
 
 Using a console, go into the directory where the file is located.
 
@@ -30,13 +30,13 @@ If you are on Windows and refrain from using a console, you can use tools such a
 
 The calculated hash should match the value observed on-chain.
 
-## Read the constitution
+## Read the Constitution
 
 You can compile a PDF document using [asciidoctor](https://asciidoctor.org/docs/asciidoctor-pdf/) on your local machine or using an online asciidoc viewer like  [Heroku](https://thetimetube.herokuapp.com/asciidoc/). For the latter, just copy & paste the content of the `*.adoc` file and click `Run (F9)`.
 
 It will render a human readable version which you can print to PDF using the `Print` option in the top right.
 
-## Update the constitution
+## Update the Constitution
 
 Every update to the content of the current constitution file will change its hash. If you have to change the content, e.g. during a Q constitution update proposal on-chain, you have to first modify the content of the `*.adoc` file and then calculate the new hash.
 

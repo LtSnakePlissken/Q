@@ -1,16 +1,16 @@
-# How to exercise your governance rights as Q token holder
+# How to exercise your Governance Rights as Q Token Holder
 
 ## Your HQ and MetaMask
 
 The easiest way to make use of the Q governance features is to use our dApp *Your HQ*. One instance is hosted at [https://hq.q.org/](https://hq.q.org/). You will need to have a running MetaMask wallet plug-in before being able to interact with the relevant delegation smart contract through *Your HQ*. Please check the MetaMask tutorial first.
 
-## Account funding
+## Account Funding
 
 After connecting *Your HQ* with MetaMask, go to the *Q Vault* area. You will see your active parameters Q vault balance and Q address balance. In *Q Vault balance* you can see your Q balance on the platform, and in Q address balance you see the display of your Q balance on the address (wallet) in MetaMask. Observe also that your voting weight is zero if you use the Q vault for the first time.
 
 To replenish your Q vault balance check the manage balance sub-tab. Lookout for the *Transfer into Q Vault* input field, enter your desired amount of Q to transfer, and click on *Transfer*. When withdrawing funds back to your MetaMask Wallet, do the same operation in the line *Withdraw from Q Vault*.
 
-## Locking funds for voting
+## Locking Funds for Voting
 
 Now with Q on the platform, you need to lock the number of tokens that you plan to vote with. In other words, the number of locked tokens will set your voting weight. This strategy prevents double-vote scenarios. In the Lock your Coins for Voting sub-tab, enter the number of coins to be locked. If you already have a locked balance, you can increase the number of locked coins, or reduce the amount to get back control over the Q. Note that in order to participate in proposals, your funds will always be locked until the proposal voting phase is over.
 

@@ -1,7 +1,7 @@
-# Unlocking address on node
+# Unlocking Address on Node
 
 
-## variables in example
+## Variables in Example
 
  ubuntu - username on your server
  example.com - hostname or ip addr o your server
@@ -17,18 +17,18 @@ scp ./keystorefile ubuntu@example.com:miner/keystore/
 
 then connect to server by ssh and cd to node dir
 ```
-ssh ubuntu@example.com 
+ssh ubuntu@example.com
 cd miner
 ```
 
-After this command enter password of your keystore 
+After this command enter password of your keystore
 ```
 docker-compose exec node geth attach --datadir /data --exec personal.unlockAccount('0x123abc...f')
 # 0x123abc...f - eth address from keystore file you deployed
 ```
 
 
-## Using of ready script
+## Using of Ready Script
 
 ```
 ./reset-passwd.sh -d example.com -r miner -l ./keystorefile

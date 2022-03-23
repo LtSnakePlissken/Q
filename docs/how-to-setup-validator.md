@@ -1,14 +1,14 @@
-# How to setup a Q validator node
+# How to Setup a Q Validator Node
 
-## Setup your server
+## Setup your Server
 
 You must prepare your server / machine to begin. One possibility is to use a local machine, alternatively you can use a cloud instance on AWS for example. There is a good external tutorial on how to get started with Ethereum on AWS. You can use this [tutorial](https://medium.com/@pilankar.akshay3/how-to-setup-a-ethereum-poa-private-proof-of-authority-ethereum-network-network-on-amazon-aws-5fdf56d2ad93) as a basic reference.
 
-## Basic configuration
+## Basic Configuration
 
 Clone the repository `https://gitlab.com/q-dev/mainnet-public-tools` and go to the validator directory. This directory contains docker-compose file for quick launching of full node with enabled rpc along with blockchain explorer, .env file for ports configuration and genesis.json - config of genesis block of Q mainnet.
 
-## Generate a keypair for validator
+## Generate a Keypair for Validator
 
 In order to sign blocks and receive reward, a validator needs a keypair.
 Create a keystore directory, then a password which will be used for private key encryption and save it into a text file pwd.txt in keystore directory.
@@ -54,11 +54,11 @@ Then start password reset procedure with
 
 > **Note: ** *You need to remove address _0xb3ff24f818b0ff6cc50de951bcb8f86b52287dac_ and add your account address instead.*
 
-## Get Q tokens
+## Get Q Tokens
 
 In order to become a validator, you will need to put some stake in validators contract, so you need Q tokens for this. We are working on a public listing of the Q token at the moment.
 
-## Configure setup
+## Configure Setup
 
 Edit .env file in validator directory. Put your address without leading 0x from the step 3, into ADDRESS, your public IP address (please make sure your machine is reachable at the corresponding IP) into IP (this is required for discoverability by other network participants) and optionally choose a port for p2p protocol (or just leave default value). The resulting .env file should look like this:
 
@@ -75,7 +75,7 @@ Next, you need to edit config.json as this file is required for staking. Put you
       "rpc": "https://rpc.q.org"`  
     }
 
-## Put stake in validators contract
+## Put Stake in Validators Contract
 
 As was mentioned previously, you need to put stake to validators contract in order to become a validator. There’s a script that does it for you:
 
@@ -83,7 +83,7 @@ As was mentioned previously, you need to put stake to validators contract in ord
 
 Alternatively, you can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org).
 
-## Launch validator node
+## Launch Validator Node
 
 Now launch your validator node using docker-compose file in validator directory:
 
@@ -93,7 +93,7 @@ Note: Check our nodes real-time logs with the following command:
 
 `docker-compose logs -f --tail "100"`
 
-## Verify that node is producing blocks
+## Verify that Node is producing Blocks
 
 In order for you to start validating, you must wait for the new epoch (i.e. validation cycle). If everything went correctly before and the committed stake was sufficient to enter the validator shortlist, your validator node will start to produce blocks in the next validation cycle.
 Please note that upon start you are likely to see a lot of warnings in q-client logs:

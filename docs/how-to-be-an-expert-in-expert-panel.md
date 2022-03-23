@@ -1,10 +1,10 @@
-# How to be an expert in an expert panel
+# How to be an Expert in an Expert Panel
 
 ## Introduction
 
 Any Q token holder can act as an expert in an expert panel dedicated to a special topic. In order to become an expert, a Q token holder needs to be proposed to enter a panel and needs to be voted in. Please have a look at the according [governance tutorial](how-to-exercise-governance-rights.md) to learn more on proposals and voting mechanisms in Q.
 
-## Proposal creation
+## Proposal Creation
 
 Once you have locked tokens, you can nominate yourself to become an expert. Alternatively, someone else can propose you to become an expert. To do this, go to *Q Governance* section, then within the *Q Expert Proposals* tab, select *Create Q Expert Proposal*. In the process of creation, select *Add new expert*, enter your address and external link with a description of your proposal. After paying the transaction fee and confirming the creation of the proposal, the voting stages begin.
 
@@ -16,6 +16,6 @@ Root nodes can submit a veto to halt the proposal in case they see it not in lin
 
 After the voting is successful, press the "Execute" button, thereby activating the proposal and enforcing the new state on the blockchain. After the successful confirmation of the transaction, you should be part of the expert panel.
 
-## Expert’s capabilities
+## Expert’s Capabilities
 
 As mentioned earlier, an expert can control the values ​​of various parameters in the network. To do this, create a vote in the expert panel, in which you need to select the parameter vote change. Next, you need to select the panel, the type of parameter, and enter a special name for the parameter. After entering these values, you need to enter a new value for the parameter being changed. Upon successful confirmation of the fee payment, a new proposal will be published.

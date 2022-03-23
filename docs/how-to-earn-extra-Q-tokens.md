@@ -1,14 +1,14 @@
-# How to earn extra Q tokens
+# How to earn extra Q Tokens
 
-## Setup MetaMask and using Your HQ website
+## Setup MetaMask and using Your HQ Website
 
 On Q network, you are able to earn extra Q tokens for participating in the Q governance. As a basic requirement you must use a wallet application that carries some tokens. We suggest to use MetaMask. There are 2 options to earn tokens. The first option is to only transfer Q tokens into a Q vault. The second option is to earn a reward on Q synthetic asset (QUSD) which is more complex but offers more benefits for earning extra tokens.
 
-## Setup MetaMask and Your HQ website
+## Setup MetaMask and Your HQ Website
 
 At first, go to page [*Your HQ*](https://hq.q.org/). Complete the MetaMask installation by following the instructions on the website or follow this [tutorial](how-to-install-metamask.md) to setup your MetaMask account.
 
-## Option I: Q vault
+## Option I: Q Vault
 
 After connecting MetaMask, go to the *Q Vault* tab. If you happen to encounter the term *Piggy Bank* please note that the terms *Piggy Bank* and *Q vault* are referring to the very same functionality and are therefore redundant.
 You will see your Q vault balance and Q address balance. In Q vault balance you can see your Q balance within your individual Q vault, whereas Q address balance shows your Q balance on your MetaMask wallet account. Note that your voting weight is zero if you use the Q vault for the first time.
@@ -16,7 +16,7 @@ You will see your Q vault balance and Q address balance. In Q vault balance you 
 To fund your Q vault balance, enter the fundable amount into the input field *Transfer into Q vault* and click *Transfer*. Once you want to withdraw funds back to your MetaMask wallet, you need to do the same operation with input field *Withdraw from Q vault*.
 Depending on system-widely set parameter *Q token holder reward rate*, you will now earn a reward on your Q tokens that are locked within your Q vault.
 
-## Option II: Saving in Q synthetic asset (QUSD)
+## Option II: Saving in Q Synthetic Asset (QUSD)
 
 You must have QUSD tokens within your wallet which can be obtained in different ways:
 

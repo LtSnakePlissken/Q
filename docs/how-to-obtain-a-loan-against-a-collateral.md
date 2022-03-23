@@ -1,4 +1,4 @@
-# How to obtain a loan against a collateral
+# How to obtain a Loan against a Collateral
 
 ## Setup MetaMask and Your HQ
 
@@ -6,7 +6,7 @@ On the Q network, you are able to take a loan in the QUSD against collateral in 
 
 First, go to the dApp [*Your HQ*](https://hq.q.org/). Complete the installation by following the instructions on the website or follow this [tutorial](how-to-install-metamask.md) to setup your MetaMask account.
 
-## Account funding
+## Account Funding
 
 You must have Q and QBTC tokens within your wallet. There are several options how you can achieve this:
 
@@ -14,7 +14,7 @@ You must have Q and QBTC tokens within your wallet. There are several options ho
 - Provide goods or services and accept QBTC as payment asset
 - Receive tokens from someone else, e.g. friends & families
 
-## QBTC vault
+## QBTC Vault
 
 To start go to the *Saving and Borrowing* tab within Your HQ website mentioned in step 1. Create a new QBTC vault by clicking on the appropriate button. After successful signing of the according transaction via MetaMask and its successful confirmation, you can now see the newly created vault and interact with it by clicking on it. You will see two sections in the right sidebar: Collateral and Borrowing.
 

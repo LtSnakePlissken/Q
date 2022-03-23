@@ -1,4 +1,4 @@
-# How to setup sentry node
+# How to Setup Sentry Node
 
 1. Create machines for N sentry nodes and 1 validator node
 2. Create private network for senty nodes' machines and validator's machine(e.g. you can use WireGuard and easy-wg-quick to quick setup)
@@ -9,22 +9,22 @@
 ```
     services:
       node:
-        image: $QCLIENT_IMAGE 
+        image: $QCLIENT_IMAGE
         entrypoint: [ "geth",
-            "--datadir=/data", 
+            "--datadir=/data",
             '--bootnodes=$BOOTNODE_URI',
-            "--port=$EXT_PORT", 
-            "--syncmode=full", 
+            "--port=$EXT_PORT",
+            "--syncmode=full",
             "--verbosity=3",
-            '--networkid=35441', 
-            '--miner.gasprice=50000000000', 
+            '--networkid=35441',
+            '--miner.gasprice=50000000000',
             '--txpool.pricelimit=47619047619',  
-            '--http.addr=0.0.0.0', 
+            '--http.addr=0.0.0.0',
             '--http.corsdomain=*',  
             '--http.api=net,web3,eth,debug,gov'
             ]
         volumes:
-          - ./data:/data 
+          - ./data:/data
 ```
 
   - .env:
@@ -38,21 +38,21 @@ EXT_PORT=30303
 5. Run node
 `docker-compose up -d`
 
-6. Get admin.nodeInfo.enode from nodes' JS console and copy enode URI 
+6. Get admin.nodeInfo.enode from nodes' JS console and copy enode URI
 
-7. install Validator node 
+7. install Validator node
   - docker-compose.yaml:
 ```
 services:
   node:
-    image: $QCLIENT_IMAGE 
+    image: $QCLIENT_IMAGE
     entrypoint: [ "geth",
-        "--datadir=/data", 
+        "--datadir=/data",
         '--bootnodes=$SENTRY',
-        "--syncmode=full", 
+        "--syncmode=full",
         "--verbosity=3",
-         '--networkid=35441', 
-        '--miner.gasprice=50000000000', 
+         '--networkid=35441',
+        '--miner.gasprice=50000000000',
         '--txpool.pricelimit=47619047619',  
         '--mine',
         '--unlock=$VALIDATOR_ADDRESS',
@@ -62,7 +62,7 @@ services:
         ]
     volumes:
       - ./data:/data
-      
+
 ```
 
   - .env:
@@ -87,4 +87,3 @@ uri1,uri2,uri3 -- enode uris of Sentry nodes; Provide all uri because, discoveri
 
 10. Wait for sync and check mining is working
   Notice: if ping is huge your blocks can don't reach to blockchain
-

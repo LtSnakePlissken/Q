@@ -1,4 +1,4 @@
-# How to export a private key
+# How to export a Private Key
 
 If you managed to run a validator or full node (e.g. for becoming a root node), you might want to import your private key into a wallet application like MetaMask in order to actively participate in Q governance processes, change your stake or interact with other system contracts through the dApp "Your HQ".
 
@@ -39,6 +39,6 @@ cd ..
 
 Follow the on-screen instructions to obtain the file containing your private key.
 
-##  Import into wallet applications
+##  Import into Wallet Applications
 
 Depending on the used wallet application, importing the private key can be slightly different. For MetaMask, click on the account icon on the top right corner of MetaMask, then select "Import Account". Then select type "JSON" and upload the key file or select "Private Key" and copy&paste your exported private key.

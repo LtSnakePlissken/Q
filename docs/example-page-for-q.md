@@ -1,4 +1,4 @@
-# Example page for Q
+# Example Page for Q
 
 This page is an example for the maintainers of the documentation and a guide how to use Python Markdown and its extensions with MkDocs for building.
 
@@ -175,7 +175,7 @@ Yes. Videos are also possible. Just change the data-attribute. Opens in a modal.
                     <use xlink:href="/assets/img/feather-sprite.svg#file-text"/>
                 </svg>
                 </figure>
-              
+
                 <h3 class="text-md">Card Title</h3>
                 <p class="color-contrast-medium line-height-md margin-y-xs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente dolorem officia.</p>
                 <p class="card-link color-white margin-top-auto">Explore <svg style="margin-bottom:-6px" width="1.25em" height="1.25em" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
@@ -189,7 +189,7 @@ Yes. Videos are also possible. Just change the data-attribute. Opens in a modal.
                     <use xlink:href="/assets/img/feather-sprite.svg#link"/>
                 </svg>
                 </figure>
-              
+
                 <h3 class="text-md">Card Title</h3>
                 <p class="color-contrast-medium line-height-md margin-y-xs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente dolorem officia.</p>
                 <p class="card-link color-white margin-top-auto">Explore <svg style="margin-bottom:-6px" width="1.25em" height="1.25em" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
@@ -203,7 +203,7 @@ Yes. Videos are also possible. Just change the data-attribute. Opens in a modal.
                     <use xlink:href="/assets/img/feather-sprite.svg#users"/>
                 </svg>
                 </figure>
-              
+
                 <h3 class="text-md">Card Title</h3>
                 <p class="color-contrast-medium line-height-md margin-y-xs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente dolorem officia.</p>
                 <p class="card-link color-white margin-top-auto">Explore <svg style="margin-bottom:-6px" width="1.25em" height="1.25em" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
@@ -217,14 +217,14 @@ Yes. Videos are also possible. Just change the data-attribute. Opens in a modal.
                     <use xlink:href="/assets/img/feather-sprite.svg#gitlab"/>
                 </svg>
                 </figure>
-              
+
                 <h3 class="text-md">Card Title</h3>
                 <p class="color-contrast-medium line-height-md margin-y-xs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente dolorem officia.</p>
                 <p class="card-link color-white margin-top-auto">Explore <svg style="margin-bottom:-6px" width="1.25em" height="1.25em" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                     <use xlink:href="/assets/img/feather-sprite.svg#arrow-right"/>
                 </svg></p>
               </a>
-              
+
             </div>
 
             <!-- getting started -->
@@ -288,7 +288,7 @@ Perfect solution for structuring frequently asked questions or any other content
           <li class="accordion__item js-accordion__item">
             <button class="reset accordion__header padding-y-md js-tab-focus" type="button">
               <h4 class="">Send, receive and earn Q</h4>
-        
+
               <svg class="icon accordion__icon-plus no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
                 <g class="icon__group" fill="none" stroke="currentColor" stroke-miterlimit="10">
                   <line x1="1" y1="8" x2="15" y2="8" />
@@ -296,7 +296,7 @@ Perfect solution for structuring frequently asked questions or any other content
                 </g>
               </svg>
             </button>
-        
+
             <div class="accordion__panel js-accordion__panel">
               <div class="text-component padding-top-xxxs padding-bottom-md">
                 <div class="padding-top-0 overflow-hidden col-10@sm">
@@ -305,11 +305,11 @@ Perfect solution for structuring frequently asked questions or any other content
               </div>
             </div>
           </li>
-        
+
           <li class="accordion__item  js-accordion__item">
             <button class="reset accordion__header padding-y-md js-tab-focus" type="button">
               <h4 class="">Become a validator node</h4>
-        
+
               <svg class="icon accordion__icon-plus no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
                 <g class="icon__group" fill="none" stroke="currentColor" stroke-miterlimit="10">
                   <line x1="1" y1="8" x2="15" y2="8" />
@@ -317,7 +317,7 @@ Perfect solution for structuring frequently asked questions or any other content
                 </g>
               </svg>
             </button>
-        
+
             <div class="accordion__panel js-accordion__panel">
               <div class="text-component padding-top-xxxs padding-bottom-md">
                 <div class="padding-top-0 overflow-hidden col-10@sm">
@@ -326,11 +326,11 @@ Perfect solution for structuring frequently asked questions or any other content
               </div>
             </div>
           </li>
-        
+
           <li class="accordion__item  js-accordion__item">
             <button class="reset accordion__header padding-y-md js-tab-focus" type="button">
               <h4 class="">Become a root node</h4>
-        
+
               <svg class="icon accordion__icon-plus no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
                 <g class="icon__group" fill="none" stroke="currentColor" stroke-miterlimit="10">
                   <line x1="1" y1="8" x2="15" y2="8" />
@@ -338,7 +338,7 @@ Perfect solution for structuring frequently asked questions or any other content
                 </g>
               </svg>
             </button>
-        
+
             <div class="accordion__panel js-accordion__panel">
               <div class="text-component padding-top-xxxs padding-bottom-md">
                 <div class="padding-top-0 overflow-hidden col-10@sm">
@@ -347,11 +347,11 @@ Perfect solution for structuring frequently asked questions or any other content
               </div>
             </div>
           </li>
-        
+
           <li class="accordion__item  js-accordion__item">
             <button class="reset accordion__header padding-y-md js-tab-focus" type="button">
               <h4 class="">Build applications on Q</h4>
-        
+
               <svg class="icon accordion__icon-plus no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
                 <g class="icon__group" fill="none" stroke="currentColor" stroke-miterlimit="10">
                   <line x1="1" y1="8" x2="15" y2="8" />
@@ -359,7 +359,7 @@ Perfect solution for structuring frequently asked questions or any other content
                 </g>
               </svg>
             </button>
-        
+
             <div class="accordion__panel js-accordion__panel">
               <div class="text-component padding-top-xxxs padding-bottom-md">
                 <div class="padding-top-0 overflow-hidden col-10@sm">
@@ -368,11 +368,11 @@ Perfect solution for structuring frequently asked questions or any other content
               </div>
             </div>
           </li>
-        
+
           <li class="accordion__item  js-accordion__item">
             <button class="reset accordion__header padding-y-md js-tab-focus" type="button">
               <h4 class="">Participate in Q’s governance</h4>
-        
+
               <svg class="icon accordion__icon-plus no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
                 <g class="icon__group" fill="none" stroke="currentColor" stroke-miterlimit="10">
                   <line x1="1" y1="8" x2="15" y2="8" />
@@ -380,7 +380,7 @@ Perfect solution for structuring frequently asked questions or any other content
                 </g>
               </svg>
             </button>
-        
+
             <div class="accordion__panel js-accordion__panel">
               <div class="text-component padding-top-xxxs padding-bottom-md">
                 <div class="padding-top-0 overflow-hidden col-10@sm">
@@ -388,11 +388,11 @@ Perfect solution for structuring frequently asked questions or any other content
                 </div>
             </div>
           </li>
-        
+
           <li class="accordion__item  js-accordion__item">
             <button class="reset accordion__header padding-y-md js-tab-focus" type="button">
               <h4 class="">Become a Q expert</h4>
-        
+
               <svg class="icon accordion__icon-plus no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
                 <g class="icon__group" fill="none" stroke="currentColor" stroke-miterlimit="10">
                   <line x1="1" y1="8" x2="15" y2="8" />
@@ -400,7 +400,7 @@ Perfect solution for structuring frequently asked questions or any other content
                 </g>
               </svg>
             </button>
-        
+
             <div class="accordion__panel js-accordion__panel">
               <div class="text-component padding-top-xxxs padding-bottom-md">
                 <div class="padding-top-0 overflow-hidden col-10@sm">
@@ -409,7 +409,7 @@ Perfect solution for structuring frequently asked questions or any other content
               </div>
             </div>
           </li>
-        
+
         </ul>
 
     </div>

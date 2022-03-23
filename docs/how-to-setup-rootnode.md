@@ -1,15 +1,15 @@
-# How to setup a Q root node
+# How to Setup a Q Root Node
 
-## Setup your server
+## Setup your Server
 
 You must prepare your server / machine to begin. One possibility is to use a local machine, alternatively you can use a cloud instance on AWS for example. There is a good external tutorial on how to get started with Ethereum on AWS. You can use this [tutorial](https://medium.com/@pilankar.akshay3/how-to-setup-a-ethereum-poa-private-proof-of-authority-ethereum-network-network-on-amazon-aws-5fdf56d2ad93) as a basic reference.
 
-## Basic configuration
+## Basic Configuration
 
 Clone the repository `https://gitlab.com/q-dev/mainnet-public-tools` and go to the rootnode directory. This directory contains docker-compose file for quick launching of full node with .env file for ports configuration and genesis.json - config of genesis block of Q MainNet.
 
 
-## Generate a keypair for root node
+## Generate a Keypair for Root Node
 
 In order to participate in layer 0 governance protocol, a root node needs a keypair.
 Create a keystore directory, then a password which will be used for private key encryption and save it into a text file pwd.txt in keystore directory.
@@ -55,11 +55,11 @@ Then start password reset procedure with
 
 > **Note: ** *You need to remove address _0xb3ff24f818b0ff6cc50de951bcb8f86b52287dac_ and add your account address instead.*
 
-## Get Q tokens
+## Get Q Tokens
 
 In order to become a validator, you will need to put some stake in validators contract, so you need Q tokens for this. We are working on a public listing of the Q token at the moment.
 
-## Configure setup
+## Configure Setup
 
 Edit .env file in rootnode directory. Put your address without leading 0x from the step 3, into ADDRESS, your public IP address (please make sure your machine is reachable at the corresponding IP) into IP (this is required for discoverability by other network participants) and optionally choose a port for p2p protocol (or just leave default value). The resulting .env file should look like this:
 
@@ -67,11 +67,11 @@ Edit .env file in rootnode directory. Put your address without leading 0x from t
     IP=193.19.228.94
     EXT_PORT=30303
 
-## Put stake in roots contract
+## Put Stake in Roots Contract
 
 You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org).
 
-## Launch root node
+## Launch Root Node
 
 Now launch your root node using docker-compose file in rootnode directory:
 
