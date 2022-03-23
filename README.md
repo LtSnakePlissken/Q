@@ -4,7 +4,7 @@ This repository contains all you need to interact with Q mainnet. It includes th
 
 ## Tutorials
 
-Head over to our [tutorial page](https://q-dev.gitlab.io/mainnet-public-tools). Also, the tutorials are included within folder `/docs` if you have cloned the whole repository.
+Head over to our [tutorial page](https://docs.q.org/). Also, the tutorials are included within folder `/docs` if you have cloned the whole repository.
 
 ## Q mainnet info script
 
