@@ -22,7 +22,7 @@ Go into the **omnibridge-oracle** directory. This directory contains a docker-co
 * ORACLE_VALIDATOR_ADDRESS : Provide your Q validator address. Example: 0xac8e5047d122f801...
 * ORACLE_VALIDATOR_ADDRESS_PRIVATE_KEY : Provide your Q validator private key. Example: a385db8296ceb9a....
 * COMMON_HOME_RPC_URL : You can keep the default, use https://rpc.q.org or use the RPC endpoint of our own full node if you are operating one.
-* COMMON_FOREIGN_RPC_URL : Provide an RPC endpoint of a client of the blockchain on the other side of the bridge. Q mainnet bridges to the Ethereum mainnet. You can use your own ethereum client, a public endpoint or [create an infura account](https://infura.io/) for free to get a personal Ethereum mainnet access point (e.g. https://rinkeby.infura.io/v3/1673abc....).
+* COMMON_FOREIGN_RPC_URL : Provide an RPC endpoint of a client of the blockchain on the other side of the bridge. Q mainnet bridges to the Ethereum mainnet. You can use your own ethereum client, a public endpoint or [create an infura account](https://infura.io/) for free to get a personal Ethereum mainnet access point (e.g. https://infura.io/v3/1673abc....).
 
 ## Launch the Oracle
 To start the client with docker-compose make the call
