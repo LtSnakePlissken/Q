@@ -22,7 +22,7 @@ Go into the **omnibridge-oracle** directory. This directory contains a docker-co
 * ORACLE_VALIDATOR_ADDRESS : Provide your Q validator address. Example: 0xac8e5047d122f801...
 * ORACLE_VALIDATOR_ADDRESS_PRIVATE_KEY : Provide your Q validator private key. Example: a385db8296ceb9a....
 * COMMON_HOME_RPC_URL : You can keep the default, use https://rpc.q.org or use the RPC endpoint of our own full node if you are operating one.
-* COMMON_FOREIGN_RPC_URL : Provide an RPC endpoint of a client of the blockchain on the other side of the bridge. Q mainnet bridges to the Ethereum mainnet. You can use your own ethereum client, a public endpoint or [create an infura account](https://infura.io/) for free to get a personal Ethereum mainnet access point (e.g. https://rinkeby.infura.io/v3/1673abc....).
+* COMMON_FOREIGN_RPC_URL : Provide an RPC endpoint of a client of the blockchain on the other side of the bridge. Q mainnet bridges to the Ethereum mainnet. You can use your own ethereum client, a public endpoint or [create an infura account](https://infura.io/) for free to get a personal Ethereum mainnet access point (e.g. https://mainnet.infura.io/v3/1673abc....).
 
 ## Launch the Oracle
 To start the client with docker-compose make the call
@@ -37,7 +37,7 @@ You can track the status of your bridge client by following the logs:
 
 Change to the folder **omnibridge-ui** and copy the file `.env.mainnet` to `.env`.
 
-* REACT_APP_FOREIGN_RPC_URL : Provide an RPC endpoint of a client of the blockchain on the other side of the bridge, e.g. https://rinkeby.infura.io/v3/1673abc....
+* REACT_APP_FOREIGN_RPC_URL : Provide an RPC endpoint of a client of the blockchain on the other side of the bridge, e.g. https://mainnet.infura.io/v3/1673abc....
 
 Start the service with docker-compose
 
@@ -51,7 +51,7 @@ Change to the folder **omnibridge-alm** and copy the file `.env.mainnet` to `.en
 
 * PORT : You can keep the default `8090` or change to some other port.
 * COMMON_HOME_RPC_URL : You can keep the default, use https://rpc.q.org or use the RPC endpoint of our own full node if you are operating one.
-* COMMON_FOREIGN_RPC_URL : Provide an RPC endpoint of a client of the blockchain on the other side of the bridge, e.g. https://rinkeby.infura.io/v3/1673abc....
+* COMMON_FOREIGN_RPC_URL : Provide an RPC endpoint of a client of the blockchain on the other side of the bridge, e.g. https://mainnet.infura.io/v3/1673abc....
 * ALM_HOME_EXPLORER_TX_TEMPLATE : You can keep the default https://explorer.q.org/tx/%s or change with the IP of your own full node block explorer.
 
 Start the monitor service with docker-compose
