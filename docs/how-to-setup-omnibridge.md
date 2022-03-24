@@ -6,7 +6,7 @@ OmniBridge is a component that allows to bridge assets from other blockchains (e
 
 First please make sure you have a running validator node as described [here](how-to-setup-validator.md).
 
-Also please make sure that you have the private key of the validator account as you need it in the config later. If you have a keystore file, you can use [extract-get-private-key.js + manual](https://gitlab.com/q-dev/mainnet-public-tools/-/tree/master/js-tools) to extract your private key from it.
+Also please make sure that you have the private key of the validator account as you need it in the config later. 
 
 ## Download Repo and Configuration
 Clone the latest master of the [mainnet-public-tools repository](https://gitlab.com/q-dev/mainnet-public-tools/-/tree/master/). It should contain, amongst others, the three following folders:
