@@ -73,7 +73,7 @@ MASK=10.xxx.xxx.0/24
 ```
 10.xxx.xxx.0/24 - it's mask of your private network(notice it can be not only in 10.0.0.0 range)
 uri1,uri2,uri3 -- enode uris of Sentry nodes; Provide all uri because, discovering is disabled!!!
-9. add sentrys' uris to /data/geth/static-peers.json
+9. add sentrys' uris to /data/geth/static-nodes.json
 ```
 [
     "uri1",
