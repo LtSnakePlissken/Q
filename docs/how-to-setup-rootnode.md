@@ -2,20 +2,43 @@
 
 ## Setup your Server
 
-You must prepare your server / machine to begin. One possibility is to use a local machine, alternatively you can use a cloud instance on AWS for example. There is a good external tutorial on how to get started with Ethereum on AWS. You can use this [tutorial](https://medium.com/@pilankar.akshay3/how-to-setup-a-ethereum-poa-private-proof-of-authority-ethereum-network-network-on-amazon-aws-5fdf56d2ad93) as a basic reference.
+The Q Root Node is required to run on a server or (virtal) machine on linux. One possibility is to use a local machine, alternatively you can use a cloud instance on AWS for example. A good external tutorial on how to get started with Ethereum on AWS can be found [here](https://medium.com/@pilankar.akshay3/how-to-setup-a-ethereum-poa-private-proof-of-authority-ethereum-network-network-on-amazon-aws-5fdf56d2ad93). Any other linux machine will work as well if it meets the following requirements:
+
+  - Linux machine with SSH access
+  - Min. 3(v)Cores (x86), 30 GB storage and 3 GB RAM
+  - Installed applications: docker, docker-compose, git (optional)
 
 ## Basic Configuration
 
-Clone the repository `https://gitlab.com/q-dev/mainnet-public-tools` and go to the rootnode directory. This directory contains docker-compose file for quick launching of full node with .env file for ports configuration and genesis.json - config of genesis block of Q MainNet.
+Clone the repository
 
+`$ git clone https://gitlab.com/q-dev/mainnet-public-tools`
 
-## Generate a Keypair for Root Node
+and go to the rootnode directory
 
-In order to participate in layer 0 governance protocol, a root node needs a keypair.
-Create a keystore directory, then a password which will be used for private key encryption and save it into a text file pwd.txt in keystore directory.
-Assuming you are in rootnode directory, issue this command in order to generate a keypair:  
+`$ cd mainnet-public-tools/rootnode`
 
-    docker-compose run --rm --entrypoint "geth account new --datadir=/data --password=/data/keystore/pwd.txt" node
+This directory contains a docker-compose file for quick launching of a full node using files `.env` for basic configuration and `genesis.json` that contains the genesis block config of Q Mainnet.
+
+> **Note: ** *If git is not installed on your machine, you can manually copy all files from public repo `mainnet-public-tools` onto your machine. Using git is much more comfortable, since it allows to pull file updates with one single command.*
+
+## Set Password for Keystore File
+
+To act as a root node, your node needs a keypair to sign transactions and L0 governance messages. First, create a keystore directory with
+
+`$ mkdir keystore`
+
+then create a file pwd.txt
+
+`$ nano keystore/pwd.txt`
+
+then set a password that will be used for future account unlocking by entering it into `pwd.txt`. The password needs to be entered at the beginning of the file. Save your changes with `CTRL+O`, then close nano with `CTRL+X` (if you use a different editor, commands might be different).
+
+## Generate a Keypair
+
+Assuming you are in `/rootnode` directory, issue this command in order to generate a keypair:  
+
+    $ docker-compose run --rm --entrypoint "geth account new --datadir=/data --password=/data/keystore/pwd.txt" node
 
 The output of this command should look like this:
 
@@ -31,7 +54,7 @@ The output of this command should look like this:
 
 This way, a new private key is generated and stored in keystore directory encrypted with password from pwd.txt file. In our example, *0xb3FF24F818b0ff6Cc50de951bcB8f86b52287DAc* (**you will have a different value**) is the address corresponding to the newly generated private key.
 
-Alternatively, you can generate a secret key pair and according file on this [page](https://vanity-eth.tk/) and save it to the keystore directory manually.
+*Alternatively*, you can generate a secret key pair and according file [here](https://vanity-eth.tk/) and save it to the keystore directory manually.
 Also you may use `create-geth-private-key.js` script in js-tools dir.
 
 Whether you chose to provide your own vanity keys or use the above command to create a keypair, please ensure that the directory `/keystore` contains the following files:
@@ -47,36 +70,69 @@ Whether you chose to provide your own vanity keys or use the above command to cr
 
 If you want to change the password in the future, you need to stop the node first.
 
-    docker-compose down
+`$ docker-compose down`
 
 Then start password reset procedure with
 
-    docker-compose run node --datadir /data account update 0xb3ff24f818b0ff6cc50de951bcb8f86b52287dac
+    $ docker-compose run node --datadir /data account update 0xb3ff24f818b0ff6cc50de951bcb8f86b52287dac
 
 > **Note: ** *You need to remove address _0xb3ff24f818b0ff6cc50de951bcb8f86b52287dac_ and add your account address instead.*
 
-## Get Q Tokens
+## Configure Node
 
-In order to become a validator, you will need to put some stake in validators contract, so you need Q tokens for this. We are working on a public listing of the Q token at the moment.
+Edit .env file in `/rootnode` directory:
 
-## Configure Setup
+`$ nano .env`
 
-Edit .env file in rootnode directory. Put your address without leading 0x from the step 3, into ADDRESS, your public IP address (please make sure your machine is reachable at the corresponding IP) into IP (this is required for discoverability by other network participants) and optionally choose a port for p2p protocol (or just leave default value). The resulting .env file should look like this:
+Enter your (newly created) root node address without leading 0x here:
 
+    # your q address here (without leading 0x)
     ADDRESS=b3FF24F818b0ff6Cc50de951bcB8f86b52287DAc
+
+Then add your machines public IP address (please make sure your machine is reachable at the corresponding IP since it's required for discoverability by other network participants) here:
+
+    # your public IP address here
     IP=193.19.228.94
+
+Optionally choose a port for p2p protocol or just leave default value (use different ports for every node you are running):
+
+    # the port you want to use for p2p communication (default is 30303)
     EXT_PORT=30303
 
-## Put Stake in Roots Contract
+The resulting .env file should look somehow like this:
 
-You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org).
+    # docker image for q client
+    QCLIENT_IMAGE=qblockchain/q-client:mainnet
+
+    # your q address here (without leading 0x)
+    ADDRESS=b3FF24F818b0ff6Cc50de951bcB8f86b52287DAc
+
+    # your public IP address here
+    IP=193.19.228.94
+
+    # the port you want to use for p2p communication (default is 30303)
+    EXT_PORT=30303
+
+    # the initial root node set if never connected before
+    INITIALROOTS=0xB6fs1878e60B7D9152695c1b3D190c3a3DC,0x3313ba4c7EbDa55C038316C77679b2909da7a5
+
+    # only root lists later than this will be considered for updates
+    ROOTTIMESTAMP=1647418453
 
 ## Launch Root Node
 
 Now launch your root node using docker-compose file in rootnode directory:
 
-`docker-compose up -d`
+`$ docker-compose up -d`
 
-Note: Check your nodes real-time logs with the following command:
+Check your nodes real-time logs with the following command:
 
-`docker-compose logs -f --tail "100"`
+`$ docker-compose logs -f --tail "100"`
+
+## Get Q Tokens
+
+In order to become a root node, you will need to make an onchain proposal to [add yourself to the root node panel](how-to-become-a-root-node.md). You need Q tokens for this. We are working on a public listing of the Q token at the moment.
+
+## Put Stake in Roots Contract
+
+You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org). Go to `Consensus Services` -> `Root Node Staking` for stake management. Also, you may want to check our [Consensus Services documentation](dapp-consensusservices.md).
