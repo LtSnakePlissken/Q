@@ -1,5 +1,5 @@
 # Global site config
-site_name: Q Testnet Documentation
+site_name: Q Documentation
 site_url: https://docs.q.org
 site_dir: public
 use_directory_urls: true
@@ -95,7 +95,7 @@ nav:
         - Use the Q Mobile Wallet : how-to-install-q-wallet.md
         - Delegate Q to a Validator : how-to-delegate-to-validator.md
         - Exercise your Governance Rights : how-to-exercise-governance-rights.md
-        - Use Telegram Notification Service : notification-service.md 
+        - Use Telegram Notification Service : notification-service.md
         - Become a Root Node : how-to-become-a-root-node.md
         - Layer 0 Governance of Root Nodes: layer0-governance.md
         - Become an Expert in an Expert Panel : how-to-be-an-expert-in-expert-panel.md
