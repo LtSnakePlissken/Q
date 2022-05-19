@@ -70,6 +70,17 @@ Edit .env file in validator directory. Put your address without leading 0x from 
 
 As was mentioned previously, you need to put stake to validators contract in order to become a validator. You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org).
 
+## Add your Validator to https://stats.q.org
+
+If you want your validator to participate in the overall statistics, you can add an additional flag to the node entrypoint, it should look like this:
+
+    node:
+    image: $QCLIENT_IMAGE
+    entrypoint: ["geth", "--ethstats=<Your_Validator_Name>:<Mainnet_access_key>@stats.q.org", "--datadir=/data", ...]
+
+In order to find out the Mainnet_access_key we ask you to write to us on Discord https://discord.gg/9vBCJFksNg.
+Also feel free to name your validator, you can use special characters, emoji as well as spaces.
+
 ## Launch Validator Node
 
 Now launch your validator node using docker-compose file in validator directory:
