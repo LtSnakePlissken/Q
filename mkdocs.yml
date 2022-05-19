@@ -42,8 +42,8 @@ theme:
         show: true
         url: 'https://www.reddit.com/r/QBlockchain/'
       discord:
-        show: false
-        url: 'https://discord.com/'
+        show: true
+        url: 'https://discord.gg/YTgkvJvZGD'
       telegram:
         show: false
         url: 'https://telegram.org/'
@@ -113,6 +113,7 @@ nav:
         - Purge Validator Slashings : how-to-purge-vn-slashings.md
         - Export Private Key : how-to-export-key.md
         - Unlock Account : how-to-unlock-account.md
+        - System Parameters : system-parameters.md
     - Your HQ dApp:
       - Overview:
         - Dashboard: dapp-dashboard.md
