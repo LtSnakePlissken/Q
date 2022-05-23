@@ -72,14 +72,14 @@ As was mentioned previously, you need to put stake to validators contract in ord
 
 ## Add your Validator to https://stats.q.org
 
-If you want your validator to participate in the overall statistics, you can add an additional flag to the node entrypoint, it should look like this:
+Your_Validator_Name can be chosen arbitrarily. It will be displayed in the statistics. If you want to disclose your ID, this could be something like OurCoolCompany - Don't trust, verify. You can use special characters, emojis as well as spaces. If you prefer to stay anonymous, we would appreciate to include the beginning of your validator Q address, so there is a link between your client and your address.
+If you want your validator to report to the network statistics, you can add an additional flag to the node entrypoint, it should look like this:
 
     node:
     image: $QCLIENT_IMAGE
     entrypoint: ["geth", "--ethstats=<Your_Validator_Name>:<Mainnet_access_key>@stats.q.org", "--datadir=/data", ...]
 
 In order to find out the Mainnet_access_key we ask you to write to us on Discord https://discord.gg/9vBCJFksNg.
-Also feel free to name your validator, you can use special characters, emoji as well as spaces.
 
 ## Launch Validator Node
 
