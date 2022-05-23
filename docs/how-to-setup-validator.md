@@ -80,7 +80,7 @@ If you want your validator to report to the network statistics, you can add an a
 
 `Your_Validator_Name` can be chosen arbitrarily. It will be displayed in the statistics. If you want to disclose your ID, this could be something like "OurCoolCompany - Don't trust, verify". You can use special characters, emojis as well as spaces. If you prefer to stay anonymous, we would appreciate to include the beginning of your validator Q address, so there is a link between your client and your address.
 
-In order to find out the `Mainnet_access_key` we ask you to write to us on Discord https://discord.gg/9vBCJFksNg.
+In order to find out the `Mainnet_access_key` we ask you to write to us on Discord https://discord.gg/YTgkvJvZGD.
 
 ## Launch Validator Node
 
