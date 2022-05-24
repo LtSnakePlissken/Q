@@ -121,15 +121,15 @@ The resulting .env file should look somehow like this:
 
 ## Add your Root Node to https://stats.q.org
 
-    If you want your root node to report to the [network statistics](https://stats.q.org), you can add an additional flag to the node entrypoint, it should look like this:
+If you want your root node to report to the [network statistics](https://stats.q.org), you can add an additional flag to the node entrypoint, it should look like this:
 
-        node:
-        image: $QCLIENT_IMAGE
-        entrypoint: ["geth", "--ethstats=<Your_RootNode_Name>:<Mainnet_access_key>@stats.q.org", "--datadir=/data", ...]
+    node:
+    image: $QCLIENT_IMAGE
+    entrypoint: ["geth", "--ethstats=<Your_RootNode_Name>:<Mainnet_access_key>@stats.q.org", "--datadir=/data", ...]
 
-    `Your_RootNode_Name` can be chosen arbitrarily. It will be displayed in the statistics and could be something like "OurCoolCompany - 0xABC123". You can use special characters, emojis as well as spaces. We would appreciate to include the beginning of your Root Node Q address, so there is a link between your client and your address.
+`Your_RootNode_Name` can be chosen arbitrarily. It will be displayed in the statistics and could be something like "OurCoolCompany - 0xABC123". You can use special characters, emojis as well as spaces. We would appreciate to include the beginning of your Root Node Q address, so there is a link between your client and your address.
 
-    In order to find out the `Mainnet_access_key` we ask you to write to us [on Discord](https://discord.gg/YTgkvJvZGD).
+In order to find out the `Mainnet_access_key` we ask you to write to us [on Discord](https://discord.gg/YTgkvJvZGD).
 
 ## Launch Root Node
 
