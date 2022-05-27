@@ -68,7 +68,7 @@ Edit .env file in validator directory. Put your address without leading 0x from 
 
 ## Put Stake in Validators Contract
 
-As was mentioned previously, you need to put stake to validators contract in order to become a validator. You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org).
+As was mentioned previously, you need to put stake to validators contract in order to become a validator. You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org). Ultimately, you need to `Join Validator Ranking` to receive rewards. The according functionality is located at `Consensus Services -> Validator Staking` in box "Manage Balance".
 
 ## Add your Validator to https://stats.q.org
 
@@ -102,3 +102,11 @@ Please note that upon start you are likely to see a lot of warnings in q-client 
 This is actually ok, as the node needs some time to synchronize with the peers of Q network. Until a full sync is reached, it may happen that your node already starts block creation using the most recent snapshot in which you are the only validator. After successful peer discovery, there warnings will disappear.
 
   > **Note: ** *All validators are required to run an omnibridge-oracle as per Constitution. Please see [here](how-to-setup-omnibridge.md#Configure-OmniBridge-oracle) for a tutorial how to do this.*
+
+## Exit the Validator Ranking
+
+If you want to exit the Validator Ranking, you must `Announce Withdrawal` within `Consensus Services -> Validator Staking` of 100% of your self-staked Q token. After doing that, you will be taken out of the ranking immediately, though your node might still validate blocks until the next validation cycle begins (within max. 8 minutes).
+
+The announced amount will be put on an escrow balance for a certain time (see constitution parameter `constitution.valWithdrawP`) until it can be withdrawn fully. Re-joining the panel is possible any time by putting back stake or reducing the announced withdrawal amount.
+
+  > **Note: ** *A temporary exit from the ranking is possible as described above. For re-entering, you need to announce withdrawal of `0` Q which overwrites your initial announcement and restores your self-stake to 100%. You need to `Join Validator Ranking` again to finalise the re-entering procedure. A temporary exit (or pause) might be useful if you are planning a maintenance downtime of your node for example.*
