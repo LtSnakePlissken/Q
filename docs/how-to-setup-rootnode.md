@@ -141,6 +141,14 @@ Check your nodes real-time logs with the following command:
 
 `$ docker-compose logs -f --tail "100"`
 
+## Find additional peers
+
+In case you cannot connect to the client with the normal configuration, we recommend that you add an additional flag referring to our additional peers (bootnode1.q.org/bootnode2.q.org/bootnode3.q.org):
+
+    node:
+    image: $QCLIENT_IMAGE
+    entrypoint: ["geth", "--bootnodes=bootnode2.q.org", "--datadir=/data", ...]
+
 ## Get Q Tokens
 
 In order to become a root node, you will need to make an onchain proposal to [add yourself to the root node panel](how-to-become-a-root-node.md). You need Q tokens for this. We are working on a public listing of the Q token at the moment.
