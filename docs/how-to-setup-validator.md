@@ -92,6 +92,14 @@ Note: Check our nodes real-time logs with the following command:
 
 `docker-compose logs -f --tail "100"`
 
+## Find additional peers
+
+In case you cannot connect to the client with the normal configuration, we recommend that you add an additional flag referring to our additional peers (bootnode1.q.org/bootnode2.q.org/bootnode3.q.org):
+
+    node:
+    image: $QCLIENT_IMAGE
+    entrypoint: ["geth", "--bootnodes=bootnode2.q.org", "--datadir=/data", ...]
+
 ## Verify that Node is producing Blocks
 
 In order for you to start validating, you must wait for the new epoch (i.e. validation cycle). If everything went correctly before and the committed stake was sufficient to enter the validator shortlist, your validator node will start to produce blocks in the next validation cycle.

@@ -12,13 +12,13 @@ services:
       - ./genesis.json:/genesis.json
       - node-data:/data
 
-  node:
+  fullnode:
     image: qblockchain/q-client:mainnet
     depends_on: 
       - node-init
     entrypoint: ["geth", "--datadir=/data", "--http", "--http.corsdomain=*", "--http.addr=0.0.0.0", "--syncmode=full", "--rpc.allow-unprotected-txs", "--networkid=35441", "--verbosity=3", "--root.addresses=$INITIALROOTS", "--root.timestamp=$ROOTTIMESTAMP", "--bootnodes=$BOOTNODE_ADDR", "--miner.gasprice=50000000000", "--txpool.pricelimit=47619047619", "--http", "--http.addr=0.0.0.0", "--http.corsdomain=*", "--http.api=net,web3,eth,debug"]
     volumes:
-      - node-data:/data
+      - fullnode-data:/data
     ports:
     - $EXT_PORT:8545
     restart: unless-stopped
@@ -34,4 +34,4 @@ services:
     restart: unless-stopped
 
 volumes:
-  node-data:
+  fullnode-data:

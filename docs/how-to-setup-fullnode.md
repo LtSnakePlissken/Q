@@ -28,3 +28,11 @@ After node is launched, it starts syncing with network. You can track the progre
 Note: Check our nodes real-time logs with the following command:
 
 `docker-compose logs -f --tail "100"`
+
+## Find additional peers
+
+In case you cannot connect to the client with the normal configuration, we recommend that you add an additional flag referring to our additional peers (bootnode1.q.org/bootnode2.q.org/bootnode3.q.org):
+
+    node:
+    image: $QCLIENT_IMAGE
+    entrypoint: ["geth", "--bootnodes=bootnode2.q.org", "--datadir=/data", ...]
