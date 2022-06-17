@@ -17,7 +17,7 @@ Validators need to put stake on their validator staking balance in order to ente
 
 The balance overview in "Validator Staking" shows stake and Q wallet balance as well as time locked validator stake. Before a validator is able to withdraw stake, an announcement of the same is required. After the announcement period has ended, the announced funds can be withdrawn. This is a security feature for Q token holders, stake delegators and the network to be prepared for unexpected exit scenarios of trusted network members.
 
-The validator ranking table gives potential delegators an overview of each validators performance. Especially "Delegator Share" (i.e. share that will be rewarded to delegators) and "Delegation Efficiency" (i.e. degree of impact of every additionally delegated Q) are indicators for economically efficient [delegations](how_to_delegate_to_validator).
+The validator ranking table gives potential delegators an overview of each validators performance. Especially "Delegator Share" (i.e. share that will be rewarded to delegators) and "Delegation Efficiency" (i.e. degree of impact of every additionally delegated Q) are indicators for economically efficient [delegations](how-to-delegate-to-validator.md).
 
 Clicking on the button "Manage Staker Reward Pool" on the top right corner of the screen opens a modal that allows validators to define the share the group of delegators receive when they delegate stake to the according validator node. There are different types of stake:
 
