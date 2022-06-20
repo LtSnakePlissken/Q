@@ -31,8 +31,8 @@ Note: Check our nodes real-time logs with the following command:
 
 ## Find additional peers
 
-In case you cannot connect to the client with the normal configuration, we recommend that you add an additional flag referring to our additional peers (bootnode1.q.org/bootnode2.q.org/bootnode3.q.org):
+In case you cannot connect to the client with the normal configuration, we recommend that you add an additional flag referring to our additional peers ($BOOTNODE1_ADDR/$BOOTNODE2_ADDR/$BOOTNODE3_ADDR):
 
     node:
     image: $QCLIENT_IMAGE
-    entrypoint: ["geth", "--bootnodes=bootnode2.q.org", "--datadir=/data", ...]
+    entrypoint: ["geth", "--bootnodes=$BOOTNODE_ADDR", "--datadir=/data", ...]

@@ -38,7 +38,7 @@ then set a password that will be used for future account unlocking by entering i
 
 Assuming you are in `/rootnode` directory, issue this command in order to generate a keypair:  
 
-    $ docker-compose run --rm --entrypoint "geth account new --datadir=/data --password=/data/keystore/pwd.txt" node
+    $ docker-compose run --rm --entrypoint "geth account new --datadir=/data --password=/data/keystore/pwd.txt" rootnode
 
 The output of this command should look like this:
 
@@ -74,7 +74,7 @@ If you want to change the password in the future, you need to stop the node firs
 
 Then start password reset procedure with
 
-    $ docker-compose run node --datadir /data account update 0xb3ff24f818b0ff6cc50de951bcb8f86b52287dac
+    $ docker-compose run rootnode --datadir /data account update 0xb3ff24f818b0ff6cc50de951bcb8f86b52287dac
 
 > **Note: ** *You need to remove address _0xb3ff24f818b0ff6cc50de951bcb8f86b52287dac_ and add your account address instead.*
 
@@ -143,11 +143,11 @@ Check your nodes real-time logs with the following command:
 
 ## Find additional peers
 
-In case you cannot connect to the client with the normal configuration, we recommend that you add an additional flag referring to our additional peers (bootnode1.q.org/bootnode2.q.org/bootnode3.q.org):
+In case you cannot connect to the client with the normal configuration, we recommend that you add an additional flag referring to our additional peers ($BOOTNODE1_ADDR/$BOOTNODE2_ADDR/$BOOTNODE3_ADDR):
 
     node:
     image: $QCLIENT_IMAGE
-    entrypoint: ["geth", "--bootnodes=bootnode2.q.org", "--datadir=/data", ...]
+    entrypoint: ["geth", "--bootnodes=$BOOTNODE_ADDR", "--datadir=/data", ...]
 
 ## Get Q Tokens
 
