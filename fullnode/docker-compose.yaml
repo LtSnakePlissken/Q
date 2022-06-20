@@ -1,22 +1,9 @@
 version: "3"
 
 services:
-  node-init:
-    image: qblockchain/q-client:mainnet
-    environment:
-      - DATADIR=/data
-      - GENESIS_PATH=genesis.json
-    entrypoint: ["/bin/sh","./entrypoint.sh"]
-    volumes:
-      - ./init.sh:/entrypoint.sh
-      - ./genesis.json:/genesis.json
-      - node-data:/data
-
   fullnode:
     image: qblockchain/q-client:mainnet
-    depends_on: 
-      - node-init
-    entrypoint: ["geth", "--datadir=/data", "--http", "--http.corsdomain=*", "--http.addr=0.0.0.0", "--syncmode=full", "--rpc.allow-unprotected-txs", "--networkid=35441", "--verbosity=3", "--root.addresses=$INITIALROOTS", "--root.timestamp=$ROOTTIMESTAMP", "--bootnodes=$BOOTNODE_ADDR", "--miner.gasprice=50000000000", "--txpool.pricelimit=47619047619", "--http", "--http.addr=0.0.0.0", "--http.corsdomain=*", "--http.api=net,web3,eth,debug"]
+    entrypoint: ["geth", "--datadir=/data", "--http", "--http.corsdomain=*", "--http.addr=0.0.0.0", "--syncmode=full", "--rpc.allow-unprotected-txs", "--verbosity=3", "--miner.gasprice=50000000000", "--txpool.pricelimit=47619047619", "--http.api=net,web3,eth,debug"]
     volumes:
       - fullnode-data:/data
     ports:

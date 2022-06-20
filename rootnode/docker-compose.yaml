@@ -1,21 +1,9 @@
 version: "3"
 
 services:
-  node-init:
-    image: qblockchain/q-client:mainnet
-    environment:
-      - DATADIR=/data
-      - GENESIS_PATH=genesis.json
-    entrypoint: ["/bin/sh","./entrypoint.sh"]
-    volumes:
-      - ./keystore:/data/keystore
-      - ./init.sh:/entrypoint.sh
-      - ./genesis.json:/genesis.json
-      - node-data:/data
-
   rootnode:
     image: $QCLIENT_IMAGE
-    entrypoint: ["geth", "--datadir=/data", "--nat=extip:$IP", "--port=$EXT_PORT", "--unlock=$ADDRESS", "--password=/data/keystore/pwd.txt", "--miner.etherbase=$ADDRESS",  "--syncmode=full", "--networkid=35441", "--verbosity=3", "--nousb", "--root.addresses=$INITIALROOTS", "--root.timestamp=$ROOTTIMESTAMP", "--bootnodes=enode://22adab037308f02abbb0fd7e831c75afa367b36615b2a0358a5c4673912cf384de6c8e688371822488622ebee383aeea5d41087160cb70484a9f1671876871b1@bootnode.q.org:30301"]
+    entrypoint: ["geth", "--datadir=/data", "--nat=extip:$IP", "--port=$EXT_PORT", "--unlock=$ADDRESS", "--password=/data/keystore/pwd.txt", "--miner.etherbase=$ADDRESS",  "--syncmode=full", "--verbosity=3"]
     volumes:
       - ./keystore:/data/keystore
       - ./additional:/data/additional
