@@ -13,11 +13,12 @@ All responsibilities of a root node are described within the constitution (c.f. 
   - initiate measures to enforce constitution compliance, e.g. vetos, slashing proposals
 
 To become a root node, you must
-  1. Setup and run your own root node,
-  2. get in touch with Root Node Selection Expert Panel (EPRS),
-  3. meet the requirements according to constitution,
-  4. create a proposal to enter the root node panel and
-  5. receive a voting majority on your proposal.
+
+1. Setup and run your own root node,
+2. get in touch with Root Node Selection Expert Panel (EPRS),
+3. meet the requirements according to constitution,
+4. create a proposal to enter the root node panel and
+5. receive a voting majority on your proposal.
 
 The following tutorial will guide you through the process.
 
