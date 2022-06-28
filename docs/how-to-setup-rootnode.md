@@ -16,7 +16,9 @@ If you are running Ubuntu, use these commands to install all mentioned required 
 
 `$ sudo apt-get install git` -> installs git
 
-`$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin` -> installs docker, docker-compose and containerd (not required)
+`$ sudo apt-get install docker` -> installs docker
+
+`$ sudo apt-get install docker-compose` -> installs docker-compose
 
 Please check corresponding online resources for your operating system and the third party application you want to install for further questions.
 
