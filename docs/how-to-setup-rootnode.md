@@ -135,7 +135,7 @@ The resulting .env file should look somehow like this:
 
 If you want your root node to report to the [network statistics](https://stats.q.org), you can add an additional flag to the node entrypoint within file `/rootnode/docker-compose.yaml`, it should look like this:
 
-    node:
+    rootnode:
     image: $QCLIENT_IMAGE
     entrypoint: ["geth", "--ethstats=<Your_RootNode_Name>:<Mainnet_access_key>@stats.q.org", "--datadir=/data", ...]
 
@@ -157,7 +157,7 @@ Check your nodes real-time logs with the following command:
 
 In case you cannot connect to the client with the normal configuration, we recommend that you add an additional flag referring to our additional peers ($BOOTNODE1_ADDR/$BOOTNODE2_ADDR/$BOOTNODE3_ADDR):
 
-    node:
+    rootnode:
     image: $QCLIENT_IMAGE
     entrypoint: ["geth", "--bootnodes=$BOOTNODE_ADDR", "--datadir=/data", ...]
 
