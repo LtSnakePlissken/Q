@@ -8,6 +8,18 @@ The Q Root Node is required to run on a server or (virtal) machine on linux. One
   - Min. 3(v)Cores (x86), 30 GB storage and 3 GB RAM
   - Installed applications: docker, docker-compose, git (optional)
 
+### Application Installation
+
+If you are running Ubuntu, use these commands to install all mentioned required applications using `apt`:
+
+`$ sudo apt-get update` -> updates apt
+
+`$ sudo apt-get install git` -> installs git
+
+`$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin` -> installs docker, docker-compose and containerd (not required)
+
+Please check corresponding online resources for your operating system and the third party application you want to install for further questions.
+
 ## Basic Configuration
 
 Clone the repository
