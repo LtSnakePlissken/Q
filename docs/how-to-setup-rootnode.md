@@ -2,7 +2,7 @@
 
 ## Setup your Server
 
-The Q Root Node is required to run on a server or (virtal) machine on linux. One possibility is to use a local machine, alternatively you can use a cloud instance on AWS for example. A good external tutorial on how to get started with Ethereum on AWS can be found [here](https://medium.com/@pilankar.akshay3/how-to-setup-a-ethereum-poa-private-proof-of-authority-ethereum-network-network-on-amazon-aws-5fdf56d2ad93). Any other linux machine will work as well if it meets the following requirements:
+The Q Root Node is required to run on a server or (virtual) machine on linux. One possibility is to use a local machine, alternatively you can use a cloud instance on AWS for example. A good external tutorial on how to get started with Ethereum on AWS can be found [here](https://medium.com/@pilankar.akshay3/how-to-setup-a-ethereum-poa-private-proof-of-authority-ethereum-network-network-on-amazon-aws-5fdf56d2ad93). Any other linux machine will work as well if it meets the following requirements:
 
   - Linux machine with SSH access
   - Min. 3(v)Cores (x86), 30 GB storage and 3 GB RAM
@@ -28,21 +28,21 @@ Clone the repository
 
 `$ git clone https://gitlab.com/q-dev/mainnet-public-tools`
 
-and go to the rootnode directory
+and go to the `/rootnode` directory
 
 `$ cd mainnet-public-tools/rootnode`
 
-This directory contains a docker-compose file for quick launching of a full node using files `.env` for basic configuration and `genesis.json` that contains the genesis block config of Q Mainnet.
+This directory contains the `docker-compose.yaml` file for quick launch of a full node using files `.env` for basic configuration and `genesis.json` that contains the genesis block config of Q Mainnet.
 
 > **Note: ** *If git is not installed on your machine, you can manually copy all files from public repo `mainnet-public-tools` onto your machine. Using git is much more comfortable, since it allows to pull file updates with one single command.*
 
 ## Set Password for Keystore File
 
-To act as a root node, your node needs a keypair to sign transactions and L0 governance messages. First, create a keystore directory with
+To act as a root node, your node needs a keypair to sign transactions and L0 governance messages. First, create a `/keystore` directory with
 
 `$ mkdir keystore`
 
-then create a file pwd.txt
+then create a file `pwd.txt`
 
 `$ nano keystore/pwd.txt`
 
@@ -94,7 +94,7 @@ Then start password reset procedure with
 
 ## Configure Node
 
-Edit .env file in `/rootnode` directory:
+Edit `.env` file in `/rootnode` directory:
 
 `$ nano .env`
 
@@ -113,7 +113,7 @@ Optionally choose a port for p2p protocol or just leave default value (use diffe
     # the port you want to use for p2p communication (default is 30303)
     EXT_PORT=30303
 
-The resulting .env file should look somehow like this:
+The resulting `.env` file should look somehow like this:
 
     # docker image for q client
     QCLIENT_IMAGE=qblockchain/q-client:mainnet
@@ -157,7 +157,7 @@ Check your nodes real-time logs with the following command:
 
 ## Find additional peers
 
-In case you cannot connect to the client with the normal configuration, we recommend that you add an additional flag referring to our additional peers ($BOOTNODE1_ADDR/$BOOTNODE2_ADDR/$BOOTNODE3_ADDR):
+In case your client can't connect with the default configuration, we recommend that you add an additional flag referring to one of our additional peers (`$BOOTNODE1_ADDR`, `$BOOTNODE2_ADDR`or `$BOOTNODE3_ADDR`) within `docker-compose.yaml` file:
 
     rootnode:
     image: $QCLIENT_IMAGE

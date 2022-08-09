@@ -6,13 +6,13 @@ You must prepare your server / machine to begin. One possibility is to use a loc
 
 ## Basic Configuration
 
-Clone the repository `https://gitlab.com/q-dev/mainnet-public-tools` and go to the validator directory. This directory contains docker-compose file for quick launching of full node with enabled rpc along with blockchain explorer, .env file for ports configuration and genesis.json - config of genesis block of Q mainnet.
+Clone the repository `https://gitlab.com/q-dev/mainnet-public-tools` and go to the `/validator` directory. This directory contains the `docker-compose.yaml` file for quick launching of full node with enabled rpc along with blockchain explorer, `.env` file for ports configuration and `genesis.json` with the configuration of genesis block of Q mainnet.
 
 ## Generate a Keypair for Validator
 
 In order to sign blocks and receive reward, a validator needs a keypair.
-Create a keystore directory, then a password which will be used for private key encryption and save it into a text file pwd.txt in keystore directory.
-Assuming you are in validator directory, issue this command in order to generate a keypair:  
+Create a `/keystore` directory, then a password which will be used for private key encryption and save it into a text file `pwd.txt` in `/keystore` directory.
+Assuming you are in `/validator` directory, issue this command in order to generate a keypair:  
 
     docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:mainnet geth account new --datadir=/data --password=/data/keystore/pwd.txt
 
@@ -30,8 +30,8 @@ The output of this command should look like this:
 
 This way, a new private key is generated and stored in keystore directory encrypted with password from pwd.txt file. In our example, *0xb3FF24F818b0ff6Cc50de951bcB8f86b52287DAc* (**you will have a different value**) is the address corresponding to the newly generated private key.
 
-Alternatively, you can generate a secret key pair and according file on this [page](https://vanity-eth.tk/) and save it to the keystore directory manually.
-Also you may use `create-geth-private-key.js` script in js-tools dir.
+Alternatively, you can generate a secret key pair and according file on this [page](https://vanity-eth.tk/) and save it to the `/keystore` directory manually.
+Also you may use `create-geth-private-key.js` script in `/js-tools` folder.
 
 Whether you chose to provide your own vanity keys or use the above command to create a keypair, please ensure that the directory `/keystore` contains the following files:
 
@@ -60,7 +60,7 @@ In order to become a validator, you will need to put some stake in validators co
 
 ## Configure Setup
 
-Edit .env file in validator directory. Put your address without leading 0x from the step 3, into ADDRESS, your public IP address (please make sure your machine is reachable at the corresponding IP) into IP (this is required for discoverability by other network participants) and optionally choose a port for p2p protocol (or just leave default value). The resulting .env file should look like this:
+Edit `.env` file in `/validator` directory. Put your address without leading 0x from the step 3, into `ADDRESS`, your public IP address (please make sure your machine is reachable at the corresponding IP) into `IP` (this is required for discoverability by other network participants) and optionally choose a port for p2p protocol (or just leave default value). The resulting `.env` file should look like this:
 
     ADDRESS=b3FF24F818b0ff6Cc50de951bcB8f86b52287DAc
     IP=193.19.228.94
@@ -68,13 +68,13 @@ Edit .env file in validator directory. Put your address without leading 0x from 
 
 ## Put Stake in Validators Contract
 
-As was mentioned previously, you need to put stake to validators contract in order to become a validator. You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org). Ultimately, you need to `Join Validator Ranking` to receive rewards. The according functionality is located at `Consensus Services -> Validator Staking` in box "Manage Balance".
+As was mentioned previously, you need to put stake to validators contract in order to become a validator. You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org). Ultimately, you need to `Join Validator Ranking` to receive rewards. The according functionality is located at `Consensus Services -> Validator Staking` in box "Manage Balance". If you can't see the menu item `Consensus Services`, you are not running the dApp UI in `advanced mode`. Go to `Settings` and activate it.
 
 ## Add your Validator to https://stats.q.org
 
 If you want your validator to report to the [network statistics](https://stats.q.org), you can add an additional flag to the node entrypoint within file `/validator/docker-compose.yaml`, it should look like this:
 
-    node:
+    validator-node:
     image: $QCLIENT_IMAGE
     entrypoint: ["geth", "--ethstats=<Your_Validator_Name>:<Mainnet_access_key>@stats.q.org", "--datadir=/data", ...]
 
@@ -94,9 +94,9 @@ Note: Check our nodes real-time logs with the following command:
 
 ## Find additional peers
 
-In case you cannot connect to the client with the normal configuration, we recommend that you add an additional flag referring to our additional peers ($BOOTNODE1_ADDR/$BOOTNODE2_ADDR/$BOOTNODE3_ADDR):
+In case your client can't connect with the default configuration, we recommend that you add an additional flag referring to one of our additional peers (`$BOOTNODE1_ADDR`, `$BOOTNODE2_ADDR`or `$BOOTNODE3_ADDR`) within `docker-compose.yaml` file:
 
-    node:
+    validator-node:
     image: $QCLIENT_IMAGE
     entrypoint: ["geth", "--bootnodes=$BOOTNODE_ADDR", "--datadir=/data", ...]
 
