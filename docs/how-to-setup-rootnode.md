@@ -151,7 +151,7 @@ IP=193.19.228.94
 Optionally choose a port for p2p protocol or just leave default value (use different ports for every node you are running):
 
 ```text
-# the port you want to use for p2p communication (default is 30303)
+# the port you want to use for p2p communication (default is 30304)
 EXT_PORT=30304
 ```
 
