@@ -167,8 +167,8 @@ ADDRESS=b3FF24F818b0ff6Cc50de951bcB8f86b52287DAc
 # your public IP address here
 IP=193.19.228.94
 
-# the port you want to use for p2p communication (default is 30303)
-EXT_PORT=30303
+# the port you want to use for p2p communication (default is 30304)
+EXT_PORT=30304
 
 # the initial root node set if never connected before
 INITIALROOTS=0xB6fs1878e60B7D9152695c1b3D190c3a3DC,0x3313ba4c7EbDa55C038316C77679b2909da7a5
