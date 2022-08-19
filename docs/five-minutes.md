@@ -4,6 +4,20 @@
 
 First install the browser add-on 'MetaMask'. After successful installation, add a custom network and enter the Q network configuration details that are documented within [MetaMask tutorial](how-to-install-metamask.md). Finally, create two new accounts so you can later send Q tokens from one to another.
 
+## Network Configuration
+
+You might need to configure your wallet to support and accept Q tokens. To do this, you need to connect to the Q mainnet by using the following network details:
+
+| **Parameter** | **Value** |
+|:--|:--|
+| Network name | Q Mainnet |
+| RPC-URL | https://rpc.q.org |
+| Chain-ID | 35441 |
+| Symbol | Q |
+| Block-Explorer-URL| https://explorer.q.org |
+
+> **Note: ** *These parameters are valid for Q mainnet only!*
+
 ## Get your first Q
 
 Q tokens will be made available shortly for public sale.
