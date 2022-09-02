@@ -92,7 +92,6 @@ nav:
     - Tutorials:
       - Basic Setup:
         - Install and setup MetaMask : how-to-install-metamask.md
-        - Use the Q Mobile Wallet : how-to-install-q-wallet.md
         - Delegate Q to a Validator : how-to-delegate-to-validator.md
         - Exercise your Governance Rights : how-to-exercise-governance-rights.md
         - Use Telegram Notification Service : notification-service.md
