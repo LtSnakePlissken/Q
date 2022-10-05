@@ -45,7 +45,7 @@ There are three types of Q proposals:
 
 Each proposal type requires a different set of additional parameters during proposal creation, including references to external information, parameters and their values or a new constitution hash resulting from textual changes. Also, proposal types differ with respect to voting and veto periods and creation and voting permissions (e.g. emergency updates can only be created and voted for by root nodes).
 
-  > **Note: ** *The exact voting procedure including permissions, quorums and time intervals is specified in appendix 5 "Voting" of the [Q constitution](https://q.org/assets/files/Q%20Constitution_v0.1.pdf).*
+  > **Note: ** *The exact voting procedure including permissions, quorums and time intervals is specified in appendix 5 "Voting" of the [Q constitution](https://q.org/assets/files/Q_Constitution.pdf).*
 
 ## Root Node Panel
 
@@ -71,7 +71,7 @@ There are two types of root node panel proposals:
 
 If you would like to leave the root node panel yourself, you can initiate a proposal for removing a root node and enter your own wallet address. This will cause an immediate panel exit that doesn't require any vote or veto.
 
-  > **Note: ** *Please check the full [tutorial](how-to-become-a_root-node) of how to become a root node before initiating a proposal and be aware of appendix 2 of Q constitution (Root Node Selection - Mandatory Requirements). The exact voting procedure including permissions, quorums and time intervals is specified in appendix 5 "Voting" of the [Q constitution](https://q.org/assets/files/Q%20Constitution_v0.1.pdf).*
+  > **Note: ** *Please check the full [tutorial](how-to-become-a_root-node) of how to become a root node before initiating a proposal and be aware of appendix 2 of Q constitution (Root Node Selection - Mandatory Requirements). The exact voting procedure including permissions, quorums and time intervals is specified in appendix 5 "Voting" of the [Q constitution](https://q.org/assets/files/Q_Constitution.pdf).*
 
 ## Expert Proposals
 
@@ -98,7 +98,7 @@ There are three types of Q expert panel proposals:
 
 Whereas every Q token holder can initiate a proposal to add or remove an expert, only active experts of the corresponding expert panel can initiate a proposal for changing one or more parameters.
 
-  > **Note: ** *The exact voting procedure including permissions, quorums and time intervals is specified in appendix 5 "Voting" of the [Q constitution](https://q.org/assets/files/Q%20Constitution_v0.1.pdf).*
+  > **Note: ** *The exact voting procedure including permissions, quorums and time intervals is specified in appendix 5 "Voting" of the [Q constitution](https://q.org/assets/files/Q_Constitution.pdf).*
 
 ## Slashing Proposals
 
@@ -124,4 +124,4 @@ There are two types of slashing proposals:
 
 Whereas root node slashing proposals can be created by any Q token holder, validator slashings are initiated and voted only by root nodes. The after successful voting, the slashing is to be executed, resulting in a reduction of the culprits stake. The slashed funds are kept in an escrow, allowing the culprit to take legal countermeasures through private arbitration "Slashing Appeal").
 
-  > **Note: ** *The exact voting procedure including permissions, quorums and time intervals is specified in appendix 5 "Voting" of the [Q constitution](https://q.org/assets/files/Q%20Constitution_v0.1.pdf). The exact process of slashing, slashing objection and arbitration is defined in articles 6 & 13.*
+  > **Note: ** *The exact voting procedure including permissions, quorums and time intervals is specified in appendix 5 "Voting" of the [Q constitution](https://q.org/assets/files/Q_Constitution.pdf). The exact process of slashing, slashing objection and arbitration is defined in articles 6 & 13.*
