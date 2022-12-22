@@ -54,7 +54,7 @@ node_1  | INFO [09-28|14:46:26.044] Looking for peers                        pee
 node_1  | INFO [09-28|14:46:29.610] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed="905.051µs" mgasps=0.000 number=2 hash=65a32d..98d44f dirty=1.12KiB
 node_1  | INFO [09-28|14:46:29.611] Commit new mining work                   number=3 sealhash=eb0759..f1af89 uncles=1 txs=0 gas=0 fees=0 elapsed="731.827µs"
 ```
-The set of logs above shows that your node is looking to pull in the current state of the blockchain and retrieve data from other nodes in the testnet network, and that retrieving the data is successful.
+The set of logs above shows that your node is looking to pull in the current state of the blockchain and retrieve data from other nodes in the network, and that retrieving the data is successful.
 
 # Running a Validator after joining the Validator List
 

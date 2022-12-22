@@ -4,9 +4,10 @@
 
 The Q Root Node is required to run on a server or (virtual) machine on linux. One possibility is to use a local machine, alternatively you can use a cloud instance on AWS for example. A good external tutorial on how to get started with Ethereum on AWS can be found [here](https://medium.com/@pilankar.akshay3/how-to-setup-a-ethereum-poa-private-proof-of-authority-ethereum-network-network-on-amazon-aws-5fdf56d2ad93). Any other linux machine will work as well if it meets the following requirements:
 
-  - Linux machine with SSH access
-  - Min. 3(v)Cores (x86), 30 GB storage and 3 GB RAM
-  - Installed applications: docker, docker-compose, git (optional)
+  - Linux machine with SSH access;
+  - Min. 1(v)Core (x86), 20 GB storage and 2 GB RAM;
+  - Rec. 2(v)Cores (x86), 30 GB storage and 4 GB RAM;
+  - Installed applications: docker, docker-compose, git (optional).
 
 ### Application Installation
 
@@ -52,7 +53,7 @@ and go to the `/rootnode` directory
 $ cd mainnet-public-tools/rootnode
 ```
 
-This directory contains the `docker-compose.yaml` file for quick launch of a full node using files `.env` for basic configuration and `genesis.json` that contains the genesis block config of Q Mainnet.
+This directory contains the `docker-compose.yaml` file for quick launching of the root node with preconfigurations using `.env` file (which can be created from `.env.example` file).
 
 > **Note: ** *If git is not installed on your machine, you can manually copy all files from public repo `mainnet-public-tools` onto your machine. Using git is much more comfortable, since it allows to pull file updates with one single command.*
 
@@ -96,8 +97,8 @@ Path of the secret key file: /data/keystore/UTC--2021-01-18T11-36-28.705754426Z-
 
 This way, a new private key is generated and stored in keystore directory encrypted with password from pwd.txt file. In our example, *0xb3FF24F818b0ff6Cc50de951bcB8f86b52287DAc* (**you will have a different value**) is the address corresponding to the newly generated private key.
 
-*Alternatively*, you can generate a secret key pair and according file [here](https://vanity-eth.tk/) and save it to the keystore directory manually.
-Also you may use `create-geth-private-key.js` script in js-tools dir.
+*Alternatively*, you can generate a secret key pair and according file [here](https://vanity-eth.tk/) and save it to the `/keystore` directory manually.
+Also, you may use `create-geth-private-key.js` script in `/js-tools` folder.
 
 Whether you chose to provide your own vanity keys or use the above command to create a keypair, please ensure that the directory `/keystore` contains the following files:
 
@@ -128,9 +129,10 @@ $ docker-compose run rootnode --datadir /data account update 0xb3ff24f818b0ff6cc
 
 ## Configure Node
 
-Edit `.env` file in `/rootnode` directory:
+Copy `.env.example` to `.env` and edit this file in `/rootnode` directory:
 
 ```text
+$ cp .env.example .env
 $ nano .env
 ```
 
@@ -159,7 +161,7 @@ The resulting `.env` file should look somehow like this:
 
 ```text
 # docker image for q client
-QCLIENT_IMAGE=qblockchain/q-client:mainnet
+QCLIENT_IMAGE=qblockchain/q-client:1.2.3
 
 # your q address here (without leading 0x)
 ADDRESS=b3FF24F818b0ff6Cc50de951bcB8f86b52287DAc
@@ -170,11 +172,10 @@ IP=193.19.228.94
 # the port you want to use for p2p communication (default is 30304)
 EXT_PORT=30304
 
-# the initial root node set if never connected before
-INITIALROOTS=0xB6fs1878e60B7D9152695c1b3D190c3a3DC,0x3313ba4c7EbDa55C038316C77679b2909da7a5
-
-# only root lists later than this will be considered for updates
-ROOTTIMESTAMP=1647418453
+# extra bootnode you want to use
+BOOTNODE1_ADDR=enode://3021f73a6f14f8594384923f7f0228f81a806d1708e5c046db12661bdce6b0f10625fae12771aa36f7a4d1f110d4e5a589bf3d34ec4b1d2c6d10e382d90f6983@79.125.97.227:30314
+BOOTNODE2_ADDR=enode://34b9e4e18bc37e4437bc0a9b10ac8ae5d0aab2b2e827310e90ec1012e818d07962b162d98e083ec5487e0cf87d1ffefb46332ec05209ec82fb675ae7afe3e241@79.125.97.227:30315
+BOOTNODE3_ADDR=enode://f6204e3d971ec3dce74b8af2933e33551993790ab789500b82c80276f9e97e41b310f08d4a6cfdf330e72c6136f8df85a11fa923410f277f9c743f8a77e105f1@79.125.97.227:30316
 ```
 
 ## Add your Root Node to https://stats.q.org
@@ -189,7 +190,7 @@ rootnode:
 
 `<Your_RootNode_Name>` can be chosen arbitrarily. It will be displayed in the statistics and could be something like "OurCoolCompany - 0xABC123". You can use special characters, emojis as well as spaces. We would appreciate to include the beginning of your Root Node Q address, so there is a link between your client and your address.
 
-In order to find out the `<Mainnet_access_key>` we ask you to write to us [on Discord](https://discord.gg/YTgkvJvZGD).
+In order to find out the `<Mainnet_access_key>` please write us [on Discord](https://discord.gg/YTgkvJvZGD).
 
 ## Launch Root Node
 
@@ -212,7 +213,7 @@ In case your client can't connect with the default configuration, we recommend t
 ```text
 rootnode:
   image: $QCLIENT_IMAGE
-  entrypoint: ["geth", "--bootnodes=$BOOTNODE_ADDR", "--datadir=/data", ...]
+  entrypoint: ["geth", "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR", "--datadir=/data", ...]
 ```
 
 ## Get Q Tokens
@@ -221,4 +222,10 @@ In order to become a root node, you will need to make an onchain proposal to [ad
 
 ## Put Stake in Roots Contract
 
+As was mentioned previously, you should put stake to rootnodes contract in order to become a rootnode.
+
 You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org). Go to `Consensus Services` -> `Root Node Staking` for stake management. Also, you may want to check our [Consensus Services documentation](dapp-consensusservices.md).
+
+## Updating Q-Client & Docker Images
+
+To upgrade the node follow the instructions [Upgrade Node](how-to-upgrade-node.md)

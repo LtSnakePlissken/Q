@@ -3,14 +3,28 @@ version: "3"
 services:
   validator-node:
     image: $QCLIENT_IMAGE
-    entrypoint: ["geth", "--datadir=/data", "--nat=extip:$IP", "--port=$EXT_PORT", "--unlock=$ADDRESS",  "--password=/data/keystore/pwd.txt", "--miner.etherbase=$ADDRESS", "--mine", "--miner.threads=1", "--syncmode=full", "--rpc.allow-unprotected-txs", "--verbosity=3", "--miner.gasprice=1"]
+    entrypoint: [
+      "geth",
+      "--datadir=/data",
+      "--syncmode=full",
+      "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR",
+      "--verbosity=3",
+      "--nat=extip:$IP",
+      "--port=$EXT_PORT",
+      "--unlock=$ADDRESS",
+      "--password=/data/keystore/pwd.txt",
+      "--mine",
+      "--miner.threads=1",
+      "--miner.gasprice=1",
+      "--rpc.allow-unprotected-txs"
+    ]
     volumes:
       - ./keystore:/data/keystore
       - ./additional:/data/additional
       - validator-node-data:/data
     ports:
-    - $EXT_PORT:$EXT_PORT/tcp
-    - $EXT_PORT:$EXT_PORT/udp
+      - $EXT_PORT:$EXT_PORT
+      - $EXT_PORT:$EXT_PORT/udp
     restart: unless-stopped
 
 volumes:
