@@ -3,14 +3,24 @@ version: "3"
 services:
   rootnode:
     image: $QCLIENT_IMAGE
-    entrypoint: ["geth", "--datadir=/data", "--nat=extip:$IP", "--port=$EXT_PORT", "--unlock=$ADDRESS", "--password=/data/keystore/pwd.txt", "--miner.etherbase=$ADDRESS",  "--syncmode=full", "--verbosity=3"]
+    entrypoint: [
+      "geth",
+      "--datadir=/data",
+      "--syncmode=full",
+      "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR",
+      "--verbosity=3",
+      "--nat=extip:$IP",
+      "--port=$EXT_PORT",
+      "--unlock=$ADDRESS",
+      "--password=/data/keystore/pwd.txt"
+    ]
     volumes:
       - ./keystore:/data/keystore
       - ./additional:/data/additional
       - rootnode-data:/data
     ports:
-    - $EXT_PORT:$EXT_PORT/tcp
-    - $EXT_PORT:$EXT_PORT/udp
+      - $EXT_PORT:$EXT_PORT
+      - $EXT_PORT:$EXT_PORT/udp
     restart: unless-stopped
 
 volumes:

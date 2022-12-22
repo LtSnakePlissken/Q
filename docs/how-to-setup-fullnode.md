@@ -18,14 +18,14 @@ and go to the `/fullnode` directory
 $ cd mainnet-public-tools/fullnode
 ```
 
-This directory contains the docker-compose file for quick launching of the full node with preconfigurations on rpc, blockchain explorer, `.env` file for ports configuration and `genesis.json` that contains the genesis block config of Q Mainnet.
-
+This directory contains the `docker-compose.yaml` file for quick launching of the full node with preconfigurations on rpc, blockchain explorer using `.env` file (which can be created from `.env.example` file).
 ## Configure Ports
 
 Copy the file `.env.example` to `.env` and configure to your needs.
 
 ```text
 $ cp .env.example .env
+$ nano .env
 ```
 
 Choose ports (or leave default values) for node rpc api and blockchain explorer by editing the `.env` file.
@@ -63,5 +63,10 @@ In case your client can't connect with the default configuration, we recommend t
 ```text
 fullnode:
   image: $QCLIENT_IMAGE
-  entrypoint: ["geth", "--bootnodes=$BOOTNODE_ADDR", "--datadir=/data", ...]
+  entrypoint: ["geth", "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR", "--datadir=/data", ...]
 ```
+
+## Updating Q-Client & Docker Images
+
+To upgrade the node follow the instructions [Upgrade Node](how-to-upgrade-node.md)
+

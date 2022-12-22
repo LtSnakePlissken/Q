@@ -107,6 +107,7 @@ nav:
         - Setup a Root Node: how-to-setup-rootnode.md
         - Setup the Token OmniBridge : how-to-setup-omnibridge.md
         - Setup Sentry Node : how-to-setup-sentry-node.md
+        - Upgrade Node: how-to-upgrade-node.md
         - Use clef to unlock Account with Prompt: clef-tutorial.md
         - Interact with Smart Contracts : how-to-interact-with-smart-contracts-with-remix.md
         - Purge Validator Slashings : how-to-purge-vn-slashings.md

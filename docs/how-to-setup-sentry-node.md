@@ -11,31 +11,39 @@ The sentry node setup is a way to secure your validator node by hiding it behind
   - Adapt `docker-compose.yaml`:
 
 ```text
-...
+version: "3"
+
 services:
-  fullnode:
+  sentrynode:
     image: $QCLIENT_IMAGE
-    entrypoint: [ "geth",
-        "--datadir=/data",
-        '--bootnodes=$BOOTNODE_URI',
-        "--port=$EXT_PORT",
-        "--syncmode=full",
-        "--verbosity=3",
-        '--networkid=35441',
-        '--miner.gasprice=50000000000',
-        '--txpool.pricelimit=47619047619',  
-        '--http.addr=0.0.0.0',
-        '--http.corsdomain=*',  
-        '--http.api=net,web3,eth,debug,gov'
-        ]
-    volumes:
-      - fullnode-data:/data
-...
+    entrypoint: [
+       "geth",
+       "--datadir=/data",
+       "--bootnodes=$BOOTNODE_URI",
+       "--port=$EXT_PORT",
+       "--syncmode=full",
+       "--verbosity=3",
+       "--miner.gasprice=50000000000",
+       "--txpool.pricelimit=47619047619",  
+       "--http.addr=0.0.0.0",
+       "--http.corsdomain=*",  
+       "--http.api=net,web3,eth,debug,gov"
+     ]
+     volumes:
+       - ./additional:/data/additional
+       - sentrynode-data:/data
+     ports:
+       - $EXT_PORT:$EXT_PORT/tcp
+       - $EXT_PORT:$EXT_PORT/udp
+     restart: unless-stopped
+
+volumes:
+  sentrynode-data:
 ```
   - Adapt `.env`:
 
 ```text
-QCLIENT_IMAGE=qblockchain/q-client:mainnet
+QCLIENT_IMAGE=qblockchain/q-client:1.2.3
 BOOTNODE_URI=enode://$BOOTNODE_ENODE_PUBLIC_KEY@$BOOTNODE_IP:30301
 EXT_PORT=30303
 ```
@@ -47,7 +55,7 @@ $ docker-compose up -d
 
 6. Get admin.nodeInfo.enode from nodes' JS console and copy enode URI
 ```text
-$ docker-compose exec fullnode geth attach data/geth.ipc
+$ docker-compose exec sentrynode geth attach data/geth.ipc
 
 $ admin.nodeInfo.enode
 ```
@@ -57,33 +65,41 @@ $ admin.nodeInfo.enode
   - Adapt `docker-compose.yaml`:
 
 ```text
-...
+version: "3"
+
 services:
   validator-node:
     image: $QCLIENT_IMAGE
-    entrypoint: [ "geth",
-        "--datadir=/data",
-        '--bootnodes=$SENTRY',
-        "--syncmode=full",
-        "--verbosity=3",
-         '--networkid=35441',
-        '--miner.gasprice=50000000000',
-        '--txpool.pricelimit=47619047619',  
-        '--mine',
-        '--unlock=$VALIDATOR_ADDRESS',
-        '--password=/data/passwd.txt',
-        '--nodiscover',
-        '--netrestrict $MASK'
-        ]
+    entrypoint: [
+      "geth",
+      "--datadir=/data",
+      "--bootnodes=$SENTRY",
+      "--syncmode=full",
+      "--verbosity=3",
+      "--miner.gasprice=50000000000",
+      "--txpool.pricelimit=47619047619",  
+      "--mine",
+      "--unlock=$VALIDATOR_ADDRESS",
+      "--password=/data/passwd.txt",
+      "--nodiscover",
+      "--netrestrict $MASK"
+    ]
     volumes:
+      - ./keystore:/data/keystore
+      - ./additional:/data/additional
       - validator-node-data:/data
-...
+    restart: unless-stopped
+
+      
+volumes:
+  validator-node-data:
 ```
 
   - Adapt `.env`:
 
 ```text
-QCLIENT_IMAGE=qblockchain/q-client:mainnet
+QCLIENT_IMAGE=qblockchain/q-client:1.2.3
+VALIDATOR_ADDRESS=0000000000000000000000000000000000000000
 SENTRY=uri1,uri2,uri3
 MASK=10.xxx.xxx.0/24
 ```

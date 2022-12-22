@@ -6,7 +6,19 @@ You must prepare your server / machine to begin. One possibility is to use a loc
 
 ## Basic Configuration
 
-Clone the repository `https://gitlab.com/q-dev/mainnet-public-tools` and go to the `/validator` directory. This directory contains the `docker-compose.yaml` file for quick launching of full node with enabled rpc along with blockchain explorer, `.env` file for ports configuration and `genesis.json` with the configuration of genesis block of Q mainnet.
+Clone the repository
+
+```text
+$ git clone https://gitlab.com/q-dev/mainnet-public-tools
+```
+
+and go to the `/validator` directory
+
+```text
+$ cd mainnet-public-tools/validator
+```
+
+This directory contains the `docker-compose.yaml` file for quick launching of the validator node with preconfigurations on rpc, blockchain explorer using `.env` (which can be created from `.env.example`).
 
 ## Generate a Keypair for Validator
 
@@ -15,7 +27,7 @@ Create a `/keystore` directory, then a password which will be used for private k
 Assuming you are in `/validator` directory, issue this command in order to generate a keypair:  
 
 ```text
-$ docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:mainnet geth account new --datadir=/data --password=/data/keystore/pwd.txt
+$ docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:1.2.3 geth account new --datadir=/data --password=/data/keystore/pwd.txt
 ```
 
 The output of this command should look like this:
@@ -70,11 +82,18 @@ In order to become a validator, you will need to put some stake in validators co
 
 ## Configure Setup
 
-Edit `.env` file in `/validator` directory. Put your address without leading 0x from the step 3, into `ADDRESS`, your public IP address (please make sure your machine is reachable at the corresponding IP) into `IP` (this is required for discoverability by other network participants) and optionally choose a port for p2p protocol (or just leave default value). The resulting `.env` file should look like this:
+Copy `.env.example` to `.env` and edit this file in `/validator` directory.
+
+```text
+$ cp .env.example .env
+$ nano .env
+```
+
+Put your address without leading 0x from the step 3, into `ADDRESS`, your public IP address (please make sure your machine is reachable at the corresponding IP) into `IP` (this is required for discoverability by other network participants) and optionally choose a port for p2p protocol (or just leave default value). The resulting `.env` file should look like this:
 
 ```text
 # docker image for q client
-QCLIENT_IMAGE=qblockchain/q-client:mainnet
+QCLIENT_IMAGE=qblockchain/q-client:1.2.3
 
 # your q address here (without leading 0x)
 ADDRESS=b3FF24F818b0ff6Cc50de951bcB8f86b52287DAc
@@ -85,21 +104,28 @@ IP=193.19.228.94
 # the port you want to use for p2p communication (default is 30303)
 EXT_PORT=30303
 
-# the initial root node set if never connected before
-INITIALROOTS=0xBADA551878e60B7D9173452695c1b3D190c3a3DC,0xFd3ba4c7EbDa55C038316C776F2479b2909da7a5
-
-# only root lists later than this will be considered for updates
-ROOTTIMESTAMP=1647418453
-
 # extra bootnode you want to use
-BOOTNODE1_ADDR=enode://2e085ed39a57457bbd33f9e9d642eafcd178412b2aaf37866c680bfcfd005503b120c068895df2cd69d194470d244f6d6a5b09bb201771907ecbaa74b3bb73c5@79.125.97.227:30314
-BOOTNODE2_ADDR=enode://02e601123249d5d5cf3b25633fee1ee0f42a301240e70091197741f0f0f536bb4a0daf4df404ad5aa9c79dcbea39fb2aa8010dfbb97e179f5f8dc9b5dbd7544c@79.125.97.227:30315
-BOOTNODE3_ADDR=enode://38a27ff4f10f544df0ce774b018e9b9b9937fc38900645d28454bd553b3560682978e7b6a2d222127a88e1c1153b8068c46526aa74e2ef3ff0f602de1bcde30f@79.125.97.227:30316
+BOOTNODE1_ADDR=enode://3021f73a6f14f8594384923f7f0228f81a806d1708e5c046db12661bdce6b0f10625fae12771aa36f7a4d1f110d4e5a589bf3d34ec4b1d2c6d10e382d90f6983@79.125.97.227:30314
+BOOTNODE2_ADDR=enode://34b9e4e18bc37e4437bc0a9b10ac8ae5d0aab2b2e827310e90ec1012e818d07962b162d98e083ec5487e0cf87d1ffefb46332ec05209ec82fb675ae7afe3e241@79.125.97.227:30315
+BOOTNODE3_ADDR=enode://f6204e3d971ec3dce74b8af2933e33551993790ab789500b82c80276f9e97e41b310f08d4a6cfdf330e72c6136f8df85a11fa923410f277f9c743f8a77e105f1@79.125.97.227:30316
+```
+
+Next, you need to edit `config.json` as this file is required for staking. Put your address from above into the address field and password from `/keystore/pwd.txt` into the password field. Resulting `config.json` should be similar to this:
+
+```text
+    {
+      "address": "b3FF24F818b0ff6Cc50de951bcB8f86b52287DAc",
+      "password": "supersecurepassword",
+      "keystoreDirectory": "/data",
+      "rpc": "https://rpc.q.org"
+    }
 ```
 
 ## Put Stake in Validators Contract
 
-As was mentioned previously, you need to put stake to validators contract in order to become a validator. You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org). Ultimately, you need to `Join Validator Ranking` to receive rewards. The according functionality is located at `Consensus Services -> Validator Staking` in box "Manage Balance". If you can't see the menu item `Consensus Services`, you are not running the dApp UI in `advanced mode`. Go to `Settings` and activate it.
+As was mentioned previously, you need to put stake to validators contract in order to become a validator. 
+
+You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org). Ultimately, you need to `Join Validator Ranking` to receive rewards. The according functionality is located at `Consensus Services -> Validator Staking` in box "Manage Balance". If you can't see the menu item `Consensus Services`, you are not running the dApp UI in `advanced mode`. Go to `Settings` and activate it.
 
 ## Add your Validator to https://stats.q.org
 
@@ -113,7 +139,7 @@ validator-node:
 
 `<Your_Validator_Name>` can be chosen arbitrarily. It will be displayed in the statistics. If you want to disclose your ID, this could be something like "OurCoolCompany - Don't trust, verify". You can use special characters, emojis as well as spaces. If you prefer to stay anonymous, we would appreciate to include the beginning of your validator Q address, so there is a link between your client and your address.
 
-In order to find out the `<Mainnet_access_key>` we ask you to write to us [on Discord](https://discord.gg/YTgkvJvZGD).
+In order to find out the `<Mainnet_access_key>` please write us [on Discord](https://discord.gg/YTgkvJvZGD).
 
 ## Launch Validator Node
 
@@ -136,7 +162,7 @@ In case your client can't connect with the default configuration, we recommend t
 ```text
 validator-node:
   image: $QCLIENT_IMAGE
-  entrypoint: ["geth", "--bootnodes=$BOOTNODE_ADDR", "--datadir=/data", ...]
+  entrypoint: ["geth", "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR", "--datadir=/data", ...]
 ```
 
 ## Verify that Node is producing Blocks
@@ -159,3 +185,7 @@ If you want to exit the Validator Ranking, you must `Announce Withdrawal` within
 The announced amount will be put on an escrow balance for a certain time (see constitution parameter `constitution.valWithdrawP`) until it can be withdrawn fully. Re-joining the panel is possible any time by putting back stake or reducing the announced withdrawal amount.
 
   > **Note: ** *A temporary exit from the ranking is possible as described above. For re-entering, you need to announce withdrawal of `0` Q which overwrites your initial announcement and restores your self-stake to 100%. You need to `Join Validator Ranking` again to finalise the re-entering procedure. A temporary exit (or pause) might be useful if you are planning a maintenance downtime of your node for example.*
+
+## Updating Q-Client & Docker Images
+
+To upgrade the node follow the instructions [Upgrade Node](how-to-upgrade-node.md)
