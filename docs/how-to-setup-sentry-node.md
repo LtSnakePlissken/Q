@@ -10,7 +10,7 @@ The sentry node setup is a way to secure your validator node by hiding it behind
 
   - Adapt `docker-compose.yaml`:
 
-```text
+```yaml
 version: "3"
 
 services:
@@ -49,12 +49,12 @@ EXT_PORT=30303
 ```
 
 5. Run node
-```text
+```bash
 $ docker-compose up -d
 ```
 
 6. Get admin.nodeInfo.enode from nodes' JS console and copy enode URI
-```text
+```bash
 $ docker-compose exec sentrynode geth attach data/geth.ipc
 
 $ admin.nodeInfo.enode
@@ -64,7 +64,7 @@ $ admin.nodeInfo.enode
 
   - Adapt `docker-compose.yaml`:
 
-```text
+```yaml
 version: "3"
 
 services:
@@ -107,7 +107,7 @@ MASK=10.xxx.xxx.0/24
 10.xxx.xxx.0/24 is the network mask of your private network (note: it can be not only in 10.0.0.0 range).
 
 8. Add sentries' uris to `/data/geth/static-nodes.json`
-```text
+```json
 [
     "uri1",
     "uri2",
@@ -119,7 +119,7 @@ MASK=10.xxx.xxx.0/24
 uri1,uri2,uri3 are the enode uris of your sentry nodes. Please provide all uris because peer discovery discovery is disabled!
 
 9. Start validator
-```text
+```bash
 $ docker-compose up -d
 ```
 

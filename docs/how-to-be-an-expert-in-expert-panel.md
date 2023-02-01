@@ -6,7 +6,7 @@ Any Q token holder can act as an expert in an expert panel dedicated to a specia
 
 ## Proposal Creation
 
-Once you have locked tokens, you can nominate yourself to become an expert. Alternatively, someone else can propose you to become an expert. To do this, go to *Q Governance* section, then within the *Q Expert Proposals* tab, select *Create Q Expert Proposal*. In the process of creation, select *Add new expert*, enter your address and external link with a description of your proposal. After paying the transaction fee and confirming the creation of the proposal, the voting stages begin.
+Once you have locked tokens, you can nominate yourself to become an expert. Alternatively, someone else can propose you to become an expert. To do this, go to *Governance* section, then within the *Expert Proposals* tab, select *Create proposal*. In the process of creation, select *Add new expert*, enter your address and external link with a description of your proposal. After paying the transaction fee and confirming the creation of the proposal, the voting stages begin.
 
 ## Voting
 

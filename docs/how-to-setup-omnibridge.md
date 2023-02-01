@@ -2,16 +2,16 @@
 
 ## Basic Requirements
 
-OmniBridge is a component that allows to bridge assets from other blockchains (e.g. Ethereum Rinkeby, Ethereum Mainnet, ..) onto Q. This is used for bridging and transferring collaterals for the creation of Q synthetic assets. Due to their role within Q, validators are predisposed to run an OmniBridge instance.
+OmniBridge is a component that allows to bridge assets from other blockchains (e.g. Ethereum mainnet, ..) onto Q. This is used for bridging and transferring collaterals for the creation of Q synthetic assets. Due to their role within Q, validators are predisposed to run an OmniBridge instance.
 
 First please make sure you have a running validator node as described [here](how-to-setup-validator.md).
 
-Also please make sure that you have the private key of the validator account as you need it in the config later. If you have a keystore file, you can use [extract-get-private-key.js + manual](https://gitlab.com/q-dev/testnet-public-tools/-/tree/master/js-tools) to extract your private key from it.
+Also please make sure that you have the private key of the validator account as you need it in the config later. If you have a keystore file, you can use [extract-get-private-key.js + manual](https://gitlab.com/q-dev/mainnet-public-tools/-/tree/master/js-tools) to extract your private key from it.
 
 ## Download Repo and Configuration
 Clone the repository
 
-```text
+```bash
 $ git clone https://gitlab.com/q-dev/mainnet-public-tools
 ```
 
@@ -27,7 +27,7 @@ It should contain, amongst others, the three following folders:
 
 Go into the `/omnibridge-oracle` directory.
 
-```text
+```bash
 $ cd omnibridge-oracle
 ```
 
@@ -35,7 +35,7 @@ This directory contains a `docker-compose.yaml` file for quickly launching the b
 
 Copy the file `.env.mainnet` locally to `.env`.
 
-```text
+```bash
 $ cp .env.mainnet .env
 ```
 
@@ -51,13 +51,13 @@ Adjust the following parameters in `.env`:
 ## Launch the Oracle
 To start the client with docker-compose make the call
 
-```text
+```bash
 $ docker-compose up -d
 ```
 
 You can track the status of your bridge client by following the logs:
 
-```text
+```bash
 $ docker-compose logs -f --tail 100
 ```
 
@@ -65,13 +65,13 @@ $ docker-compose logs -f --tail 100
 
 Now change to the folder `/omnibridge-ui`
 
-```text
+```bash
 $ cd ../omnibridge-ui
 ```
 
 and copy the file `.env.mainnet` to `.env`.
 
-```text
+```bash
 $ cp .env.mainnet .env
 ```
 
@@ -83,7 +83,7 @@ Adjust the following parameters in `.env`:
 
 Start the service
 
-```text
+```bash
 $ docker-compose up -d
 ```
 
@@ -94,13 +94,13 @@ You can find the UI running on your machine on port `:8080`, try accessing it wi
 
 Now change to the folder `/omnibridge-alm`
 
-```text
+```bash
 $ cd ../omnibridge-alm
 ```
 
 and copy the file `.env.mainnet` to `.env`.
 
-```text
+```bash
 $ cp .env.mainnet .env
 ```
 
@@ -115,7 +115,7 @@ Adjust the following parameters in `.env`:
 
 Start the monitor service with docker-compose
 
-```text
+```bash
 $ docker-compose up -d
 ```
 

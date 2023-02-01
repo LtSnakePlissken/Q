@@ -27,7 +27,7 @@ Borrowing comes with a fee that is applied based on compound rate approach. You 
 
 ## Obtaining QBTC
 
-For borrowing synthetic assets like QUSD, you need to deposit a collateral such as QBTC. QBTC is wrapped BTC that was bridged from Ethereum to Q using a token bridge (or Omnibridge). A token bridgefor Q mainnet is deployed and reachable at [https://bridge.q.org/](https://bridge.q.org/). This bridge bridges Q mainnet with Ethereum mainnet.
+For borrowing synthetic assets like QUSD, you need to deposit a collateral such as QBTC. QBTC is wrapped BTC that was bridged from Ethereum to Q using a token bridge (or Omnibridge). A token bridge for Q mainnet is deployed and reachable at [https://bridge.q.org/](https://bridge.q.org/). This bridge bridges Q mainnet with Ethereum mainnet.
 
 These are the steps you need to do in order to have QBTC in your MetaMask wallet:
 

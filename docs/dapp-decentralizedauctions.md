@@ -28,22 +28,22 @@ The Q System Reserve collects Q from multiple sources and can be used to maintai
 
 ## Liquidation
 
-When a borrowing vault is free for liquidation due to price fluctuation of collateralized assets, you can create a liquidation auction with button "Create Liquidation Auction" in the top right corner of the screen. A modal opens up and allows to enter
+When a borrowing vault is free for liquidation due to price fluctuation of collateralized assets, you can create a liquidation auction with button "Create Auction" in the top right corner of the screen. A page opens up and allows to enter
 
 - Address of vault owner
 - Vault ID
 - Your initial bid in QUSD
 
-After successful transaction confirmation, the auction is started and will remain open until auction time has ended (`governed.EPDR.liquidationAuctionP`). It will be visible under "Active Auctions" until it has ended and everyone interested will be able to put a bid on it. "Ended Auctions" can be searched as well.
+After successful transaction confirmation, the auction is started and will remain open until auction time has ended (`governed.EPDR.liquidationAuctionP`). It will be visible under "Liquidation" tab until it has ended and everyone interested will be able to put a bid on it. Ended auctions are displayed there as well.
 
 ## System Debt
 
-When the system dept overpasses the threshold (`governed.EPDR.QUSD_debtThreshold`) and netting is not possible, any Q token holder can initiate a system debt auction with button "Create System Debt Auction" in the top right corner of the screen. A modal opens up and allows to enter the initial bid in QUSD for the defined auction lot in Q.
+When the system dept overpasses the threshold (`governed.EPDR.QUSD_debtThreshold`) and netting is not possible, any Q token holder can initiate a system debt auction with button "Create Auction" in the top right corner of the screen. A page opens up and allows to enter the initial bid in QUSD for the defined auction lot in Q.
 
-After successful transaction confirmation, the auction is started and will remain open until auction time has ended (`governed.EPDR.debtAuctionP`). It will be visible under "Active Auctions" until it has ended and everyone interested will be able to put a bid on it. "Ended Auctions" can be searched as well.
+After successful transaction confirmation, the auction is started and will remain open until auction time has ended (`governed.EPDR.debtAuctionP`). It will be visible under "System Debt" tab until it has ended and everyone interested will be able to put a bid on it. Ended auctions are displayed there as well.
 
 ## System Surplus
 
-When the system surplus overpasses the threshold (`governed.EPDR.QUSD_surplusThreshold`) and netting is not possible, any Q token holder can initiate a system debt auction with button "Create System Surplus Auction" in the top right corner of the screen. A modal opens up and allows to enter the initial bid in Q for the defined auction lot in QUSD.
+When the system surplus overpasses the threshold (`governed.EPDR.QUSD_surplusThreshold`) and netting is not possible, any Q token holder can initiate a system debt auction with button "Create Auction" in the top right corner of the screen. A page opens up and allows to enter the initial bid in Q for the defined auction lot in QUSD.
 
-After successful transaction confirmation, the auction is started and will remain open until auction time has ended (`governed.EPDR.surplusAuctionP`). It will be visible under "Active Auctions" until it has ended and everyone interested will be able to put a bid on it. "Ended Auctions" can be searched as well.
+After successful transaction confirmation, the auction is started and will remain open until auction time has ended (`governed.EPDR.surplusAuctionP`). It will be visible under "System Surplus" tab until it has ended and everyone interested will be able to put a bid on it. Ended auctions are displayed there as well.

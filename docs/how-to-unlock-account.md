@@ -15,25 +15,25 @@ This brief tutorial demonstrates how to manually unlock your account by password
 
 First, deploy `keystorefile` to server (can be skipped if node is run locally).
 
-```text
+```bash
 $ scp ./keystorefile ubuntu@example.com:miner/keystore/
 ```
 
 Then connect to your server by ssh and change to node directory
 
-```text
+```bash
 $ ssh ubuntu@example.com
 $ cd miner
 ```
 
 Then manually enter the password for decryption of your keystore (where `0x123abc...f` is the address from keystore file you deployed)
 
-```text
+```bash
 $ docker-compose exec node geth attach --datadir /data --exec personal.unlockAccount('0x123abc...f')
 ```
 
 ## Using of ready Script
 
-```text
+```bash
 ./reset-passwd.sh -d example.com -r miner -l ./keystorefile
 ```

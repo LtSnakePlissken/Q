@@ -14,11 +14,11 @@ All responsibilities of a root node are described within the constitution (c.f. 
 
 To become a root node, you must
 
-1. Setup and run your own root node,
-2. get in touch with Root Node Selection Expert Panel (EPRS),
-3. meet the requirements according to constitution,
-4. create a proposal to enter the root node panel and
-5. receive a voting majority on your proposal.
+1. Setup and run your own root node.
+2. Get in touch with Root Node Selection Expert Panel (EPRS).
+3. Meet the requirements according to constitution.
+4. Create a proposal to enter the root node panel.
+5. Receive a voting majority on your proposal.
 
 The following tutorial will guide you through the process.
 
@@ -32,9 +32,9 @@ To be able to sign transactions with your root node address, you need to import 
 
 If you have imported your keys into MetaMask, the next step is to stake Q tokens to show your commitment to the project and put some "skin into the game". Please note that adding stake is optional for root nodes but the more stake you add, the higher the chance you get voted into the panel.
 
-Go to the dApp "Your HQ" at [https://hq.q.org](https://hq.q.org), connect it with your root node wallet account and go to "Consensus Services -> Root Node Staking". Enter the desired amount of Q you want to stake, then click on "Stake to Panel" and confirm the transaction within MetaMask.
+Go to the dApp "Your HQ" at [https://hq.q.org](https://hq.q.org), connect it with your root node wallet account and go to "Staking -> Root Node Staking". Click on dropdown menu in the top-right corner, select "Stake to panel", enter the desired amount of Q you want to stake, then click on "Confirm" and confirm the transaction within MetaMask.
 
-> **Note: ** *If you want to remove stake, you have to enter the desired amount of Q to be withdrawn from panel, then click "Announce Withdrawal". After the announcement period has ended, you can withdraw up to the announced amount within a separate transaction by clicking on "Withdraw from Panel". The announcement period allows others to get notified about your planned stake reduction and potentially initiate (on-chain) legal measures that would have an impact on your stake (e.g. slashing proposal due to constitutional breach or non-compliant actions).*
+> **Note:** *If you want to remove stake, you have to enter the desired amount of Q to be withdrawn from panel, then click "Announce Withdrawal". After the announcement period has ended, you can withdraw up to the announced amount within a separate transaction by clicking on "Withdraw from Panel". The announcement period allows others to get notified about your planned stake reduction and potentially initiate (on-chain) legal measures that would have an impact on your stake (e.g. slashing proposal due to constitutional breach or non-compliant actions).*
 
 ## The EPRS
 
@@ -44,15 +44,15 @@ Every root node candidate is required to contact the EPRS for this purpose. The 
 
 ## Entering the Root Node Panel
 
-Adding stake doesn't add your account to the root node panel automatically. All root nodes are elected by the majority of Q token holders. To initiate election, you must create an appropriate proposal first. In "Your HQ" go to "Q Governance -> Q Root Node Panel", then "Create Q Root Node Panel Proposal".
+Adding stake doesn't add your account to the root node panel automatically. All root nodes are elected by the majority of Q token holders. To initiate election, you must create an appropriate proposal first. In "Your HQ" go to "Governance -> Root Node Panel", then "Create proposal".
 
 Within the opening modal, select "Add a new root node" and click on "Next". The address of the currently connected MetaMask wallet account is set automatically as applying root node address. You can't propose any third party address to become root node.
 
-On the next modal page, you need to provide the hash of the current constitution. By signing the proposal including the current hash, you confirm and accept the terms incorporated within constitution (c.f. Appendix 2, Part A, 1.(iv)). The current constitution hash can be fetched from "Your HQ" [Dashboard](https://hq.q.org/).
+On the next page, you need to provide the hash of the current constitution. By signing the proposal including the current hash, you confirm and accept the terms incorporated within constitution (c.f. Appendix 2, Part A, 1.(iv)). The current constitution hash can be fetched from "Your HQ" [Dashboard](https://hq.q.org/).
 
 In addition to the constitution hash, you need to provide a URL that leads potential voters to external information on you, your motivation to join the root node panel and legal information about you or your corporation.
 
-We created a [template](https://qdev.li/q-root-node-proposal-testnet) for Q proposals that can be used as reference for a Q root node proposal. Every ended and `executed` root node panel [proposal](https://hq.q.org/q-root-node-panel) can also be used as best-practice reference.
+We created a [template](https://qdev.li/q-root-node-proposal-testnet) for Q proposals that can be used as reference for a Q root node proposal. Every ended and `executed` root node panel [proposal](https://hq.q.org/governance/root-node-panel) can also be used as best-practice reference.
 
 The external reference shall include all required information as per Constitution Appendix 2, Part A, as well as some additional items that help potential voters evaluate the application and decide on the proposal:
 
@@ -62,8 +62,8 @@ The external reference shall include all required information as per Constitutio
 - Link to Q root node panel proposal
 - Date of proposal creation
 
-> **Note: ** *The more precise you are, the more likely is a positive vote from all eligible voters, i.e. the Q token holders.*
+> **Note:** *The more precise you are, the more likely is a positive vote from all eligible voters, i.e. the Q token holders.*
 
-Finally, select "Yes" if you want to remove and replace an existing root node within a single proposal or "No" if you simply want your address to be added to the existing root node panel.
+Finally, type existing root node address if you want to remove and replace an existing root node within a single proposal or leave field empty if you simply want your address to be added to the existing root node panel.
 
-After you committed the proposal by confirming the transaction through MetaMask, the process is started and voting is possible for all eligible Q token holders until the voting period (c.f. value of [`constitution.voting.addOrRemRootVP`](https://hq.q.org/q-parameters)) has ended. Once ended, if quorum is reached and the required majority voted "yes", you will be added to root node panel after executing the proposal through a final transaction.
+After you committed the proposal by confirming the transaction through MetaMask, the process is started and voting is possible for all eligible Q token holders until the voting period (c.f. value of [`constitution.voting.addOrRemRootVP`](https://hq.q.org/q-parameters/constitution)) has ended. Once ended, if quorum is reached and the required majority voted "yes", you will be added to root node panel after executing the proposal through a final transaction.
