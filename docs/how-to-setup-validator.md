@@ -4,17 +4,24 @@
 
 You must prepare your server / machine to begin. One possibility is to use a local machine, alternatively you can use a cloud instance on AWS for example. There is a good external tutorial on how to get started with Ethereum on AWS. You can use this [tutorial](https://medium.com/@pilankar.akshay3/how-to-setup-a-ethereum-poa-private-proof-of-authority-ethereum-network-network-on-amazon-aws-5fdf56d2ad93) as a basic reference.
 
+Any Linux machine will work if it meets the following requirements:
+
+- Linux machine with SSH access;
+- Min. 1(v)Core (x86), 20 GB storage and 2 GB RAM;
+- Rec. 2(v)Cores (x86), 30 GB storage and 4 GB RAM;
+- Installed applications: docker, docker-compose, git (optional).
+
 ## Basic Configuration
 
 Clone the repository
 
-```text
+```bash
 $ git clone https://gitlab.com/q-dev/mainnet-public-tools
 ```
 
 and go to the `/validator` directory
 
-```text
+```bash
 $ cd mainnet-public-tools/validator
 ```
 
@@ -26,7 +33,7 @@ In order to sign blocks and receive reward, a validator needs a keypair.
 Create a `/keystore` directory, then a password which will be used for private key encryption and save it into a text file `pwd.txt` in `/keystore` directory.
 Assuming you are in `/validator` directory, issue this command in order to generate a keypair:  
 
-```text
+```bash
 $ docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:1.2.3 geth account new --datadir=/data --password=/data/keystore/pwd.txt
 ```
 
@@ -64,13 +71,13 @@ validator
 
 If you want to change the password in the future, you need to stop the node first.
 
-```text
+```bash
 $ docker-compose down
 ```
 
 Then start password reset procedure with
 
-```text
+```bash
 $ docker-compose run validator-node --datadir /data account update 0xb3ff24f818b0ff6cc50de951bcb8f86b52287dac
 ```
 
@@ -84,7 +91,7 @@ In order to become a validator, you will need to put some stake in validators co
 
 Copy `.env.example` to `.env` and edit this file in `/validator` directory.
 
-```text
+```bash
 $ cp .env.example .env
 $ nano .env
 ```
@@ -112,7 +119,7 @@ BOOTNODE3_ADDR=enode://f6204e3d971ec3dce74b8af2933e33551993790ab789500b82c80276f
 
 Next, you need to edit `config.json` as this file is required for staking. Put your address from above into the address field and password from `/keystore/pwd.txt` into the password field. Resulting `config.json` should be similar to this:
 
-```text
+```json
     {
       "address": "b3FF24F818b0ff6Cc50de951bcB8f86b52287DAc",
       "password": "supersecurepassword",
@@ -125,13 +132,13 @@ Next, you need to edit `config.json` as this file is required for staking. Put y
 
 As was mentioned previously, you need to put stake to validators contract in order to become a validator. 
 
-You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org). Ultimately, you need to `Join Validator Ranking` to receive rewards. The according functionality is located at `Consensus Services -> Validator Staking` in box "Manage Balance". If you can't see the menu item `Consensus Services`, you are not running the dApp UI in `advanced mode`. Go to `Settings` and activate it.
+You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org). Ultimately, you need to `Join Validator Ranking` to receive rewards. The according functionality is located at `Staking -> Validator Staking`.
 
 ## Add your Validator to https://stats.q.org
 
 If you want your validator to report to the [network statistics](https://stats.q.org), you can add an additional flag to the node entrypoint within file `/validator/docker-compose.yaml`, it should look like this:
 
-```text
+```yaml
 validator-node:
   image: $QCLIENT_IMAGE
   entrypoint: ["geth", "--ethstats=<Your_Validator_Name>:<Mainnet_access_key>@stats.q.org", "--datadir=/data", ...]
@@ -145,13 +152,13 @@ In order to find out the `<Mainnet_access_key>` please write us [on Discord](htt
 
 Now launch your validator node using docker-compose file in validator directory:
 
-```text
+```bash
 $ docker-compose up -d
 ```
 
 Note: Check our nodes real-time logs with the following command:
 
-```text
+```bash
 $ docker-compose logs -f --tail "100"
 ```
 
@@ -159,7 +166,7 @@ $ docker-compose logs -f --tail "100"
 
 In case your client can't connect with the default configuration, we recommend that you add an additional flag referring to one of our additional peers (`$BOOTNODE1_ADDR`, `$BOOTNODE2_ADDR`or `$BOOTNODE3_ADDR`) within `docker-compose.yaml` file:
 
-```text
+```yaml
 validator-node:
   image: $QCLIENT_IMAGE
   entrypoint: ["geth", "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR", "--datadir=/data", ...]
@@ -180,7 +187,7 @@ This is actually ok, as the node needs some time to synchronize with the peers o
 
 ## Exit the Validator Ranking
 
-If you want to exit the Validator Ranking, you must `Announce Withdrawal` within `Consensus Services -> Validator Staking` of 100% of your self-staked Q token. After doing that, you will be taken out of the ranking immediately, though your node might still validate blocks until the next validation cycle begins (within max. 8 minutes).
+If you want to exit the Validator Ranking, you must `Announce Withdrawal` within `Staking -> Validator Staking -> Validator Manage` of 100% of your self-staked Q token. After doing that, you will be taken out of the ranking immediately, though your node might still validate blocks until the next validation cycle begins (within max. 8 minutes).
 
 The announced amount will be put on an escrow balance for a certain time (see constitution parameter `constitution.valWithdrawP`) until it can be withdrawn fully. Re-joining the panel is possible any time by putting back stake or reducing the announced withdrawal amount.
 

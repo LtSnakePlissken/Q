@@ -8,13 +8,13 @@ You must prepare your server / machine to begin. One possibility is to use a loc
 
 Clone the repository
 
-```text
+```bash
 $ git clone https://gitlab.com/q-dev/mainnet-public-tools
 ```
 
 and go to the `/fullnode` directory
 
-```text
+```bash
 $ cd mainnet-public-tools/fullnode
 ```
 
@@ -23,7 +23,7 @@ This directory contains the `docker-compose.yaml` file for quick launching of th
 
 Copy the file `.env.example` to `.env` and configure to your needs.
 
-```text
+```bash
 $ cp .env.example .env
 $ nano .env
 ```
@@ -39,7 +39,7 @@ EXPLORER_PORT=<blockchain explorer port>
 
 Launch the node by executing the following command from `/fullnode` directory:
 
-```text
+```bash
 $ docker-compose up -d
 ```
 
@@ -52,7 +52,7 @@ where `PORT` is the number you chose above for EXPLORER_PORT, e.g. `http://local
 
 You can check your nodes real-time logs with the following command:
 
-```text
+```bash
 $ docker-compose logs -f --tail "100"
 ```
 
@@ -60,7 +60,7 @@ $ docker-compose logs -f --tail "100"
 
 In case your client can't connect with the default configuration, we recommend that you add an additional flag referring to one of our additional peers (`$BOOTNODE1_ADDR`, `$BOOTNODE2_ADDR`or `$BOOTNODE3_ADDR`) within `docker-compose.yaml` file:
 
-```text
+```yaml
 fullnode:
   image: $QCLIENT_IMAGE
   entrypoint: ["geth", "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR", "--datadir=/data", ...]

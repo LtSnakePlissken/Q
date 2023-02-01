@@ -15,25 +15,25 @@ If you are running Ubuntu, use these commands to install all mentioned required 
 
 Update apt:
 
-```text
+```bash
 $ sudo apt-get update
 ```
 
 Install git:
 
-```text
+```bash
 $ sudo apt-get install git
 ```
 
 Install docker:
 
-```text
+```bash
 $ sudo apt-get install docker
 ```
 
 Install docker-compose:
 
-```text
+```bash
 $ sudo apt-get install docker-compose
 ```
 
@@ -43,13 +43,13 @@ Please check corresponding online resources for your operating system and the th
 
 Clone the repository
 
-```text
+```bash
 $ git clone https://gitlab.com/q-dev/mainnet-public-tools
 ```
 
 and go to the `/rootnode` directory
 
-```text
+```bash
 $ cd mainnet-public-tools/rootnode
 ```
 
@@ -61,13 +61,13 @@ This directory contains the `docker-compose.yaml` file for quick launching of th
 
 To act as a root node, your node needs a keypair to sign transactions and L0 governance messages. First, create a `/keystore` directory with
 
-```text
+```bash
 $ mkdir keystore
 ```
 
 then create a file `pwd.txt`
 
-```text
+```bash
 $ nano keystore/pwd.txt
 ```
 
@@ -77,7 +77,7 @@ then set a password that will be used for future account unlocking by entering i
 
 Assuming you are in `/rootnode` directory, issue this command in order to generate a keypair:  
 
-```text
+```bash
 $ docker-compose run --rm --entrypoint "geth account new --datadir=/data --password=/data/keystore/pwd.txt" rootnode
 ```
 
@@ -115,13 +115,13 @@ rootnode
 
 If you want to change the password in the future, you need to stop the node first.
 
-```text
+```bash
 $ docker-compose down
 ```
 
 Then start password reset procedure with
 
-```text
+```bash
 $ docker-compose run rootnode --datadir /data account update 0xb3ff24f818b0ff6cc50de951bcb8f86b52287dac
 ```
 
@@ -131,7 +131,7 @@ $ docker-compose run rootnode --datadir /data account update 0xb3ff24f818b0ff6cc
 
 Copy `.env.example` to `.env` and edit this file in `/rootnode` directory:
 
-```text
+```bash
 $ cp .env.example .env
 $ nano .env
 ```
@@ -182,7 +182,7 @@ BOOTNODE3_ADDR=enode://f6204e3d971ec3dce74b8af2933e33551993790ab789500b82c80276f
 
 If you want your root node to report to the [network statistics](https://stats.q.org), you can add an additional flag to the node entrypoint within file `/rootnode/docker-compose.yaml`, it should look like this:
 
-```text
+```yaml
 rootnode:
   image: $QCLIENT_IMAGE
   entrypoint: ["geth", "--ethstats=<Your_RootNode_Name>:<Mainnet_access_key>@stats.q.org", "--datadir=/data", ...]
@@ -196,13 +196,13 @@ In order to find out the `<Mainnet_access_key>` please write us [on Discord](htt
 
 Now launch your root node using docker-compose file in rootnode directory:
 
-```text
+```bash
 $ docker-compose up -d
 ```
 
 Check your nodes real-time logs with the following command:
 
-```text
+```bash
 $ docker-compose logs -f --tail "100"
 ```
 
@@ -210,7 +210,7 @@ $ docker-compose logs -f --tail "100"
 
 In case your client can't connect with the default configuration, we recommend that you add an additional flag referring to one of our additional peers (`$BOOTNODE1_ADDR`, `$BOOTNODE2_ADDR`or `$BOOTNODE3_ADDR`) within `docker-compose.yaml` file:
 
-```text
+```yaml
 rootnode:
   image: $QCLIENT_IMAGE
   entrypoint: ["geth", "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR", "--datadir=/data", ...]
@@ -224,7 +224,7 @@ In order to become a root node, you will need to make an onchain proposal to [ad
 
 As was mentioned previously, you should put stake to rootnodes contract in order to become a rootnode.
 
-You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org). Go to `Consensus Services` -> `Root Node Staking` for stake management. Also, you may want to check our [Consensus Services documentation](dapp-consensusservices.md).
+You can use the dApp "Your HQ" that can be found at [https://hq.q.org](https://hq.q.org). Go to `Staking` -> `Root Node Staking` for stake management. Also, you may want to check our [Staking documentation](dapp-staking.md).
 
 ## Updating Q-Client & Docker Images
 

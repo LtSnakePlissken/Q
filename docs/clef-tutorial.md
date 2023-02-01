@@ -3,7 +3,7 @@
 ### initialization
 First, you need to init clef dir to create masterseed
 
-```text
+```bash
 # CLEFDIR - directory with clef data (default: $HOME/.clef)
 $ clef init --configdir CLEFDIR
 ```
@@ -15,7 +15,7 @@ $ clef init --configdir CLEFDIR
 Then you should COPY your keystore file to keysotre folder
 and add password to clef
 
-```text
+```bash
 $ cp keystoreFile KEYSTOREDIR
 $ clef setpw --configdir CLEFDIR 0x123dead #password will prompted and decrypted by masterseed
 ```
@@ -23,7 +23,7 @@ $ clef setpw --configdir CLEFDIR 0x123dead #password will prompted and decrypted
 ### Rules
 To accept or reject some requests create rule file:
 
-```text
+```js
 function ApproveListing() {
     return "Approve"
 }
@@ -34,19 +34,19 @@ function ApproveTx(){
 
 and then add checksum of rules file to clef
 
-```text
+```bash
 $ clef attest --configdir CLEFDIR $(sha256sum rules.js)
 ```
 
 ### Start service
 
-```text
+```bash
 $ clef --configdir CLEFDIR --keystore KEYSTOREDIR --chainid=35441 --rules=/data/rules.js
 ```
 
 then you can use clef as signer in geth
 
-```text
+```bash
 $ geth ...YOUR FLAGS... --signer=CLEFDIR/clef.ipc
 ```
 
@@ -64,7 +64,7 @@ More info about clef can be found in the offcial [docs](https://geth.ethereum.or
 ### sending tx from "locked" account
 rm password from clef
 
-```text
+```bash
 $ clef --configdir=CLEFDIR $address
 ```
 

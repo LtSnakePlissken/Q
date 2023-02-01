@@ -1,9 +1,9 @@
-# Consensus Services
+# Staking
 
-This dApp section is used by root nodes and validator nodes to manage their stake and staker reward pool (validators only).
+This dApp section is used by root nodes and validator nodes to manage their stake and staker reward pool (validators only). Also there's ability to delegate staking power to 
 
-![Screenshot](img/consensus_services.png)
-*Screenshot of dApp: Consensus Services - Validator Staking*
+![Screenshot](img/staking.png)
+*Screenshot of dApp: Staking - Validator Staking*
 
 ## Root Node Staking
 
@@ -40,3 +40,11 @@ The lower section "Reward Stats" show the following pool details:
 A validator may set a new delegator share at the bottom of the modal. The bigger the share for delegators, the smaller the share for the validator but the higher the chance of attracting new delegators.
 
   > **Note: ** *Unlike validators, root nodes earn rewards based on their panel membership in a non-pro-rata approach. This is the reason why stake delegation is not available for root nodes, thus management of a staker reward pool is only possible for validators.*
+
+## Delegator Staking
+
+Validator receive their reward based on the stake they have put onto their validator nodes address. By delegating Q, any Q token holder can increase a validator nodes stake and, if the validator manages correctly his staker reward pool, earn a defined share of validation reward.
+
+Delegation happens by choosing/entering validator address and amount of Q you want to delegate. You can have multiple delegations and thus earn delegation rewards by several validators. Rewards need to be claimed. The value "Outstanding Delegation Rewards" shows the claimable amount that was collected within each validators stake delegation pool.
+
+> **Note: ** *Delegated stake is at risk of being slashed if the validator misbehaves and gets slashed by the Q root nodes.*

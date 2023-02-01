@@ -10,4 +10,10 @@ The easiest way to delegate your stake is to use our dApp *Your HQ*. One instanc
 
 ## Delegation
 
-After connecting MetaMask to *Your HQ*, click on "Q Vault" to enter the Q Vault area. On the bottom of the page, you can see your current delegations and you can enter the validator nodes address and Q amount you want to delegate.
+After connecting MetaMask to *Your HQ*, click on "Staking" and select "Delegator Staking" tab. There would be a list of your delegations displayed on the page.
+
+If you would like to delegate your Q to a validator, click on "Stake My Tokens" button. Then you can choose a validator from the list, enter amount of Q to delegate and confirm transaction in MetaMask.
+
+You can also delegate tokens manually by specifying several validators in one transcation.
+
+> **Note:** *You can only delegate Q tokens from your Q Vault. To transfer tokens from your wallet to Q Vault see [Q Vault reference](./dapp-qvault.md)*.

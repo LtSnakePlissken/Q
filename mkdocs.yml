@@ -108,6 +108,9 @@ nav:
         - Setup the Token OmniBridge : how-to-setup-omnibridge.md
         - Setup Sentry Node : how-to-setup-sentry-node.md
         - Upgrade Node: how-to-upgrade-node.md
+        - Migrate Node to New Server: how-to-migrate-node.md
+        - Use Account Aliases: account-aliases.md
+        - Setup Withdrawal Address: withdrawal-addresses.md
         - Use clef to unlock Account with Prompt: clef-tutorial.md
         - Interact with Smart Contracts : how-to-interact-with-smart-contracts-with-remix.md
         - Purge Validator Slashings : how-to-purge-vn-slashings.md
@@ -119,7 +122,8 @@ nav:
         - Dashboard: dapp-dashboard.md
         - Governance: dapp-governance.md
         - Q Vault: dapp-qvault.md
-        - Consensus Services: dapp-consensusservices.md
+        - Staking: dapp-staking.md
+        - Account Aliasing: dapp-aliases.md
         - Saving & Borrowing: dapp-savingborrowing.md
         - Decentralized Auctions: dapp-decentralizedauctions.md
         - Time Locks: dapp-timelocks.md

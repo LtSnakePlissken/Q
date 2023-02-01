@@ -119,7 +119,7 @@ node_1  | INFO [09-28|14:46:05.919] Maximum peer count   ETH=50 LES=0 total=50
 ```
 You get this output if the bootnode you are trying to connect to has currently reached the connection limit. In this case you can either wait and try again later or add the flag referring to one of our additional peers (`$BOOTNODE1_ADDR`, `$BOOTNODE2_ADDR`or `$BOOTNODE3_ADDR`) within `docker-compose.yaml` file:
 
-```text
+```yaml
 fullnode:
   image: $QCLIENT_IMAGE
   entrypoint: ["geth", "--bootnodes=$BOOTNODE_ADDR", "--datadir=/data", ...]
@@ -178,13 +178,13 @@ Corrupted database:
 
 # How to share your logs
 
-```text
+```bash
 docker-compose logs validator-node > YOURNAME.log
 ```
 
 The above command will save your logs from "validator" to the YOURNAME.log file. Replace with "fullnode" or "rootnode" according to the chosen node type.
 
-```text
+```bash
 scp ubuntu@YOUR_MACHINE_IP:PATH/TO/LOGS/YOURNAME.log PATH/TO/LOCAL/STORAGE
 ```
 This command will download the logs from your external machine.

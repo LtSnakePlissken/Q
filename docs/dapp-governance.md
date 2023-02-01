@@ -1,24 +1,63 @@
 # Governance
 
-The main governance page gives an overview of open an ended votings on Q, grouped by the four main proposal types that exist. A click on *View Page* button opens the according sub-page.
+Q governance is enforced through proposals that can be voted for or against. Each proposal type has a different lifecycle and stages differ depending on the proposal initiator, voting audience or the overall Q governance structure. This overview checks for all onchain proposals and counts them by separating active (i.e. open) and past (i.e. closed) proposals.
 
-On the right side of the screen, the box "Voting Stats" lists KPIs of the wallet account that is currently connected to the dApp Your HQ.
+> **Note: ** *In the navigation bar, a number next to "Governance" link indicates the amount of all currently active proposals.*
 
-**Total voting weight**
+The governance page has two blocks: voting stats block on the top and proposal tabs block below.
 
-Shows the accumulated amount of Q that will be accounted for in your votes. It includes all Q added to the voting weight within Q Vault [Q Vault](#Q-Vault), all [stakings](#Consensus-Services) and all [time lock balances](#Time-Locks).
+![Screenshot](img/governance.png)
+*Screenshot of dApp: Governance*
 
-**Voting Locking End**
+## Voting Stats
+
+The box "Voting Stats" lists KPIs of the wallet account that is currently connected to the dApp Your HQ.
+
+### Total voting weight
+
+Shows the accumulated amount of Q that will be accounted for in your votes. It includes all Q added to the voting weight within Q Vault [Q Vault](./dapp-qvault.md), all [stakings](./dapp-staking.md) and all [time lock balances](./dapp-timelocks.md).
+
+### Voting Locking End
 
 To mitigate vote manipulation, your voting weight is locked until the last voting period you have voted for has ended. The corresponding time of unlocking is shown here. Until this moment, you can't withdraw or transfer the corresponding Q tokens.
 
-**Voting Status**
+### Voting Status
 
 Shows all relevant voting groups your wallet address is member of. The voting status is used to check elegibility of each participating voter for certain voting types, e.g you can only veto on a proposal if your voting status is "root node".
 
-**Vote Delegation**
+### Vote Delegation
 
-Your voting weight can be delegated to another Q token holder (see [here](how-to-exercise-governance-rights#Delegating-Voting-Power.md)) who can then vote for or against Q proposals with an aggregated voting weight. The delegation status displayed here shows whether you have delegated or not or if someone else delegated voting power on yourself.
+Your voting weight can be delegated to another Q token holder (see [here](how-to-exercise-governance-rights#Delegating-Voting-Power)) who can then vote for or against Q proposals with an aggregated voting weight. The delegation status displayed here shows whether you have delegated or not or if someone else delegated voting power on yourself.
+
+### Voting Power
+
+By clicking on _"Voting Power"_ button on voting stats block top-right corner you will see voting power page. Here you can lock your Q vault tokens for voting or delegate your voting rights to another account.
+
+## Lock Q for Voting
+
+Before you can participate in any governance votings, you need to lock your Q within Q vault to prevent double-votings. The "voting weight" represents the amount of Q that is used to give your vote a weight. The Q locked within Q vault are not the only source increasing voting weight. Delegated voting power or time locks do also increase the aggregated voting weight.
+
+## Delegate Voting power
+
+If you don't plan to participate in governance activities and votings but would like to have your voting weight counted and utilized nevertheless, you can delegate your voting weight to a trusted Q network participant. The field "Current agent" shows who received your delegated voting weight and will thus vote on your behalf.
+
+You can delegate your voting weight by announcing a new voting agent.
+
+  > **Note: ** *If your delegated voting weight was used for a voting by your agent, the according tokens are locked until voting is over.*
+
+## Proposals
+
+Proposals are grouped by type and displayed via card list. Each proposal card contains its identifier, title, status, vote/veto period, and quorum progress.
+
+There is a status filter on each proposal tab. It allows to display only active/ended proposals.
+
+There are 5 types of proposals:
+
+- Q Proposals
+- Root Node Panel
+- Expert Proposals
+- Slashing Proposals
+- Contract Updates
 
 ## Q Proposals
 
@@ -28,14 +67,13 @@ Changes to the Q system and especially to the Q constitution can be initiated th
 
 Each proposal will receive a unique and incremental id within its sub-type (e.g. Basic constitution proposal) and is displayed in a separate box. Additional information like remaining voting time or current proposal status are displayed as well.
 
-The "Action" button offers multiple commands that may not all be possible to give at any time (depending on type, status and general context):
+The proposal details page offers multiple commands that may not all be possible to give at any time (depending on type, status and general context):
 
-  - Share - a click with the left mouse button copies the proposals URL (deep-link) to the clipboard
-  - View details - expands the proposal box and reveals all details, including external reference URL and voting stats
+  - Share - opens the sharing modal with multiple choices (copy link, post on Twitter/Reddit, etc.)
   - Vote - allows to vote Yes or No (or veto in case of a root node)
   - Execute - successfully *passed* proposals require to be executed onchain before the changes take effect
 
-A click on the button "Create Q Proposal" on the top right side of the screen opens a modal that will guide you through the process of initiating a proposal.
+A click on the button "Create Proposal" on the top right side of the screen opens a modal that will guide you through the process of initiating a proposal.
 
 There are three types of Q proposals:
 
@@ -55,14 +93,13 @@ Adding root nodes to and removing them from the root node panel happens through 
 
 Each proposal will receive a unique and incremental id within its sub-type (e.g. Root Node Adding Proposal) and is displayed in a separate box. Additional information like remaining voting time or current proposal status are displayed as well.
 
-The "Action" button offers multiple commands that may not all be possible to give at any time (depending on type, status and general context):
+The proposal details page offers multiple commands that may not all be possible to give at any time (depending on type, status and general context):
 
-  - Share - a click with the left mouse button copies the proposals URL (deep-link) to the clipboard
-  - View details - expands the proposal box and reveals all details, including external reference URL and voting stats
+  - Share - opens the sharing modal with multiple choices (copy link, post on Twitter/Reddit, etc.)
   - Vote - allows to vote Yes or No (or veto in case of a root node)
   - Execute - successfully *passed* proposals require to be executed onchain before the changes take effect
 
-A click on the button "Create Root Node Panel Proposal" on the top right side of the screen opens a modal that will guide you through the process of initiating a proposal.
+A click on the button "Create Proposal" on the top right side of the screen opens a modal that will guide you through the process of initiating a proposal.
 
 There are two types of root node panel proposals:
 
@@ -71,7 +108,7 @@ There are two types of root node panel proposals:
 
 If you would like to leave the root node panel yourself, you can initiate a proposal for removing a root node and enter your own wallet address. This will cause an immediate panel exit that doesn't require any vote or veto.
 
-  > **Note: ** *Please check the full [tutorial](how-to-become-a_root-node) of how to become a root node before initiating a proposal and be aware of appendix 2 of Q constitution (Root Node Selection - Mandatory Requirements). The exact voting procedure including permissions, quorums and time intervals is specified in appendix 5 "Voting" of the [Q constitution](https://q.org/assets/files/Q_Constitution.pdf).*
+  > **Note: ** *Please check the full [tutorial](how-to-become-a-root-node) of how to become a root node before initiating a proposal and be aware of appendix 2 of Q constitution (Root Node Selection - Mandatory Requirements). The exact voting procedure including permissions, quorums and time intervals is specified in appendix 5 "Voting" of the [Q constitution](https://q.org/assets/files/Q_Constitution.pdf).*
 
 ## Expert Proposals
 
@@ -81,14 +118,13 @@ Some parameters belonging to core Q system or integrated apps are overlooked and
 
 Each proposal will receive a unique and incremental id within its sub-type (e.g. Fees & Incentives Experts membership proposal) and is displayed in a separate box. Additional information like remaining voting time or current proposal status are displayed as well.
 
-The "Action" button offers multiple commands that may not all be possible to give at any time (depending on type, status and general context):
+The proposal details page offers multiple commands that may not all be possible to give at any time (depending on type, status and general context):
 
-  - Share - a click with the left mouse button copies the proposals URL (deep-link) to the clipboard
-  - View details - expands the proposal box and reveals all details, including external reference URL and voting stats
+  - Share - opens the sharing modal with multiple choices (copy link, post on Twitter/Reddit, etc.)
   - Vote - allows to vote Yes or No (or veto in case of a root node)
   - Execute - successfully *passed* proposals require to be executed onchain before the changes take effect
 
-A click on the button "Create Q Expert Proposal" on the top right side of the screen opens a modal that will guide you through the process of initiating a proposal.
+A click on the button "Create Proposal" on the top right side of the screen opens a modal that will guide you through the process of initiating a proposal.
 
 There are three types of Q expert panel proposals:
 
@@ -108,14 +144,13 @@ When validators or root nodes behave maliciously or in general against the Q con
 
 Each proposal will receive a unique and incremental id within its sub-type (e.g. validator slashing proposal) and is displayed in a separate box. Additional information like remaining voting time or current proposal status are displayed as well.
 
-The "Action" button offers multiple commands that may not all be possible to give at any time (depending on type, status and general context):
+The proposal details page offers multiple commands that may not all be possible to give at any time (depending on type, status and general context):
 
-  - Share - a click with the left mouse button copies the proposals URL (deep-link) to the clipboard
-  - View details - expands the proposal box and reveals all details, including external reference URL and voting stats
+  - Share - opens the sharing modal with multiple choices (copy link, post on Twitter/Reddit, etc.)
   - Vote - allows to vote Yes or No (or veto in case of a root node)
   - Execute - successfully *passed* proposals require to be executed onchain before the changes take effect
 
-A click on the button "Create Q Slashing Proposal" on the top right side of the screen opens a modal that will guide you through the process of initiating a proposal.
+A click on the button "Create Proposal" on the top right side of the screen opens a modal that will guide you through the process of initiating a proposal.
 
 There are two types of slashing proposals:
 
