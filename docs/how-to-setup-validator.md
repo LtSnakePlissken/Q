@@ -29,6 +29,12 @@ This directory contains the `docker-compose.yaml` file for quick launching of th
 
 ## Generate a Keypair for Validator
 
+Copy `.env.example` to `.env` and in `/validator` directory:
+
+```bash
+$ cp .env.example .env
+```
+
 In order to sign blocks and receive reward, a validator needs a keypair.
 Create a `/keystore` directory, then a password which will be used for private key encryption and save it into a text file `pwd.txt` in `/keystore` directory.
 Assuming you are in `/validator` directory, issue this command in order to generate a keypair:  
@@ -89,10 +95,9 @@ In order to become a validator, you will need to put some stake in validators co
 
 ## Configure Setup
 
-Copy `.env.example` to `.env` and edit this file in `/validator` directory.
+Edit the environment file in `/validator` directory:
 
 ```bash
-$ cp .env.example .env
 $ nano .env
 ```
 

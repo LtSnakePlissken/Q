@@ -75,6 +75,12 @@ then set a password that will be used for future account unlocking by entering i
 
 ## Generate a Keypair
 
+Copy `.env.example` to `.env` inside the `/rootnode` directory:
+
+```bash
+$ cp .env.example .env
+```
+
 Assuming you are in `/rootnode` directory, issue this command in order to generate a keypair:  
 
 ```bash
@@ -129,10 +135,9 @@ $ docker-compose run rootnode --datadir /data account update 0xb3ff24f818b0ff6cc
 
 ## Configure Node
 
-Copy `.env.example` to `.env` and edit this file in `/rootnode` directory:
+Edit the environment file:
 
 ```bash
-$ cp .env.example .env
 $ nano .env
 ```
 
