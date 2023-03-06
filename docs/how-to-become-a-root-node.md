@@ -2,7 +2,7 @@
 
 ## Role and Responsibilities
 
-Root nodes monitor the operations happening on the Q blockchain layer and thus ensure that actions on Q from any network participant are compliant to the Q constitution. The current (mainnet) constitution can be downloaded [here](https://q.org/assets/files/Q_Constitution.pdf).
+Root nodes monitor the operations happening on the Q blockchain layer and thus ensure that actions on Q from any network participant are compliant to the Q constitution. The current (mainnet) constitution can be downloaded [here](https://q.org/files/Q_Constitution.pdf).
 
 Root nodes are verified entities (e.g. corporates, universities, NGOs, ..) and well known to the Q community. They are collectively forming the root node panel which has special voting and veto rights, depending on each individual governance context. Each root node acts independently when it comes to monitoring the system and initiating measures in case of constitutional breaches.
 
