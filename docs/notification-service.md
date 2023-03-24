@@ -8,7 +8,7 @@ The Q notification service is integrated into Telegram messenger. This tutorial 
 
 ## Connect to Notification Service Bot
 
-Open Notification service by following the link: [https://t.me/notifications_q_bot](https://t.me/Q_Notification_Servicebot). 
+Open Notification service by following the link: [https://t.me/notifications_q_bot](https://t.me/notifications_q_bot). 
 
 You can also search for name `Q Notifications` or ID `@notifications_q_bot` in Telegram and click on the result.
 
