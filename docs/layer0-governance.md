@@ -11,7 +11,7 @@ Currently, L0 governance allows to maintain two kinds of lists:
 
 **Precondition**
 
-To perform L0 governance actions you need to understand how to access `q-client console`. You can access q-client console by running command `docker-compose exec node geth attach data/geth.ipc` on the node with unlocked root node account.
+To perform L0 governance actions you need to understand how to access `q-client console`. You can access q-client console by running command `docker-compose exec node geth attach data/geth.ipc` or `docker-compose exec rootnode geth attach data/geth.ipc` on the node with unlocked root node account.
 
 ## Updating the Root Node Lists
 
