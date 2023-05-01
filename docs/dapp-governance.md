@@ -27,7 +27,7 @@ Shows all relevant voting groups your wallet address is member of. The voting st
 
 ### Vote Delegation
 
-Your voting weight can be delegated to another Q token holder (see [here](how-to-exercise-governance-rights#Delegating-Voting-Power)) who can then vote for or against Q proposals with an aggregated voting weight. The delegation status displayed here shows whether you have delegated or not or if someone else delegated voting power on yourself.
+Your voting weight can be delegated to another Q token holder (see [here](../how-to-exercise-governance-rights/#delegating-voting-power)) who can then vote for or against Q proposals with an aggregated voting weight. The delegation status displayed here shows whether you have delegated or not or if someone else delegated voting power on yourself.
 
 ### Voting Power
 
@@ -108,7 +108,7 @@ There are two types of root node panel proposals:
 
 If you would like to leave the root node panel yourself, you can initiate a proposal for removing a root node and enter your own wallet address. This will cause an immediate panel exit that doesn't require any vote or veto.
 
-  > **Note: ** *Please check the full [tutorial](how-to-become-a-root-node) of how to become a root node before initiating a proposal and be aware of appendix 2 of Q constitution (Root Node Selection - Mandatory Requirements). The exact voting procedure including permissions, quorums and time intervals is specified in appendix 5 "Voting" of the [Q constitution](https://q.org/files/Q_Constitution.pdf).*
+  > **Note: ** *Please check the full [tutorial](../how-to-become-a-root-node) of how to become a root node before initiating a proposal and be aware of appendix 2 of Q constitution (Root Node Selection - Mandatory Requirements). The exact voting procedure including permissions, quorums and time intervals is specified in appendix 5 "Voting" of the [Q constitution](https://q.org/files/Q_Constitution.pdf).*
 
 ## Expert Proposals
 

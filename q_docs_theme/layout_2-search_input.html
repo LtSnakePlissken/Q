@@ -8,7 +8,7 @@
     data-autocomplete-dropdown-visible-class="autocomplete--results-visible" role="search">
     <form action="{{ "search.html"|url }}" method="get">
         <input autocomplete="off" class="search-input__input form-control js-autocomplete__input" type="search"
-            name="q" id="mkdocs-search-query" placeholder="Search …" aria-label="Search">
+            name="q" id="mkdocs-search-query" placeholder="Search …" aria-label="Search" maxlength="1024">
 
         <button class="search-input__btn">
             <svg class="icon" viewBox="0 0 20 20">
@@ -22,13 +22,6 @@
     </form>
 
     <span class="search-input__shortcut" aria-hidden="true">/</span>
-
-    <div class="autocomplete__loader position-absolute top-0 right-0 padding-right-xxs height-100% flex items-center"
-        aria-hidden="true">
-        <div class="circle-loader circle-loader--v1">
-            <div class="circle-loader__circle"></div>
-        </div>
-    </div>
 
     <div class="autocomplete__results js-autocomplete__results">
         <ul id="autocomplete1" class="autocomplete__list js-autocomplete__list">
