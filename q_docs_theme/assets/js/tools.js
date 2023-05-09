@@ -1,3 +1,14 @@
+// Remove search ID from mobile search input
+function checkMobileSearchId () {
+  const mobileSearch = document.querySelector('.mobile-search')
+  if (!mobileSearch) return
+
+  mobileSearch.id = window.innerWidth < 1024 ? 'mkdocs-search-query' : ''
+}
+
+document.addEventListener('DOMContentLoaded', checkMobileSearchId);
+
+// Copy button for code blocks
 window.addEventListener('load', function() {
   document.querySelectorAll('code.hljs').forEach(appendCopyButton);
 })
@@ -50,3 +61,28 @@ function copyTextToClipboard (text) {
 
   document.body.removeChild(textArea);
 }
+
+// Hide scroll on body when mobile menu is open
+function hideScrollOnBody () {
+  const sidenav = document.getElementById('sidenav-v3')
+  if (!sidenav) return
+
+  const observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      if (mutation.attributeName !== 'class') return 
+
+      const classValue = mutation.target.getAttribute('class')
+      const isOpen = classValue.includes('sidebar--is-visible')
+
+      document.body.style.overflow = isOpen ? 'hidden' : ''
+      document.body.position = isOpen ? 'fixed' : ''
+    })
+  })
+
+  observer.observe(sidenav, {
+    attributes: true,
+    attributeFilter: ['class']
+  })
+}
+
+document.addEventListener('DOMContentLoaded', hideScrollOnBody);
