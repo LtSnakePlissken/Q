@@ -10,9 +10,18 @@ Before you begin migrating your node, it is important to back up all of your dat
 
 Go to `validator` directory and run the following command to create a tar file of the directory.
 
+Linux, macOS, other Unix-like systems:
+
 ```bash
 $ tar -czvf node.tar.gz .
 ```
+Windows:
+
+```
+Compress-Archive -Path . -DestinationPath node.tar.gz
+```
+
+
 
 Save the tar file in a safe location. You can also use a tool such as `rsync` or `scp` to copy the data to a remote server.
 
@@ -26,9 +35,18 @@ Copy the `node.tar.gz` file to the new server and extract it in the `validator` 
 
 After copying the file, extract it using the following command:
 
+Linux, macOS, other Unix-like systems:
+
 ```bash
 $ tar -xzvf node.tar.gz
 ```
+Windows:
+```
+# Extracts the contents of node.tar.gz file
+Expand-Archive -Path "node.tar.gz" -DestinationPath "destination_folder"
+```
+
+
 
 After that, you can remove the `node.tar.gz` file from the `validator` directory.
 

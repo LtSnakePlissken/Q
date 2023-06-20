@@ -7,68 +7,68 @@ use_directory_urls: true
 
 # Theme config
 theme:
-    name: null
-    custom_dir: 'q_docs_theme/'
-    include_search_page: true # Instructs the search plugin to include the search.html template
-    search_index_only: false
-    static_templates:
-      - 404.html
-    highlightjs: true
-    hljs_languages: []
-    navigation_depth: 4
-    analytics:
-      gtag: null
-      anonymize_ip: false
-    text_variables:
-      project_name: '<span>Q Development AG</span>' # HTML allowed
-    search_default_values: # Up to 3 elements are visible in the search box
-      - value:
-        label: 'What is Q?'
-        category: 'Introduction'
-        url: '/' # External URL also possible, format: 'https://www.q.org'
-      - value:
-        label: 'Dashboard'
-        category: 'HQ App > Overview'
-        url: '/dapp-dashboard/'
-      - value:
-        label: 'Onboarding in 5 Minutes'
-        category: 'Introduction'
-        url: '/five-minutes/'
-    community_links:
-      medium:
-        show: true
-        url: 'https://medium.com/q-blockchain'
-      reddit:
-        show: true
-        url: 'https://www.reddit.com/r/QBlockchain/'
-      discord:
-        show: true
-        url: 'https://discord.gg/YTgkvJvZGD'
-      telegram:
-        show: false
-        url: 'https://telegram.org/'
-      gitlab:
-        show: true
-        url: 'https://gitlab.com/q-dev'
-    layout:
-      toc: true
-      meta: false
-      menu_footer: true
-      copyright: true
-      prev_next: true
-      community_links: true
-      search: true
-      desktop_header: true
-      # 👇 👇 👇 work in progress
-      popular_links: false # wip
-      breadcrumbs: false # wip
-      theme_switch: false # wip
-      # 👆 👆 👆 work in progress
+  name: null
+  custom_dir: 'q_docs_theme/'
+  include_search_page: true # Instructs the search plugin to include the search.html template
+  search_index_only: false
+  static_templates:
+    - 404.html
+  highlightjs: true
+  hljs_languages: [ ]
+  navigation_depth: 4
+  analytics:
+    gtag: null
+    anonymize_ip: false
+  text_variables:
+    project_name: '<span>Q Development AG</span>' # HTML allowed
+  search_default_values: # Up to 3 elements are visible in the search box
+    - value:
+      label: 'What is Q?'
+      category: 'Introduction'
+      url: '/' # External URL also possible, format: 'https://www.q.org'
+    - value:
+      label: 'Dashboard'
+      category: 'HQ App > Overview'
+      url: '/dapp-dashboard/'
+    - value:
+      label: 'Onboarding in 5 Minutes'
+      category: 'Introduction'
+      url: '/five-minutes/'
+  community_links:
+    medium:
+      show: true
+      url: 'https://medium.com/q-blockchain'
+    reddit:
+      show: true
+      url: 'https://www.reddit.com/r/QBlockchain/'
+    discord:
+      show: true
+      url: 'https://discord.gg/YTgkvJvZGD'
+    telegram:
+      show: false
+      url: 'https://telegram.org/'
+    gitlab:
+      show: true
+      url: 'https://gitlab.com/q-dev'
+  layout:
+    toc: true
+    meta: false
+    menu_footer: true
+    copyright: true
+    prev_next: true
+    community_links: true
+    search: true
+    desktop_header: true
+    # 👇 👇 👇 work in progress
+    popular_links: false # wip
+    breadcrumbs: false # wip
+    theme_switch: false # wip
+    # 👆 👆 👆 work in progress
 
 # Plugin config
 # All plugins: https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins#search--tables-of-content
 plugins:
-    - search
+  - search
 
 # MD Extensions
 markdown_extensions:
@@ -86,44 +86,46 @@ markdown_extensions:
 
 # Navigation config
 nav:
-    - Introduction:
-      - What is Q? : index.md
-      - Q Onboarding in 5 Minutes : five-minutes.md
-    - Tutorials:
+  - Introduction:
+      - What is Q?: index.md
+      - Q Onboarding in 5 Minutes: five-minutes.md
+  - Tutorials:
       - Basic Setup:
-        - Install and setup MetaMask : how-to-install-metamask.md
-        - Delegate Q to a Validator : how-to-delegate-to-validator.md
-        - Exercise your Governance Rights : how-to-exercise-governance-rights.md
-        - Use Telegram Notification Service : notification-service.md
-        - Become a Root Node : how-to-become-a-root-node.md
-        - Layer 0 Governance of Root Nodes: layer0-governance.md
-        - Become an Expert in an Expert Panel : how-to-be-an-expert-in-expert-panel.md
-        - Earn extra Q Tokens : how-to-earn-extra-Q-tokens.md
-        - Obtain a Loan against a Collateral : how-to-obtain-a-loan-against-a-collateral.md
-        - Verify and update the Q Constitution : how-to-verify-q-constitution-hash.md
+          - Install and setup MetaMask: how-to-install-metamask.md
+          - Delegate Q to a Validator: how-to-delegate-to-validator.md
+          - Exercise your Governance Rights: how-to-exercise-governance-rights.md
+          - Use Telegram Notification Service: notification-service.md
+          - Become a Root Node: how-to-become-a-root-node.md
+          - Layer 0 Governance of Root Nodes: layer0-governance.md
+          - Become an Expert in an Expert Panel: how-to-be-an-expert-in-expert-panel.md
+          - Earn extra Q Tokens: how-to-earn-extra-Q-tokens.md
+          - Obtain a Loan against a Collateral: how-to-obtain-a-loan-against-a-collateral.md
+          - Verify and update the Q Constitution: how-to-verify-q-constitution-hash.md
       - Technical How To's:
-        - Setup a Q Fullnode : how-to-setup-fullnode.md
-        - Setup a Validator Node : how-to-setup-validator.md
-        - Setup a Root Node: how-to-setup-rootnode.md
-        - Setup the Token OmniBridge : how-to-setup-omnibridge.md
-        - Setup Sentry Node : how-to-setup-sentry-node.md
-        - Upgrade Node: how-to-upgrade-node.md
-        - Migrate Node to New Server: how-to-migrate-node.md
-        - Use Account Aliases: account-aliases.md
-        - Setup Withdrawal Address: withdrawal-addresses.md
-        - Use clef to unlock Account with Prompt: clef-tutorial.md
-        - Interact with Smart Contracts : how-to-interact-with-smart-contracts-with-remix.md
-        - Purge Validator Slashings : how-to-purge-vn-slashings.md
-        - Export Private Key : how-to-export-key.md
-        - Unlock Account : how-to-unlock-account.md
-        - System Parameters : system-parameters.md
-    - Your HQ dApp:
+          - Setup a Q Fullnode: how-to-setup-fullnode.md
+          - Setup a Validator Node: how-to-setup-validator.md
+          - Setup a Root Node: how-to-setup-rootnode.md
+          - Setup the Token OmniBridge: how-to-setup-omnibridge.md
+          - Setup Sentry Node: how-to-setup-sentry-node.md
+          - Upgrade Node: how-to-upgrade-node.md
+          - Migrate Node to New Server: how-to-migrate-node.md
+          - Use Account Aliases: account-aliases.md
+          - Setup Withdrawal Address: withdrawal-addresses.md
+          - Use clef to unlock Account with Prompt: clef-tutorial.md
+          - Interact with Smart Contracts: how-to-interact-with-smart-contracts-with-remix.md
+          - Purge Validator Slashings: how-to-purge-vn-slashings.md
+          - Export Private Key: how-to-export-key.md
+          - Unlock Account: how-to-unlock-account.md
+          - System Parameters: system-parameters.md
+          - Sentry Integration: sentry-integration.md
+          - Account Operations: account-operations.md
+  - Your HQ dApp:
       - Overview:
-        - Dashboard: dapp-dashboard.md
-        - Governance: dapp-governance.md
-        - Q Vault: dapp-qvault.md
-        - Staking: dapp-staking.md
-        - Account Aliasing: dapp-aliases.md
-        - Saving & Borrowing: dapp-savingborrowing.md
-        - Decentralized Auctions: dapp-decentralizedauctions.md
-        - Time Locks: dapp-timelocks.md
+          - Dashboard: dapp-dashboard.md
+          - Governance: dapp-governance.md
+          - Q Vault: dapp-qvault.md
+          - Staking: dapp-staking.md
+          - Account Aliasing: dapp-aliases.md
+          - Saving & Borrowing: dapp-savingborrowing.md
+          - Decentralized Auctions: dapp-decentralizedauctions.md
+          - Time Locks: dapp-timelocks.md

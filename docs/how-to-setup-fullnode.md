@@ -8,25 +8,63 @@ You must prepare your server / machine to begin. One possibility is to use a loc
 
 Clone the repository
 
+Linux, macOS, other Unix-like systems:
+
 ```bash
 $ git clone https://gitlab.com/q-dev/mainnet-public-tools
 ```
 
+Windows (if you don't have git installed):
+
+```
+# Download the contents of the Git repository
+Invoke-WebRequest -Uri https://gitlab.com/q-dev/mainnet-public-tools/-/archive/master/mainnet-public-tools-master.zip -OutFile mainnet-public-tools-master.zip
+
+# Extract the contents of the ZIP file
+Expand-Archive -Path mainnet-public-tools-master.zip -DestinationPath .
+
+# Remove the ZIP file
+Remove-Item -Path mainnet-public-tools-master.zip
+```
+
+
 and go to the `/fullnode` directory
+
+Linux, macOS, other Unix-like systems:
 
 ```bash
 $ cd mainnet-public-tools/fullnode
 ```
+
+Windows:
+
+```
+Set-Location -Path "mainnet-public-tools\mainnet-fullnode"
+```
+
 
 This directory contains the `docker-compose.yaml` file for quick launching of the full node with preconfigurations on rpc, blockchain explorer using `.env` file (which can be created from `.env.example` file).
 ## Configure Ports
 
 Copy the file `.env.example` to `.env` and configure to your needs.
 
+Linux, macOS, other Unix-like systems:
+
 ```bash
 $ cp .env.example .env
 $ nano .env
 ```
+Windows:
+
+```
+# This will copy the .env.example file to a new file named .env.
+Copy-Item -Path ".\env.example" -Destination ".\env"
+
+#This will open the .env file in Notepad for editing. If you prefer to use a different text editor, replace notepad.exe with the appropriate command for your editor.
+notepad.exe .\env
+`
+
+
 
 Choose ports (or leave default values) for node rpc api and blockchain explorer by editing the `.env` file.
 

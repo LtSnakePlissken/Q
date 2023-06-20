@@ -1,15 +1,5 @@
 # How to Setup a Q Validator Node
 
-## Setup your Server
-
-You must prepare your server / machine to begin. One possibility is to use a local machine, alternatively you can use a cloud instance on AWS for example. There is a good external tutorial on how to get started with Ethereum on AWS. You can use this [tutorial](https://medium.com/@pilankar.akshay3/how-to-setup-a-ethereum-poa-private-proof-of-authority-ethereum-network-network-on-amazon-aws-5fdf56d2ad93) as a basic reference.
-
-Any Linux machine will work if it meets the following requirements:
-
-- Linux machine with SSH access;
-- Min. 1(v)Core (x86), 20 GB storage and 2 GB RAM;
-- Rec. 2(v)Cores (x86), 30 GB storage and 4 GB RAM;
-- Installed applications: docker, docker-compose, git (optional).
 
 ## Basic Configuration
 
@@ -18,12 +8,32 @@ Clone the repository
 ```bash
 $ git clone https://gitlab.com/q-dev/mainnet-public-tools
 ```
+Windows (if you don`t have git installed):
+
+```
+# Download the contents of the Git repository
+Invoke-WebRequest -Uri https://gitlab.com/q-dev/mainnet-public-tools/-/archive/master/mainnet-public-tools-master.zip -OutFile mainnet-public-tools-master.zip
+
+# Extract the contents of the ZIP file
+Expand-Archive -Path mainnet-public-tools-master.zip -DestinationPath .
+
+# Remove the ZIP file
+Remove-Item -Path mainnet-public-tools-master.zip
+```
+
 
 and go to the `/validator` directory
+
+Linux, macOS, other Unix-like systems:
 
 ```bash
 $ cd mainnet-public-tools/validator
 ```
+Windows:
+```
+Set-Location -Path "mainnet-public-tools\validator"
+```
+
 
 This directory contains the `docker-compose.yaml` file for quick launching of the validator node with preconfigurations on rpc, blockchain explorer using `.env` (which can be created from `.env.example`).
 
@@ -31,8 +41,17 @@ This directory contains the `docker-compose.yaml` file for quick launching of th
 
 Copy `.env.example` to `.env` and in `/validator` directory:
 
-```bash
-$ cp .env.example .env
+Linux, macOS, other Unix-like systems:
+```
+cp .env.example .env
+```
+
+
+Windows:
+```
+# This will copy the .env.example file to a new file named .env.
+Copy-Item -Path ".\env.example" -Destination ".\env"
+
 ```
 
 In order to sign blocks and receive reward, a validator needs a keypair.
@@ -40,7 +59,7 @@ Create a `/keystore` directory, then a password which will be used for private k
 Assuming you are in `/validator` directory, issue this command in order to generate a keypair:  
 
 ```bash
-$ docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:1.2.3 geth account new --datadir=/data --password=/data/keystore/pwd.txt
+$ docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:1.3.0 geth account new --datadir=/data --password=/data/keystore/pwd.txt
 ```
 
 The output of this command should look like this:
@@ -97,15 +116,24 @@ In order to become a validator, you will need to put some stake in validators co
 
 Edit the environment file in `/validator` directory:
 
+Linux, macOS, other Unix-like systems:
+
 ```bash
 $ nano .env
 ```
+
+Windows:
+```
+#This will open the .env file in Notepad for editing. If you prefer to use a different text editor, replace notepad.exe with the appropriate command for your editor.
+notepad.exe .\env
+```
+
 
 Put your address without leading 0x from the step 3, into `ADDRESS`, your public IP address (please make sure your machine is reachable at the corresponding IP) into `IP` (this is required for discoverability by other network participants) and optionally choose a port for p2p protocol (or just leave default value). The resulting `.env` file should look like this:
 
 ```text
 # docker image for q client
-QCLIENT_IMAGE=qblockchain/q-client:1.2.3
+QCLIENT_IMAGE=qblockchain/q-client:1.3.0
 
 # your q address here (without leading 0x)
 ADDRESS=b3FF24F818b0ff6Cc50de951bcB8f86b52287DAc
@@ -117,9 +145,9 @@ IP=193.19.228.94
 EXT_PORT=30303
 
 # extra bootnode you want to use
-BOOTNODE1_ADDR=enode://3021f73a6f14f8594384923f7f0228f81a806d1708e5c046db12661bdce6b0f10625fae12771aa36f7a4d1f110d4e5a589bf3d34ec4b1d2c6d10e382d90f6983@79.125.97.227:30314
-BOOTNODE2_ADDR=enode://34b9e4e18bc37e4437bc0a9b10ac8ae5d0aab2b2e827310e90ec1012e818d07962b162d98e083ec5487e0cf87d1ffefb46332ec05209ec82fb675ae7afe3e241@79.125.97.227:30315
-BOOTNODE3_ADDR=enode://f6204e3d971ec3dce74b8af2933e33551993790ab789500b82c80276f9e97e41b310f08d4a6cfdf330e72c6136f8df85a11fa923410f277f9c743f8a77e105f1@79.125.97.227:30316
+BOOTNODE1_ADDR=enode://22adab037308f02abbb0fd7e831c75afa367b36615b2a0358a5c4673912cf384de6c8e688371822488622ebee383aeea5d41087160cb70484a9f1671876871b1@bootnode.q.org:30301
+BOOTNODE2_ADDR=enode://3021f73a6f14f8594384923f7f0228f81a806d1708e5c046db12661bdce6b0f10625fae12771aa36f7a4d1f110d4e5a589bf3d34ec4b1d2c6d10e382d90f6983@extrabootnode.q.org:30314
+BOOTNODE3_ADDR=enode://34b9e4e18bc37e4437bc0a9b10ac8ae5d0aab2b2e827310e90ec1012e818d07962b162d98e083ec5487e0cf87d1ffefb46332ec05209ec82fb675ae7afe3e241@extrabootnode.q.org:30315
 ```
 
 Next, you need to edit `config.json` as this file is required for staking. Put your address from above into the address field and password from `/keystore/pwd.txt` into the password field. Resulting `config.json` should be similar to this:
