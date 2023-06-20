@@ -17,7 +17,7 @@ pulling new releases of the mainnet-public-tools check your **docker-compose.yam
 - **Change the docker image directly in your **.env** file:**
 ```
 ...
-QCLIENT_IMAGE=qblockchain/q-client:1.2.3
+QCLIENT_IMAGE=qblockchain/q-client:1.3.0
 ...
 ```
 

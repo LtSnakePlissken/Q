@@ -14,6 +14,20 @@ Clone the repository
 ```bash
 $ git clone https://gitlab.com/q-dev/mainnet-public-tools
 ```
+Windows (if you don't have git installed):
+
+```
+# Download the contents of the Git repository
+Invoke-WebRequest -Uri https://gitlab.com/q-dev/mainnet-public-tools/-/archive/master/mainnet-public-tools-master.zip -OutFile mainnet-public-tools-master.zip
+
+# Extract the contents of the ZIP file
+Expand-Archive -Path mainnet-public-tools-master.zip -DestinationPath .
+
+# Remove the ZIP file
+Remove-Item -Path mainnet-public-tools-master.zip
+`
+
+
 
 It should contain, amongst others, the three following folders:
 
@@ -27,17 +41,37 @@ It should contain, amongst others, the three following folders:
 
 Go into the `/omnibridge-oracle` directory.
 
+Linux, macOS, other Unix-like systems:
+
 ```bash
 $ cd omnibridge-oracle
 ```
+
+Windows:
+
+```
+Set-Location -Path "mainnet-public-tools\omnibridge-oracle"
+`
+
 
 This directory contains a `docker-compose.yaml` file for quickly launching the bridge oracle and some example environment configurations.
 
 Copy the file `.env.mainnet` locally to `.env`.
 
+Linux, macOS, other Unix-like systems:
+
 ```bash
 $ cp .env.mainnet .env
 ```
+
+Windows:
+
+```
+# This will copy the .env.example file to a new file named .env.
+Copy-Item -Path ".\env.example" -Destination ".\env"
+
+```
+
 
 Adjust the following parameters in `.env`:
 
@@ -65,15 +99,35 @@ $ docker-compose logs -f --tail 100
 
 Now change to the folder `/omnibridge-ui`
 
+Linux, macOS, other Unix-like systems:
+
 ```bash
 $ cd ../omnibridge-ui
 ```
 
+Windows:
+
+```
+Set-Location -Path "../omnibridge-ui"
+```
+
+
 and copy the file `.env.mainnet` to `.env`.
+
+Linux, macOS, other Unix-like systems:
 
 ```bash
 $ cp .env.mainnet .env
 ```
+
+Windows:
+
+```
+# This will copy the .env.mainnet file to a new file named .env.
+Copy-Item -Path ".\env.mainnet" -Destination ".\env"
+
+```
+
 
 Adjust the following parameters in `.env`:
 
@@ -94,15 +148,35 @@ You can find the UI running on your machine on port `:8080`, try accessing it wi
 
 Now change to the folder `/omnibridge-alm`
 
+Linux, macOS, other Unix-like systems:
+
 ```bash
 $ cd ../omnibridge-alm
 ```
 
+Windows:
+
+```
+Set-Location -Path "../omnibridge-alm"
+```
+
+
 and copy the file `.env.mainnet` to `.env`.
+
+Linux, macOS, other Unix-like systems:
 
 ```bash
 $ cp .env.mainnet .env
 ```
+
+Windows:
+
+```
+# This will copy the .env.mainnet file to a new file named .env.
+Copy-Item -Path ".\env.mainnet" -Destination ".\env"
+
+```
+
 
 Adjust the following parameters in `.env`:
 

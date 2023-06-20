@@ -15,16 +15,39 @@ This brief tutorial demonstrates how to manually unlock your account by password
 
 First, deploy `keystorefile` to server (can be skipped if node is run locally).
 
+
+Linux, macOS, other Unix-like systems:
 ```bash
 $ scp ./keystorefile ubuntu@example.com:miner/keystore/
 ```
 
+Windows:
+
+```
+# This will copy the keystore file from the current directory to the remote miner/keystore directory on the example.com server, using the SCP protocol.
+
+# Note that you will need to replace "example.com" with the actual hostname or IP address of the remote server, and "ubuntu" with the appropriate username for that server. 
+
+Copy-Item -Path ".\keystorefile" -Destination "ubuntu@example.com:miner\keystore\" -ToSession (New-PSSession -ComputerName "example.com" -Credential "ubuntu")
+```
+
+
 Then connect to your server by ssh and change to node directory
+
+Linux, macOS, other Unix-like systems:
 
 ```bash
 $ ssh ubuntu@example.com
 $ cd miner
 ```
+
+Windows:
+
+```
+Enter-PSSession -ComputerName "example.com" -Credential "ubuntu"
+Set-Location -Path "miner"
+```
+
 
 Then manually enter the password for decryption of your keystore (where `0x123abc...f` is the address from keystore file you deployed)
 

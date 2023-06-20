@@ -1,44 +1,5 @@
 # How to Setup a Q Root Node
 
-## Setup your Server
-
-The Q Root Node is required to run on a server or (virtual) machine on linux. One possibility is to use a local machine, alternatively you can use a cloud instance on AWS for example. A good external tutorial on how to get started with Ethereum on AWS can be found [here](https://medium.com/@pilankar.akshay3/how-to-setup-a-ethereum-poa-private-proof-of-authority-ethereum-network-network-on-amazon-aws-5fdf56d2ad93). Any other linux machine will work as well if it meets the following requirements:
-
-  - Linux machine with SSH access;
-  - Min. 1(v)Core (x86), 20 GB storage and 2 GB RAM;
-  - Rec. 2(v)Cores (x86), 30 GB storage and 4 GB RAM;
-  - Installed applications: docker, docker-compose, git (optional).
-
-### Application Installation
-
-If you are running Ubuntu, use these commands to install all mentioned required applications using `apt`:
-
-Update apt:
-
-```bash
-$ sudo apt-get update
-```
-
-Install git:
-
-```bash
-$ sudo apt-get install git
-```
-
-Install docker:
-
-```bash
-$ sudo apt-get install docker
-```
-
-Install docker-compose:
-
-```bash
-$ sudo apt-get install docker-compose
-```
-
-Please check corresponding online resources for your operating system and the third party application you want to install for further questions.
-
 ## Basic Configuration
 
 Clone the repository
@@ -47,11 +8,31 @@ Clone the repository
 $ git clone https://gitlab.com/q-dev/mainnet-public-tools
 ```
 
+Windows (if you don`t have git installed):
+
+```
+# Download the contents of the Git repository
+Invoke-WebRequest -Uri https://gitlab.com/q-dev/mainnet-public-tools/-/archive/master/mainnet-public-tools-master.zip -OutFile mainnet-public-tools-master.zip
+
+# Extract the contents of the ZIP file
+Expand-Archive -Path mainnet-public-tools-master.zip -DestinationPath .
+
+# Remove the ZIP file
+Remove-Item -Path mainnet-public-tools-master.zip
+```
+
+
 and go to the `/rootnode` directory
 
 ```bash
 $ cd mainnet-public-tools/rootnode
 ```
+
+Windows:
+```
+Set-Location -Path "mainnet-public-tools\rootnode"
+```
+
 
 This directory contains the `docker-compose.yaml` file for quick launching of the root node with preconfigurations using `.env` file (which can be created from `.env.example` file).
 
@@ -61,15 +42,31 @@ This directory contains the `docker-compose.yaml` file for quick launching of th
 
 To act as a root node, your node needs a keypair to sign transactions and L0 governance messages. First, create a `/keystore` directory with
 
+Linux, macOS, other Unix-like systems:
+
 ```bash
 $ mkdir keystore
 ```
 
+Windows:
+```
+New-Item -ItemType Directory -Name "keystore"
+```
+
+
 then create a file `pwd.txt`
+
+Linux, macOS, other Unix-like systems:
 
 ```bash
 $ nano keystore/pwd.txt
 ```
+Windows:
+```
+notepad.exe .\keystore\pwd.txt
+```
+
+
 
 then set a password that will be used for future account unlocking by entering it into `pwd.txt`. The password needs to be entered at the beginning of the file. Save your changes with `CTRL+O`, then close nano with `CTRL+X` (if you use a different editor, commands might be different).
 
@@ -77,9 +74,19 @@ then set a password that will be used for future account unlocking by entering i
 
 Copy `.env.example` to `.env` inside the `/rootnode` directory:
 
+Linux, macOS, other Unix-like systems:
+
 ```bash
 $ cp .env.example .env
 ```
+
+Windows:
+```
+# This will copy the .env.example file to a new file named .env.
+Copy-Item -Path ".\env.example" -Destination ".\env"
+
+```
+
 
 Assuming you are in `/rootnode` directory, issue this command in order to generate a keypair:  
 
@@ -137,9 +144,17 @@ $ docker-compose run rootnode --datadir /data account update 0xb3ff24f818b0ff6cc
 
 Edit the environment file:
 
+Linux, macOS, other Unix-like systems:
 ```bash
 $ nano .env
 ```
+
+Windows:
+```
+#This will open the .env file in Notepad for editing. If you prefer to use a different text editor, replace notepad.exe with the appropriate command for your editor.
+notepad.exe .\env
+```
+
 
 Enter your (newly created) root node address without leading 0x here:
 
@@ -166,7 +181,7 @@ The resulting `.env` file should look somehow like this:
 
 ```text
 # docker image for q client
-QCLIENT_IMAGE=qblockchain/q-client:1.2.3
+QCLIENT_IMAGE=qblockchain/q-client:1.3.0
 
 # your q address here (without leading 0x)
 ADDRESS=b3FF24F818b0ff6Cc50de951bcB8f86b52287DAc
@@ -178,9 +193,9 @@ IP=193.19.228.94
 EXT_PORT=30304
 
 # extra bootnode you want to use
-BOOTNODE1_ADDR=enode://3021f73a6f14f8594384923f7f0228f81a806d1708e5c046db12661bdce6b0f10625fae12771aa36f7a4d1f110d4e5a589bf3d34ec4b1d2c6d10e382d90f6983@79.125.97.227:30314
-BOOTNODE2_ADDR=enode://34b9e4e18bc37e4437bc0a9b10ac8ae5d0aab2b2e827310e90ec1012e818d07962b162d98e083ec5487e0cf87d1ffefb46332ec05209ec82fb675ae7afe3e241@79.125.97.227:30315
-BOOTNODE3_ADDR=enode://f6204e3d971ec3dce74b8af2933e33551993790ab789500b82c80276f9e97e41b310f08d4a6cfdf330e72c6136f8df85a11fa923410f277f9c743f8a77e105f1@79.125.97.227:30316
+BOOTNODE1_ADDR=enode://22adab037308f02abbb0fd7e831c75afa367b36615b2a0358a5c4673912cf384de6c8e688371822488622ebee383aeea5d41087160cb70484a9f1671876871b1@bootnode.q.org:30301
+BOOTNODE2_ADDR=enode://3021f73a6f14f8594384923f7f0228f81a806d1708e5c046db12661bdce6b0f10625fae12771aa36f7a4d1f110d4e5a589bf3d34ec4b1d2c6d10e382d90f6983@extrabootnode.q.org:30314
+BOOTNODE3_ADDR=enode://34b9e4e18bc37e4437bc0a9b10ac8ae5d0aab2b2e827310e90ec1012e818d07962b162d98e083ec5487e0cf87d1ffefb46332ec05209ec82fb675ae7afe3e241@extrabootnode.q.org:30315
 ```
 
 ## Add your Root Node to https://stats.q.org
@@ -208,7 +223,7 @@ $ docker-compose up -d
 Check your nodes real-time logs with the following command:
 
 ```bash
-$ docker-compose logs -f --tail "100"
+$ docker-compose logs -f --tail "100"q
 ```
 
 ## Find additional peers
