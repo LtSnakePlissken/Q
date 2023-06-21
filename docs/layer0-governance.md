@@ -196,8 +196,8 @@ Example Output (one validator excluded):
             endBlock:6000
         },
         validators: [{
-        address: "0x64d4edefe8ba86d3588b213b0a053e7b910cad68",
-        block: 4000
+            address: "0x64d4edefe8ba86d3588b213b0a053e7b910cad68",
+            block: 4000
         }]
       }      
 
@@ -246,6 +246,9 @@ In the output we get proposal hash.
 After one root node proposed update, this proposal should be available on other nodes. To check it, we can call another
 method to see
 proposed root list.
+
+If the new exclusion list is equal to the active or proposed, the user will be prompted with a warning. If a user is
+aware of their actions, they must pass the optional second parameter `force` as `true`.
 
 ### See proposed Validator Exclusion List
 
@@ -368,3 +371,31 @@ Example output
         signer: "0xa713a6d7a695c95eb4eafdd588b170a17bf64a58"
     }]
 
+#### gov.quarantinedExclusionLists
+
+Displays a list of quarantined exclusion lists.
+This list is updated every time you're getting new exclusion list and it can cause a rewind of the blockchain.
+If this happens - you will be informed about it.
+
+    gov.quarantinedExclusionLists()
+
+There are exclusion sets in the quarantine. Accepting them will cause huge rewind of the blockchain
+
+#### gov.acceptQuarantinedExclusionList
+
+Allows you to accept the quarantined exclusion list if you're sure that it's valid.
+This command will cause a rewind of the blockchain.
+
+    gov.acceptQuarantinedExclusionList("0xf6cc800a504eadaabe2e7dbd5651fdd546d8769323af8ab50245b61e80795982")
+
+### Quota for proposing lists
+
+Keep in mind that there is a quota for proposing new exclusion list. Number of attempts is limited to 3 per day. If you
+exceed this quota, other nodes won't accept your proposal until quota period expires. Your node will do the same. If you
+want to modify behavior of your node, you can use the following flags in your config:
+
+    --gov.proposalQuotaMax=3
+    --gov.proposalQuotaTimeWindow=24 
+
+Default values are 3 and 24 respectively. First one is a number of attempts, second one is a time window in hours. You
+can set your own values.

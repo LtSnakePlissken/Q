@@ -12,7 +12,7 @@ quickly as possible.
 4. Run q-client with the additional flags (you can add them to the *entrypoint* section of your docker-compose.yaml  :
 
 ```bash
---sentry --sentry-dsn=<your DSN string>
+  --sentry --sentry-dsn=<your DSN string>
 ```
 
 Since you have set up flags and restarted Q-Client you will be able to receive notifications about critical/fatal

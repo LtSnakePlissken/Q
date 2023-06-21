@@ -8,7 +8,7 @@ Clone the repository
 $ git clone https://gitlab.com/q-dev/mainnet-public-tools
 ```
 
-Windows (if you don`t have git installed):
+Windows (if you don't have git installed):
 
 ```
 # Download the contents of the Git repository
@@ -181,7 +181,7 @@ The resulting `.env` file should look somehow like this:
 
 ```text
 # docker image for q client
-QCLIENT_IMAGE=qblockchain/q-client:1.3.0
+QCLIENT_IMAGE=qblockchain/q-client:1.3.1
 
 # your q address here (without leading 0x)
 ADDRESS=b3FF24F818b0ff6Cc50de951bcB8f86b52287DAc
