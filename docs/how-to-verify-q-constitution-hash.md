@@ -72,7 +72,7 @@ and [start a Q constitution update proposal](how-to-exercise-governance-rights.m
 
 ## Constiution storage
 
-Since Q-client version 1.3.0 the constitution can be stored in the Q-client.
+Since Q-client version 1.3.1 the constitution can be stored in the Q-client.
 
 ### Constitution storage Management
 

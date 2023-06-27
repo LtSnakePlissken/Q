@@ -59,7 +59,8 @@ Create a `/keystore` directory, then a password which will be used for private k
 Assuming you are in `/validator` directory, issue this command in order to generate a keypair:  
 
 ```bash
-$ docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:1.3.0 geth account new --datadir=/data --password=/data/keystore/pwd.txt
+$ docker run --entrypoint="" --rm -v $PWD:/data -it qblockchain/q-client:1.3.1 geth account new --datadir=/data --password=/data/keystore/pwd.txt
+
 ```
 
 The output of this command should look like this:
@@ -133,7 +134,7 @@ Put your address without leading 0x from the step 3, into `ADDRESS`, your public
 
 ```text
 # docker image for q client
-QCLIENT_IMAGE=qblockchain/q-client:1.3.0
+QCLIENT_IMAGE=qblockchain/q-client:1.3.1
 
 # your q address here (without leading 0x)
 ADDRESS=b3FF24F818b0ff6Cc50de951bcB8f86b52287DAc
