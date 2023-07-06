@@ -223,7 +223,7 @@ $ docker-compose up -d
 Check your nodes real-time logs with the following command:
 
 ```bash
-$ docker-compose logs -f --tail "100"q
+$ docker-compose logs -f --tail "100"
 ```
 
 ## Find additional peers
