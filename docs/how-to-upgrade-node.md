@@ -32,7 +32,7 @@ $ docker-compose pull
 - **Restart with new configs & images**
 
 ```bash
-$ docker-compose down && docker-compose up -d
+$ docker-compose down --timeout 60 && docker-compose up -d
 ```
 
 Now your validator node should restart and synchronise with the mainnet again.
