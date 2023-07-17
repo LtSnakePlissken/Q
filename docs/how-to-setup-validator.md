@@ -111,7 +111,7 @@ $ docker-compose run validator-node --datadir /data account update 0xb3ff24f818b
 
 ## Get Q Tokens
 
-In order to become a validator, you will need to put some stake in validators contract, so you need Q tokens for this. We are working on a public listing of the Q token at the moment.
+In order to become a validator, you will need to put some stake in validators contract, so you need Q tokens for this. If you do not have Q tokens already, you can purchase them directly from Q Development AG. Follow [this link](https://q.org/why-q#why-q-validators-block) to learn more.
 
 ## Configure Setup
 
