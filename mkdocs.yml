@@ -101,6 +101,7 @@ nav:
           - Earn extra Q Tokens: how-to-earn-extra-Q-tokens.md
           - Obtain a Loan against a Collateral: how-to-obtain-a-loan-against-a-collateral.md
           - Verify and update the Q Constitution: how-to-verify-q-constitution-hash.md
+          - Bridge tokens on Q: q-bridge.md
       - Technical How To's:
           - Setup a Q Fullnode: how-to-setup-fullnode.md
           - Setup a Validator Node: how-to-setup-validator.md
@@ -129,3 +130,4 @@ nav:
           - Saving & Borrowing: dapp-savingborrowing.md
           - Decentralized Auctions: dapp-decentralizedauctions.md
           - Time Locks: dapp-timelocks.md
+
