@@ -157,6 +157,6 @@ There are two types of slashing proposals:
   1. Root Node Slashing - initiates the voting on the slashing of a root node.
   2. Validator Node slashing - initiates the voting on the slashing of a validator node.
 
-Whereas root node slashing proposals can be created by any Q token holder, validator slashings are initiated and voted only by root nodes. The after successful voting, the slashing is to be executed, resulting in a reduction of the culprits stake. The slashed funds are kept in an escrow, allowing the culprit to take legal countermeasures through private arbitration "Slashing Appeal").
+Whereas root node slashing proposals can be initiated by root nodes and voted by any Q token holder, validator slashings are initiated and voted only by root nodes. After successful voting, the slashing is to be executed, resulting in a reduction of the culprits stake. The slashed funds are kept in an escrow, allowing the culprit to take legal countermeasures through private arbitration "Slashing Appeal").
 
   > **Note: ** *The exact voting procedure including permissions, quorums and time intervals is specified in appendix 5 "Voting" of the [Q constitution](https://q.org/files/Q_Constitution.pdf). The exact process of slashing, slashing objection and arbitration is defined in articles 6 & 13.*
