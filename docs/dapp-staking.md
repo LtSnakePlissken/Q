@@ -24,7 +24,7 @@ Clicking on the button "Manage Staker Reward Pool" on the top right corner of th
   - Total Stake: Validator Own Stake + Delegated Stake
   - Validator Stake: All Q tokens that have been staked by the validator himself
   - Delegated Stake: All Q tokens that have been delegated by others than the validators
-  - Accountable Stake: Stake counting in validator ranking. To prevent validators to self stake 1Q and put 1Mio Q into the Q vault and delegate to themselves, a minimum percentage of self-stake is required. This percentage is managed by parameter `governed.EPQFI.stakeDelegationFactor`. Assuming it is 10%, the accountable total stake for a validator cannot be more than 10 times his self stake.
+  - Accountable Stake: Stake counting in validator ranking. To prevent validators to self stake 1Q and put 1Mio Q into the Q vault and delegate to themselves, a factor determines the maximum accountable stake based on self-stake. This factor is managed by parameter `governed.EPQFI.stakeDelegationFactor`. Assuming it is 10, the accountable total stake for a validator cannot be more than 10 times his self stake.
 
 The option to refresh user delegations will trigger a distribution of collected rewards by the reward pool so far.
 
@@ -47,4 +47,4 @@ Validator receive their reward based on the stake they have put onto their valid
 
 Delegation happens by choosing/entering validator address and amount of Q you want to delegate. You can have multiple delegations and thus earn delegation rewards by several validators. Rewards need to be claimed. The value "Outstanding Delegation Rewards" shows the claimable amount that was collected within each validators stake delegation pool.
 
-> **Note: ** *Delegated stake is at risk of being slashed if the validator misbehaves and gets slashed by the Q root nodes.*
+> **Note: ** *Delegated stake is NOT at risk of being slashed if the validator misbehaves and gets slashed by the Q root nodes.*

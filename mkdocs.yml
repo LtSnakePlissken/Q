@@ -130,4 +130,8 @@ nav:
           - Saving & Borrowing: dapp-savingborrowing.md
           - Decentralized Auctions: dapp-decentralizedauctions.md
           - Time Locks: dapp-timelocks.md
-
+  - Q rewards and incentive structure:
+      - Rewards:
+          - Rewards sources: rewards-sources.md
+          - Validation rewards: validation-rewards.md
+          - Root node rewards: root-node-rewards.md
