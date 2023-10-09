@@ -92,6 +92,7 @@ nav:
   - Tutorials:
       - Basic Setup:
           - Install and setup MetaMask: how-to-install-metamask.md
+          - Claim Q Tokens from the Mainnet Faucet: how-to-claim-q-tokens.md
           - Delegate Q to a Validator: how-to-delegate-to-validator.md
           - Exercise your Governance Rights: how-to-exercise-governance-rights.md
           - Use Telegram Notification Service: notification-service.md
