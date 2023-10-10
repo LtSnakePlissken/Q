@@ -240,6 +240,8 @@ rootnode:
 
 In order to become a root node, you will need to make an onchain proposal to [add yourself to the root node panel](how-to-become-a-root-node.md). You need Q tokens for this. We are working on a public listing of the Q token at the moment.
 
+In the meantime, you can get the Q tokens needed for creating the proposal from the [Mainnet Faucet](https://faucet.q.org). You can find more information on the faucet and on how to use it in the [Faucet documentation](how-to-claim-q-tokens.md).
+
 ## Put Stake in Roots Contract
 
 As was mentioned previously, you should put stake to rootnodes contract in order to become a rootnode.

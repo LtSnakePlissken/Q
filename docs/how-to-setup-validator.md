@@ -113,6 +113,8 @@ $ docker-compose run validator-node --datadir /data account update 0xb3ff24f818b
 
 In order to become a validator, you will need to put some stake in validators contract, so you need Q tokens for this. If you do not have Q tokens already, you can purchase them directly from Q Development AG. Follow [this link](https://q.org/why-q#why-q-validators-block) to learn more.
 
+For getting started operationaly, you can claim small amounts of Q tokens from the [Mainnet Faucet](https://faucet.q.org). You can find more information on the faucet and on how to use it in the [Faucet documentation](how-to-claim-q-tokens.md).
+
 ## Configure Setup
 
 Edit the environment file in `/validator` directory:

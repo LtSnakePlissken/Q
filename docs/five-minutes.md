@@ -22,6 +22,8 @@ You might need to configure your wallet to support and accept Q tokens. To do th
 
 Q tokens will be made available shortly for public sale.
 
+In the meantime, you can still get started on the Q blcokchain by claiming small amounts of Q tokens from the [Mainnet Faucet](https://faucet.q.org). You can find more information on the faucet and on how to use it in the [Faucet documentation](how-to-claim-q-tokens.md).
+
 ## Verify Q Funding
 
 Once you have funded your wallet account, open MetaMask and select the according wallet account. It should now have received a couple of Qs and should display an according balance.

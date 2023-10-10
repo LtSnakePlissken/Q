@@ -1,6 +1,6 @@
-# Claim Q Tokens from the Mainnet Faucet
+# Claim Q tokens from the Mainnet Faucet
 
-To get started with the Q Blockchain, you can claim Q Tokens from the Mainnet Faucet. Q tokens can be used for various purposes, such as sending them to friends, interacting with governance systems on Q, or deploying code.
+To get started with the Q Blockchain, you can claim Q tokens from the Mainnet Faucet. Q tokens can be used for various purposes, such as sending them to friends, interacting with governance systems on Q, or deploying code.
 
 [![Q Faucet](img/faucet/main.png)](https://faucet.q.org)
 
@@ -22,11 +22,11 @@ To get started with the Q Blockchain, you can claim Q Tokens from the Mainnet Fa
 <br>
 <br>
 
-Besides the steps described above, a few conditions have do be met for successfully claiming tokens from the Faucet:
+**Besides the steps described above, a few conditions have do be met for successfully claiming tokens from the faucet:**
 
 - Using the faucet is possible only once per address within 24 h
 - The provided wallet needs a „non-zero“ balance on the Ethereum Mainnet. That means you need to hold at least some Ethereum dust.
 - The balance of the provided wallet needs to be below 1 Q on Q Mainnet.
 - The daily supply of tokens to the faucet is limited. If there are no more tokens in the faucet, please wait for a refill. 
 
-To support the Faucet, you can donate Q Tokens directly to the faucet at: `0x5A3F5728C3b7ACFbc1C658F6b42A4e05eC00E688`
+To support the faucet, you can donate Q tokens directly to the faucet at: `0x5A3F5728C3b7ACFbc1C658F6b42A4e05eC00E688`
