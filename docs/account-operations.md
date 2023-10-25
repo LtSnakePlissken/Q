@@ -47,7 +47,7 @@ shown below:
 docker ps
 
 (CONTAINER ID   IMAGE                                                                           COMMAND                  CREATED       STATUS                          PORTS                                                                                                                                                                               NAMES
-92b12f674eb4   qblockchain/q-client:1.3.1   "/bin/sh -c 'mix do …"   4 days ago    Up 4 days                       0.0.0.0:8080->4000/tcp, :::8080->4000/tcp, 0.0.0.0:8081->4001/tcp, :::8081->4001/tcp)
+92b12f674eb4   qblockchain/q-client:v1.3.5   "/bin/sh -c 'mix do …"   4 days ago    Up 4 days                       0.0.0.0:8080->4000/tcp, :::8080->4000/tcp, 0.0.0.0:8081->4001/tcp, :::8081->4001/tcp)
 
 docker cp 92b12f674eb4:/root/.ethereum/keystore/Creation-Date--Your-Account ./
 ```
