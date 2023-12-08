@@ -19,7 +19,7 @@ pulling new releases of the mainnet-public-tools check your **docker-compose.yam
 
 ```
 ...
-QCLIENT_IMAGE=qblockchain/q-client:v1.3.5
+QCLIENT_IMAGE=qblockchain/q-client:v1.3.6
 ...
 ```
 > **_NOTE:_**  the tag naming convention has been changed to include a v in the version tag. So, make sure to enter "...q-client:v1.3.5".

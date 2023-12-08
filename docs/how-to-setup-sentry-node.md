@@ -43,7 +43,7 @@ volumes:
   - Adapt `.env`:
 
 ```text
-QCLIENT_IMAGE=qblockchain/q-client:v1.3.5
+QCLIENT_IMAGE=qblockchain/q-client:v1.3.6
 BOOTNODE_URI=enode://$BOOTNODE_ENODE_PUBLIC_KEY@$BOOTNODE_IP:30301
 EXT_PORT=30303
 ```
@@ -98,7 +98,7 @@ volumes:
   - Adapt `.env`:
 
 ```text
-QCLIENT_IMAGE=qblockchain/q-client:v1.3.5
+QCLIENT_IMAGE=qblockchain/q-client:v1.3.6
 VALIDATOR_ADDRESS=0000000000000000000000000000000000000000
 SENTRY=uri1,uri2,uri3
 MASK=10.xxx.xxx.0/24

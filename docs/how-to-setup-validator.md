@@ -136,7 +136,7 @@ Put your address without leading 0x from the step 3, into `ADDRESS`, your public
 
 ```text
 # docker image for q client
-QCLIENT_IMAGE=qblockchain/q-client:v1.3.5
+QCLIENT_IMAGE=qblockchain/q-client:v1.3.6
 
 # your q address here (without leading 0x)
 ADDRESS=b3FF24F818b0ff6Cc50de951bcB8f86b52287DAc
