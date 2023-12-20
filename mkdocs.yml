@@ -115,6 +115,7 @@ nav:
           - Setup Withdrawal Address: withdrawal-addresses.md
           - Use clef to unlock Account with Prompt: clef-tutorial.md
           - Interact with Smart Contracts: how-to-interact-with-smart-contracts-with-remix.md
+          - Interact with Smart Contracts using Q-Client: how-to-interact-with-smart-contracts-with-q-client.md
           - Purge Validator Slashings: how-to-purge-vn-slashings.md
           - Export Private Key: how-to-export-key.md
           - Unlock Account: how-to-unlock-account.md
