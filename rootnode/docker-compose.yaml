@@ -9,6 +9,7 @@ services:
       "--syncmode=full",
       "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR",
       "--verbosity=3",
+      "--snapshot=false",
       "--nat=extip:$IP",
       "--port=$EXT_PORT",
       "--unlock=$ADDRESS",
