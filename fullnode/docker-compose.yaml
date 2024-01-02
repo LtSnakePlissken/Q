@@ -10,6 +10,7 @@ services:
       "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR",
       "--verbosity=3",
       "--port=$EXT_PORT",
+      "--snapshot=false",
       "--http",
       "--http.corsdomain=*",
       "--http.addr=0.0.0.0",
