@@ -12,6 +12,7 @@ services:
       "--snapshot=false",
       "--nat=extip:$IP",
       "--port=$EXT_PORT",
+      "--miner.etherbase=$ADDRESS",
       "--unlock=$ADDRESS",
       "--password=/data/keystore/pwd.txt",
       "--mine",
